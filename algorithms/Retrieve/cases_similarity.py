@@ -39,18 +39,21 @@ def compare_cases(obj1, obj2, weights):
     :param weights: features weights
     :param obj1: the first case
     :param obj2: the second case
-    :return: similarity between the two cases
+    :return: similarity between the two cases using weights
     """
     similarity = 0
     weights_sum = 0
     # similarity between two nominative features is calculated differently from
     # two quantitative values
-    for _x in constants.NOMINATIVE_FEATURES:
-        similarity += compare_nominative(_x, obj1[_x], obj2[_x]) * weights[_x]
-        weights_sum += weights[_x]
-    for _x in constants.QUANTITATIVE_FEATURES:
-        similarity += compare_quantitative(_x, obj1[_x], obj2[_x]) * weights[_x]
-        weights_sum += weights[_x]
+    for _x in obj1:
+        # if _x is nominative
+        if _x[0] == 'c':
+            similarity += compare_nominative(_x, obj1[_x], obj2[_x]) * weights[_x]
+            weights_sum += weights[_x]
+        # if _x is qualitative
+        elif _x[0] == 'n':
+            similarity += compare_quantitative(_x, obj1[_x], obj2[_x]) * weights[_x]
+            weights_sum += weights[_x]
     return similarity / weights_sum
 
 
@@ -58,16 +61,19 @@ def compare_cases_initial(obj1, obj2):
     """
     :param obj1: the first case
     :param obj2: the second case
-    :return: similarity between the two cases
+    :return: similarity between the two cases before having weights
     """
     similarity = 0
     weights_sum = 0
     # similarity between two nominative features is calculated differently from
     # two quantitative values
-    for _x in constants.NOMINATIVE_FEATURES:
-        similarity += compare_nominative(_x, obj1[_x], obj2[_x])
-        weights_sum += 1
-    for _x in constants.QUANTITATIVE_FEATURES:
-        similarity += compare_quantitative(_x, obj1[_x], obj2[_x])
-        weights_sum += 1
+    for _x in obj1:
+        # if _x is nominative
+        if _x[0] == 'c':
+            similarity += compare_nominative(_x, obj1[_x], obj2[_x])
+            weights_sum += 1
+        # if _x is qualitative
+        elif _x[0] == 'n':
+            similarity += compare_quantitative(_x, obj1[_x], obj2[_x])
+            weights_sum += 1
     return similarity / weights_sum
