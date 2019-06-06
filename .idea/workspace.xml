@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a194b26d-c31f-40f3-8bd0-1b2b4f83b541" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/datasets/immunotherapy/Immunotherapy.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasets/immunotherapy/immunothrapy.names" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasets/mammographic-masses/mammographic_masses.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasets/mammographic-masses/mammographic_masses.names" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasets/thyroid-disease/new-thyroid.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasets/thyroid-disease/new-thyroid.names" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CBR-for-Classification.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CBR-for-Classification.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/Feature-Weights/feature_weights.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/Feature-Weights/feature_weights.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/jfreechart-1.0.16-demo.jnlp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/netbeans-8.0.2-windows.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/Feature-Weights/feature_weights.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/FeaturesWeights/features_weights.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/Retrieve/cases_similarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/Retrieve/cases_similarity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/constants.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,9 +53,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/Feature-Weights/feature_weights.py">
+        <entry file="file://$PROJECT_DIR$/algorithms/FeaturesWeights/features_weights.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-221">
+            <state relative-caret-position="136">
               <caret line="171" selection-start-line="171" selection-end-line="171" />
               <folding>
                 <element signature="e#82#2448#0" />
@@ -57,23 +64,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/Retrieve/cases_similarity.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            <state relative-caret-position="119">
+              <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/immunothrapy.names">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://212b83d1-864c-454b-8a2c-7c143352b470/schema/main/table/cases">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="af066416-b8bd-4281-94be-e4060c92f527">
-              <filtering>
-                <filter text="frequency=1" />
-                <filter text="" />
-              </filtering>
+        <entry file="file://$PROJECT_DIR$/algorithms/constants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -90,6 +103,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>row2</find>
+      <find>constants</find>
     </findStrings>
     <replaceStrings>
       <replace>pair[0]</replace>
@@ -110,7 +124,10 @@
         <option value="$PROJECT_DIR$/algorithms/Feature-Weights/featureWeights.py" />
         <option value="$PROJECT_DIR$/algorithms/Feature-Weights/feature-weights.py" />
         <option value="$PROJECT_DIR$/algorithms/Feature-Weights/feature_weights.py" />
+        <option value="$PROJECT_DIR$/algorithms/constants.py" />
         <option value="$PROJECT_DIR$/algorithms/Retrieve/cases_similarity.py" />
+        <option value="$PROJECT_DIR$/algorithms/cases_similarity.py" />
+        <option value="$PROJECT_DIR$/datasets/immunotherapy/immunothrapy.names" />
       </list>
     </option>
   </component>
@@ -141,13 +158,19 @@
             <path>
               <item name="CBR-for-Classification" type="b2602c69:ProjectViewProjectNode" />
               <item name="untitled" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="Retrieve" type="462c0819:PsiDirectoryNode" />
+              <item name="datasets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CBR-for-Classification" type="b2602c69:ProjectViewProjectNode" />
               <item name="untitled" type="462c0819:PsiDirectoryNode" />
               <item name="datasets" type="462c0819:PsiDirectoryNode" />
+              <item name="immunotherapy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CBR-for-Classification" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled" type="462c0819:PsiDirectoryNode" />
+              <item name="datasets" type="462c0819:PsiDirectoryNode" />
+              <item name="mammographic-masses" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -161,7 +184,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/datasets/immunotherapy" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -172,7 +195,7 @@
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -183,10 +206,16 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Milad\PycharmProjects\untitled\datasets\immunotherapy" />
+      <recent name="C:\Users\Milad\PycharmProjects\untitled\datasets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Milad\PycharmProjects\untitled\datasets\thyroid-disease" />
+      <recent name="C:\Users\Milad\PycharmProjects\untitled\datasets\mammographic-masses" />
+      <recent name="C:\Users\Milad\PycharmProjects\untitled\algorithms\FeaturesWeights" />
+      <recent name="C:\Users\Milad\PycharmProjects\untitled\algorithms\Retrieve" />
       <recent name="C:\Users\Milad\PycharmProjects\untitled\algorithms" />
-      <recent name="C:\Users\Milad\PycharmProjects\untitled\templates" />
-      <recent name="C:\Users\Milad\PycharmProjects\untitled" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -262,17 +291,18 @@
       <workItem from="1559677819816" duration="982000" />
       <workItem from="1559679569605" duration="3904000" />
       <workItem from="1559689108442" duration="8849000" />
-      <workItem from="1559834260322" duration="8648000" />
+      <workItem from="1559834260322" duration="12176000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22383000" />
+    <option name="totallyTimeSpent" value="25911000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17019667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17019667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" weight="0.3289689" />
@@ -287,7 +317,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50378215" side_tool="true" weight="0.46644846" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49621785" visible="true" weight="0.32569557" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49621785" visible="true" weight="0.23076923" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -340,6 +370,16 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/212b83d1-864c-454b-8a2c-7c143352b470/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/FeaturesWeights/features_weights.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="171" selection-start-line="171" selection-end-line="171" />
+          <folding>
+            <element signature="e#82#2448#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="das://212b83d1-864c-454b-8a2c-7c143352b470/schema/main/table/cases">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="af066416-b8bd-4281-94be-e4060c92f527">
@@ -350,20 +390,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/Feature-Weights/feature_weights.py">
+    <entry file="file://$PROJECT_DIR$/algorithms/constants.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="171" selection-start-line="171" selection-end-line="171" />
-          <folding>
-            <element signature="e#82#2448#0" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/thyroid-disease/new-thyroid.data">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/thyroid-disease/new-thyroid.names">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-663" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/Immunotherapy.data">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/Retrieve/cases_similarity.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="119">
+          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/immunothrapy.names">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
         </state>
       </provider>
     </entry>

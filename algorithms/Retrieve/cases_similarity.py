@@ -1,6 +1,5 @@
 """ This module compares two cases and returns the similarity between them"""
 
-
 import constants
 
 
@@ -37,6 +36,7 @@ def compare_quantitative(feature, value1, value2):
 
 def compare_cases(obj1, obj2, weights):
     """
+    :param weights: features weights
     :param obj1: the first case
     :param obj2: the second case
     :return: similarity between the two cases
