@@ -1,7 +1,7 @@
 """ This module weights features and select the most appropriate ones. """
 
 from itertools import combinations
-from constants import FEATURES_NUMB
+import constants
 
 DATA = [
     {
@@ -175,22 +175,22 @@ def features_weighting(data):
     """
     weight = {}
     # initiate the weights to 0
-    for _x in range(FEATURES_NUMB):
+    for _x, f in enumerate(constants.ALL_FEATURES):
         weight[list(data[0].keys())[_x]] = 0
     # calculate the weights using all possible pairs
     for pair in list(combinations(data, 2)):
         comparator = 1 if pair[0]['solution'] == pair[1]['solution'] else -1
-        for i, _x in enumerate(pair[0]):
+        for i, _x in enumerate(constants.ALL_FEATURES):
             # iterate over features
             # if feature is quantitative (n = numerical)
-            if i < FEATURES_NUMB and _x[0] == 'n':
+            if _x[0] == 'n':
                 if pair[0][_x] is not None and pair[1][_x] is not None and \
                         abs(pair[0][_x] - pair[1][_x]) < 10:
                     weight[_x] += (pair[0]["frequency"] * comparator)  # age
                 else:
                     weight[_x] -= (int(pair[0]["frequency"]) * comparator)
             # if feature is qualitative (c = categorical)
-            elif i < FEATURES_NUMB and _x[0] == 'c':
+            elif _x[0] == 'c':
                 if pair[0][_x] == pair[1][_x]:
                     weight[_x] += (pair[0]["frequency"] * comparator)  # frequency
                 else:
@@ -200,8 +200,8 @@ def features_weighting(data):
     min_weight = weight[min(weight, key=weight.get)]
 
     for i, _x in enumerate(data[0]):
-        if i < FEATURES_NUMB:
+        if i < len(constants.ALL_FEATURES):
             weight[_x] = (weight[_x] - min_weight) / (max_weight - min_weight)
     return weight
 
-# features_weighting(DATA)
+# print(features_weighting(DATA))
