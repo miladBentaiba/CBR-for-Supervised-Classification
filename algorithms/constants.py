@@ -1,5 +1,6 @@
 """ This module contains the constants used in the project """
 
+DATABASE = 'mammography'
 
 ALL_FEATURES = ['c_bi', 'n_age', 'c_shape', 'c_margin', 'c_density']
 
@@ -12,4 +13,3 @@ MAX_FEATURE = {'n_age': 100}
 MIN_FEATURE = {'n_age': 18}
 
 POSSIBLE_SOLUTIONS = [0, 1]
-

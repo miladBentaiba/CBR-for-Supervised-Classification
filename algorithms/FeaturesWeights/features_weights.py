@@ -1,9 +1,10 @@
 """ This module weights features and select the most appropriate ones. """
-
+import init
 from itertools import combinations
 
 import constants
 
+S = init.Singleton.get_instance()
 DATA = [
     {
         "c_bi": 5,
@@ -205,4 +206,31 @@ def features_weighting(data):
             weight[_x] = (weight[_x] - min_weight) / (max_weight - min_weight)
     return weight
 
+
+class Weighting:
+    """ open and close an sqlite connexion """
+    __instance = None
+
+    @staticmethod
+    def get_instance():
+        """ Static access method. """
+        if Weighting.__instance is None:
+            Weighting(DATA)
+        return Weighting.__instance
+
+    def __init__(self, data):
+        """ Virtually private constructor """
+        if Weighting.__instance is None:
+            _cur = S.cursor()
+            _cur.execute('select feature, weight from weights')
+            results = _cur.fetchall()
+            if not results:
+                Weighting.__instance = features_weighting(data)
+            else:
+                Weighting.__instance = {}
+                for _x in results:
+                    self.__instance[_x[0]] = _x[1]
+
+
+# w = Weighting(DATA)
 # print(features_weighting(DATA))
