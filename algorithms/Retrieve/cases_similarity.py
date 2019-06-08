@@ -1,6 +1,7 @@
 """ This module compares two cases and returns the similarity between them"""
 
 import constants
+from FeaturesWeights.features_weights import DATA
 
 
 def compare_nominative(feature, value1, value2):
@@ -45,13 +46,13 @@ def compare_cases(obj1, obj2, weights):
     weights_sum = 0
     # similarity between two nominative features is calculated differently from
     # two quantitative values
-    for i, _x in enumerate(obj1):
+    for _x in constants.ALL_FEATURES:
         # if _x is nominative
-        if i < constants.FEATURES_NUMB and _x[0] == 'c':
+        if _x[0] == 'c':
             similarity += compare_nominative(_x, obj1[_x], obj2[_x]) * weights[_x]
             weights_sum += weights[_x]
         # if _x is qualitative
-        elif i < constants.FEATURES_NUMB and _x[0] == 'n':
+        elif _x[0] == 'n':
             similarity += compare_quantitative(_x, obj1[_x], obj2[_x]) * weights[_x]
             weights_sum += weights[_x]
     return similarity / weights_sum
@@ -67,13 +68,16 @@ def compare_cases_initial(obj1, obj2):
     weights_sum = 0
     # similarity between two nominative features is calculated differently from
     # two quantitative values
-    for i, _x in enumerate(obj1):
+    for _x in constants.ALL_FEATURES:
         # if _x is nominative
-        if i < constants.FEATURES_NUMB and _x[0] == 'c':
+        if _x[0] == 'c':
             similarity += compare_nominative(_x, obj1[_x], obj2[_x])
             weights_sum += 1
         # if _x is qualitative
-        elif i < constants.FEATURES_NUMB and _x[0] == 'n':
+        elif _x[0] == 'n':
             similarity += compare_quantitative(_x, obj1[_x], obj2[_x])
             weights_sum += 1
     return similarity / weights_sum
+
+
+print(compare_cases_initial(DATA[0], DATA[2]))

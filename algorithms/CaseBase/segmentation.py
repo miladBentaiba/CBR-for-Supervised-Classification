@@ -5,7 +5,7 @@ import sqlite3
 
 
 import init
-from constants import POSSIBLE_SOLUTIONS
+import constants
 
 
 S = init.Singleton.get_instance()
@@ -25,7 +25,7 @@ def create_segment(obj, iteration_number):
         '(?,?,?)', (obj['_id_case'], _id_segment, iteration_number))
     S.commit()
     _deg = {'_id_segment': _id_segment, 'delegate': {}}
-    for _x in ALL_FEATURES:
+    for _x in constants.ALL_FEATURES:
         if obj[_x] is not None:
             _deg['delegate'][_x] = [{'value': obj[_x], 'frequency': obj['frequency']}]
     return _deg
