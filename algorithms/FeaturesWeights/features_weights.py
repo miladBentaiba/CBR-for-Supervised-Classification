@@ -1,6 +1,7 @@
 """ This module weights features and select the most appropriate ones. """
 
 from itertools import combinations
+from constants import FEATURES_NUMB
 
 DATA = [
     {
@@ -167,8 +168,6 @@ DATA = [
     }
 ]
 
-FEATURES_NUMB = 5
-
 
 def features_weighting(data):
     """
@@ -203,8 +202,6 @@ def features_weighting(data):
     for i, _x in enumerate(data[0]):
         if i < FEATURES_NUMB:
             weight[_x] = (weight[_x] - min_weight) / (max_weight - min_weight)
-    print(weight)
     return weight
 
-
-features_weighting(DATA)
+# features_weighting(DATA)
