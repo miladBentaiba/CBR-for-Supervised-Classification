@@ -234,3 +234,4 @@ class Weighting:
 
 # w = Weighting(DATA)
 # print(features_weighting(DATA))
+# print(tuple( v for v in DATA[0].values() ))
