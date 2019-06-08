@@ -7,7 +7,15 @@
       <sourceFolder url="file://$MODULE_DIR$/experiments" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/templates" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/venv" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/algorithms/FeaturesWeights" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/algorithms/Retain" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/algorithms/Retrieve" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/algorithms/Reuse" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/algorithms/Revise" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/algorithms/Rule-Base" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/algorithms/CaseBase" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.7 (untitled)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

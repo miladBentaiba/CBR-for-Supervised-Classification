@@ -34,10 +34,7 @@ def compare_case_delegate(obj, delegate, _weights):
                 except KeyError:
                     sim_x = 0
                 else:
-                    if frequencies == 0:
-                        sim_x = PROBABILITY_FEATURES[_x]
-                    else:
-                        sim_x /= frequencies
+                    sim_x = PROBABILITY_FEATURES[_x] if frequencies == 0 else sim_x/frequencies
             sim_x *= _weights[_x]
             total += sim_x
             weights += _weights[_x]
@@ -47,9 +44,7 @@ def compare_case_delegate(obj, delegate, _weights):
                 # age is a quantitative attribute, and has a different similarity function
                 total += (1 - abs((obj[_x] - delegate[_x][0]['value']) / 100)) * _weights[_x]
                 weights += _weights[_x]
-            except KeyError:
-                pass
-            except TypeError:
+            except (KeyError, TypeError):
                 pass
     return total / weights
 
