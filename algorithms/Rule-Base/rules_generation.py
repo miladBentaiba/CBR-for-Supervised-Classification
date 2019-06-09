@@ -10,14 +10,6 @@ S = init.Singleton.get_instance()
 _weights = Weighting.get_instance()
 
 
-def order_features():
-    """
-    :return: return a list of features from the most weighted to the less weighted
-    """
-    sorted_x = sorted(_weights, key=_weights.get, reverse=True)
-    return sorted_x
-
-
 def rules_generation():
     """
     :return: generate rules from a valid case_base and store them in the rule table
@@ -25,7 +17,7 @@ def rules_generation():
     _c = S.cursor()
     column_list = []
     where_clause = ''
-    ordered_features = order_features()
+    ordered_features = Weighting.order_features()
     for feature in ordered_features:
         column_list.append(feature)
         where_clause += ' and ' + feature + ' is not null'
@@ -56,7 +48,7 @@ def validation_per_rules(obj):
     i = 0
     valid = None
     where_clause = ''
-    ordered_features = order_features()
+    ordered_features = Weighting.order_features()
     for feature in ordered_features:
         i += 1
         where_clause += ' and ' + feature + ' is ' + \
@@ -78,6 +70,3 @@ def validation_per_rules(obj):
         else:  # len(results) > 1
             valid = None
     return valid
-
-
-# rules_generation()

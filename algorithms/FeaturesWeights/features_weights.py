@@ -171,6 +171,13 @@ DATA = [
 ]
 
 
+def order_features(_weights):
+    """
+    :return: return a list of features from the most weighted to the less weighted
+    """
+    return sorted(_weights, key=_weights.get, reverse=True)
+
+
 def features_weighting(data):
     """
     :return: calculate features weights
@@ -204,7 +211,8 @@ def features_weighting(data):
     for i, _x in enumerate(data[0]):
         if i < len(constants.ALL_FEATURES):
             weight[_x] = (weight[_x] - min_weight) / (max_weight - min_weight)
-    return weight
+
+    return order_features(weight)
 
 
 class Weighting:
@@ -230,3 +238,7 @@ class Weighting:
                 Weighting.__instance = {}
                 for _x in results:
                     self.__instance[_x[0]] = _x[1]
+
+    @staticmethod
+    def order_features():
+        return sorted(Weighting.__instance, key=Weighting.__instance.get, reverse=True)
