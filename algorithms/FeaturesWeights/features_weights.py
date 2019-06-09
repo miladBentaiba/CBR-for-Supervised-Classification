@@ -234,4 +234,7 @@ class Weighting:
 
 # w = Weighting(DATA)
 # print(features_weighting(DATA))
-# print(tuple( v for v in DATA[0].values() ))
+# x = tuple(v for v in DATA[0].values())
+# print(x)
+# print(','.join(constants.ALL_FEATURES))
+# print(','.join(['?']*len(constants.ALL_FEATURES)))

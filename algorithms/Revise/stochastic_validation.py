@@ -6,13 +6,14 @@ from init import Singleton
 from Retrieve.cases_similarity import compare_cases
 from constants import SOLUTION
 from constants import POSSIBLE_SOLUTIONS
+from constants import ALL_FEATURES
 from FeaturesWeights.features_weights import Weighting
+from FeaturesWeights.features_weights import DATA
 
 S = Singleton.get_instance()
 _weights = Weighting.get_instance()
 
 
-# TODO
 def frequency_ratio(obj):
     """
     :param obj: the case
@@ -20,10 +21,11 @@ def frequency_ratio(obj):
     """
     _c = S.cursor()
 
-    _c.execute('select sum(frequency) from cases where (bi, age, shape, margin, density) '
-               'is (?, ?, ?, ?, ?) limit 1', (obj['bi'], obj['age'], obj['shape'],
-                                              obj['margin'], obj['density']))
+    _c.execute("select sum(frequency) from cases where ({0}) is ({1}) limit 1"
+               .format(','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES))),
+               tuple(obj[x] for x in ALL_FEATURES))
     results = _c.fetchone()[0]
+    print(results)
     return obj['frequency'] / results
 
 
@@ -43,16 +45,16 @@ def randomness_ratio(obj):
     _c = S.cursor()
     _c.execute('select (select sum(frequency) from cases where '
                '' + SOLUTION + '=?6 and expert is 1) as s0,'
-               '(select sum(frequency) from cases '
-               'where ?7 in ({0}) and '
-               'expert is 1) as s1, '
-               ' (select sum(frequency) from cases '
-               '   where (bi, age, shape, margin, density, ?7, '
-               'expert) is (?1, ?2, ?3, ?4, ?5, ?6, 1) ) as f0, '
-               ' (select sum(frequency) from cases'
-               '   where (bi, age, shape, margin, density) is (?1, ?2, ?3, ?4, ?5) '
-               '  and ?7 in ({0}) and expert is 1) as f1'
-               .format(",".join(map(str, _s1))),
+                               '(select sum(frequency) from cases '
+                               'where ?7 in ({0}) and '
+                               'expert is 1) as s1, '
+                               ' (select sum(frequency) from cases '
+                               '   where ({1}, ?7, '
+                               'expert) is (?1, ?2, ?3, ?4, ?5, ?6, 1) ) as f0, '
+                               ' (select sum(frequency) from cases'
+                               '   where ({1}) is (?1, ?2, ?3, ?4, ?5) '
+                               '  and ?7 in ({0}) and expert is 1) as f1'
+               .format(",".join(map(str, _s1)), ','.join(ALL_FEATURES)),
                (obj['bi'], obj['age'], obj['shape'], obj['margin'], obj['density'], SOLUTION, str(_s0)))
     results = _c.fetchone()
     res = {'s0': 0 if results[0] is None else results[0],
@@ -72,8 +74,8 @@ def significance(obj):
     if they don't have the same solution
     """
     _c = S.cursor()
-    _c.execute('select distinct ? from cases where (bi, age, shape, margin, density, expert) '
-               'is (?, ?, ?, ?, ?, 1)',
+    _c.execute('select distinct ? from cases where ({0}, expert) '
+               'is (?, ?, ?, ?, ?, 1)'.format(','.join(ALL_FEATURES)),
                (SOLUTION, obj['bi'], obj['age'], obj['shape'], obj['margin'], obj['density']))
     results = _c.fetchall()
     if results and (obj[SOLUTION],) in results:
@@ -81,8 +83,8 @@ def significance(obj):
     elif results and (obj[SOLUTION],) not in results:
         signif = 0
     else:
-        _c.execute('select bi, age, shape, margin, density, ? '
-                   'from cases where expert is 1', (SOLUTION,))
+        _c.execute('select {0}, ? '
+                   'from cases where expert is 1'.format(','.join(ALL_FEATURES)), (SOLUTION,))
         results = _c.fetchall()
         max_similarity = 0
         similar_case = {}
@@ -114,3 +116,6 @@ def stochastic_validity(obj):
         return (randomness + signif) / 2
     else:
         return (frequency_ratio(obj) + randomness + signif) / 3
+
+
+frequency_ratio(DATA[0])
