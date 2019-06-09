@@ -239,4 +239,7 @@ class Weighting:
 # print(','.join(constants.ALL_FEATURES))
 # print(','.join(['?']*len(constants.ALL_FEATURES)))
 list2 = tuple('?'+str(x) for x in range(1, len(constants.ALL_FEATURES)+1))
-print(list2+('x', 'y'))
+obj = {'a':1, 'b': 2}
+print(obj)
+obj.append({'c': 3})
+print(obj)

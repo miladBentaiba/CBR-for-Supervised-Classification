@@ -29,7 +29,6 @@ def frequency_ratio(obj):
     return obj['frequency'] / results
 
 
-# TODO
 def randomness_ratio(obj):
     """
     _s0 * (f0 + f1)                                _s1 * f0
@@ -67,7 +66,6 @@ def randomness_ratio(obj):
     return randomness
 
 
-# TODO
 def significance(obj):
     """
     :param obj: the case
@@ -76,8 +74,8 @@ def significance(obj):
     """
     _c = S.cursor()
     _c.execute('select distinct ? from cases where ({0}, expert) '
-               'is (?, ?, ?, ?, ?, 1)'.format(','.join(ALL_FEATURES)),
-               (SOLUTION, obj['bi'], obj['age'], obj['shape'], obj['margin'], obj['density']))
+               'is ({1}, 1)'.format(','.join(ALL_FEATURES), ",".join(['?'] * len(ALL_FEATURES))),
+               (SOLUTION,) + tuple(obj[x] for x in ALL_FEATURES))
     results = _c.fetchall()
     if results and (obj[SOLUTION],) in results:
         signif = 1
@@ -90,9 +88,8 @@ def significance(obj):
         max_similarity = 0
         similar_case = {}
         for _case in results:
-            _rs = json.dumps({'bi': _case[0], 'age': _case[1], 'shape': _case[2],
-                              'margin': _case[3], 'density': _case[4],
-                              SOLUTION: _case[5]}, allow_nan=True)
+            _rs = json.dumps({ALL_FEATURES[x]: _case[x] for x in range(len(ALL_FEATURES))}
+                             .update({SOLUTION: _case[len(ALL_FEATURES)]}), allow_nan=True)
             sim = compare_cases(obj, json.loads(_rs), _weights)
             if sim > max_similarity:
                 max_similarity = sim
