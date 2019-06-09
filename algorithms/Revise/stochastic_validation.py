@@ -8,7 +8,6 @@ from constants import SOLUTION
 from constants import POSSIBLE_SOLUTIONS
 from constants import ALL_FEATURES
 from FeaturesWeights.features_weights import Weighting
-from FeaturesWeights.features_weights import DATA
 
 S = Singleton.get_instance()
 _weights = Weighting.get_instance()
@@ -114,6 +113,3 @@ def stochastic_validity(obj):
         return (randomness + signif) / 2
     else:
         return (frequency_ratio(obj) + randomness + signif) / 3
-
-
-frequency_ratio(DATA[0])

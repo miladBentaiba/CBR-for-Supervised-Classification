@@ -230,16 +230,3 @@ class Weighting:
                 Weighting.__instance = {}
                 for _x in results:
                     self.__instance[_x[0]] = _x[1]
-
-
-# w = Weighting(DATA)
-# print(features_weighting(DATA))
-# x = tuple(v for v in DATA[0].values())
-# print(x)
-# print(','.join(constants.ALL_FEATURES))
-# print(','.join(['?']*len(constants.ALL_FEATURES)))
-list2 = tuple('?'+str(x) for x in range(1, len(constants.ALL_FEATURES)+1))
-obj = {'a':1, 'b': 2}
-print(obj)
-obj.append({'c': 3})
-print(obj)

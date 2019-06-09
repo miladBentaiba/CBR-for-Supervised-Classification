@@ -9,7 +9,7 @@ from Retrieve.case_segment_similarity import get_level
 from features_weights import Weighting
 
 S = init.Singleton.get_instance()
-_weights = Weighting.get_instance()
+WEIGHTS = Weighting.get_instance()
 
 
 def create_segment(obj, iteration_number):
@@ -277,7 +277,7 @@ def segment_one(obj, iteration_number):
     structured_delegates = get_delegates_by_solution(obj[constants.SOLUTION])
     # save the case in only one segment (in its first level)
     for delegate in structured_delegates:
-        similarity = compare_case_delegate(obj, delegate['delegate'], _weights)
+        similarity = compare_case_delegate(obj, delegate['delegate'], WEIGHTS)
         if get_level(similarity) == 1:
             inserted_in_level_1 = True
             try:
@@ -315,7 +315,7 @@ def segment_all(obj_array, iteration_number):
                 i = 0
                 # iterate over segments
                 while i < len(new_delegates):
-                    similarity = compare_case_delegate(obj, new_delegates[i]['delegate'], _weights)
+                    similarity = compare_case_delegate(obj, new_delegates[i]['delegate'], WEIGHTS)
                     if get_level(similarity) == 1:
                         obj['segmented'] = True
                         new_delegate = insert_into_existing_segment(new_delegates[i],
