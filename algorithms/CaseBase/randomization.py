@@ -30,17 +30,18 @@ def features_interchanging(obj1, obj2):
         obj4[feature] = obj1[feature]
     if obj3 not in (obj1, obj2):
         obj3.pop('_id_case')
-        _c.execute('select count(*) from cases where ({0}, ?) is ({1})'.format(),
-                   (SOLUTION, obj3['bi'], obj3['age'], obj3['shape'], obj3['margin'], obj3['density'], obj3['severity']))
+        _c.execute('select count(*) from cases where ({0}, ?) is ({1})'
+                   .format(','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES))),
+                   (SOLUTION,) + tuple(obj3[x] for x in ALL_FEATURES) + (obj3[SOLUTION],))
         numb = _c.fetchone()[0]
         if numb == 0:
             new_cases.append(json.dumps(obj3))
 
     if obj4 not in (obj1, obj2, obj3):
         obj4.pop('_id_case')
-        _c.execute('select count(*) from cases where bi is ? and age is ? and shape is ? and margin is ?'
-                   ' and density is ? and severity is ?', (obj4['bi'], obj4['age'], obj4['shape'],
-                                                           obj4['margin'], obj4['density'], obj4['severity']))
+        _c.execute('select count(*) from cases where ({0}, ?) is ({1})'
+                   .format(','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES))),
+                   (SOLUTION,) + tuple(obj4[x] for x in ALL_FEATURES) + (obj4[SOLUTION],))
         numb = _c.fetchone()[0]
         if numb == 0:
             new_cases.append(json.dumps(obj4))
