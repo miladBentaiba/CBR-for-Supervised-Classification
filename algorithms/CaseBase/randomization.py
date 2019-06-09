@@ -66,11 +66,12 @@ def randomization(iteration_number):
         # for each level in the segment
         _c = S.cursor()
         # get all the cases
-        _c.execute('select cases._id_case, bi, age, shape, margin, density, severity '
+        _c.execute('select cases._id_case, {0}, ? '
                    ' from cases inner join cases_in_segment '
                    '             on (cases._id_case = cases_in_segment._id_case)'
-                   ' where cases_in_segment._id_segment = ? and level = 1',
-                   (_id_segment[0],))
+                   ' where cases_in_segment._id_segment = ? and level = 1'
+                   .format(','.join(ALL_FEATURES)),
+                   (SOLUTION, _id_segment[0],))
         cases = []
         # structure the query results in jsonArray
         for row in _c.fetchall():
