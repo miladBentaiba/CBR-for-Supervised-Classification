@@ -44,18 +44,19 @@ def randomness_ratio(obj):
     _s1.remove(obj[SOLUTION])
     _c = S.cursor()
     _c.execute('select (select sum(frequency) from cases where '
-               '' + SOLUTION + '=?6 and expert is 1) as s0,'
-                               '(select sum(frequency) from cases '
-                               'where ?7 in ({0}) and '
-                               'expert is 1) as s1, '
-                               ' (select sum(frequency) from cases '
-                               '   where ({1}, ?7, '
-                               'expert) is (?1, ?2, ?3, ?4, ?5, ?6, 1) ) as f0, '
-                               ' (select sum(frequency) from cases'
-                               '   where ({1}) is (?1, ?2, ?3, ?4, ?5) '
-                               '  and ?7 in ({0}) and expert is 1) as f1'
-               .format(",".join(map(str, _s1)), ','.join(ALL_FEATURES)),
-               (obj['bi'], obj['age'], obj['shape'], obj['margin'], obj['density'], SOLUTION, str(_s0)))
+               ' ' + SOLUTION + '=?1 and expert is 1) as s0,'
+                                '(select sum(frequency) from cases '
+                                'where ?2 in ({0}) and '
+                                'expert is 1) as s1, '
+                                ' (select sum(frequency) from cases '
+                                '   where ({1}, ?2, '
+                                'expert) is ({2}, ?1, 1) ) as f0, '
+                                ' (select sum(frequency) from cases '
+                                '   where ({1}) is ({2}) '
+                                '  and ?2 in ({0}) and expert is 1) as f1'
+               .format(",".join(map(str, _s1)), ",".join(ALL_FEATURES),
+                       ",".join(['?'] * len(ALL_FEATURES))),
+               (SOLUTION, str(_s0)) + tuple(obj[x] for x in ALL_FEATURES))
     results = _c.fetchone()
     res = {'s0': 0 if results[0] is None else results[0],
            's1': 0 if results[1] is None else results[1],
