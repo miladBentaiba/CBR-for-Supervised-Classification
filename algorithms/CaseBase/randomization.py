@@ -5,6 +5,7 @@ import json
 from FeaturesWeights.features_weights import Weighting
 import init
 from constants import ALL_FEATURES
+from constants import SOLUTION
 
 
 S = init.Singleton.get_instance()
@@ -17,21 +18,20 @@ def features_interchanging(obj1, obj2):
     :return: at most two generated cases by the most weighted features interchanging
     """
     _c = S.cursor()
-    ordered_features = order_features()
+    ordered_features = Weighting.order_features()
     new_cases = []
     # number of features to substitute is number_substitutions
     obj3 = dict(obj1)
     obj4 = dict(obj2)
-    number_substitutions = NUMBER_LEVELS - 1  # level
+    number_substitutions = len(ALL_FEATURES) - 1  # level
     for index in range(number_substitutions):
         feature = ordered_features[index]
         obj3[feature] = obj2[feature]
         obj4[feature] = obj1[feature]
     if obj3 not in (obj1, obj2):
         obj3.pop('_id_case')
-        _c.execute('select count(*) from cases where bi is ? and age is ? and shape is ? and margin is ?'
-                   ' and density is ? and severity is ?', (obj3['bi'], obj3['age'], obj3['shape'],
-                                                           obj3['margin'], obj3['density'], obj3['severity']))
+        _c.execute('select count(*) from cases where ({0}, ?) is ({1})'.format(),
+                   (SOLUTION, obj3['bi'], obj3['age'], obj3['shape'], obj3['margin'], obj3['density'], obj3['severity']))
         numb = _c.fetchone()[0]
         if numb == 0:
             new_cases.append(json.dumps(obj3))

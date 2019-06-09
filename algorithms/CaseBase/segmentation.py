@@ -3,7 +3,9 @@
 import sqlite3
 
 import init
-import constants
+from constants import SOLUTION
+from constants import ALL_FEATURES
+from constants import POSSIBLE_SOLUTIONS
 from Retrieve.case_segment_similarity import compare_case_delegate
 from Retrieve.case_segment_similarity import get_level
 from features_weights import Weighting
@@ -17,7 +19,7 @@ def create_segment(obj, iteration_number):
     # last_insert_rowid() means incremental value of _id_segment
     # create the segment first
     cur = S.cursor()
-    cur.execute('insert into segment (' + constants.SOLUTION + ') values (?)', (obj[constants.SOLUTION],))
+    cur.execute('insert into segment (?) values (?)', (SOLUTION, obj[SOLUTION]))
     # then, insert the case in the corresponding level of the segment
     # last_row_id means the last created segment
     _id_segment = cur.lastrowid
@@ -26,7 +28,7 @@ def create_segment(obj, iteration_number):
         '(?,?,?)', (obj['_id_case'], _id_segment, iteration_number))
     S.commit()
     _deg = {'_id_segment': _id_segment, 'delegate': {}}
-    for _x in constants.ALL_FEATURES:
+    for _x in ALL_FEATURES:
         if obj[_x] is not None:
             _deg['delegate'][_x] = [{'value': obj[_x], 'frequency': obj['frequency']}]
     return _deg
@@ -45,7 +47,7 @@ def insert_into_existing_segment(delegate, obj, iteration_number):
             delegate['_id_segment'], obj['_id_case'], iteration_number, 1))
     S.commit()
     # updating the delegate
-    for _x in constants.ALL_FEATURES:
+    for _x in ALL_FEATURES:
         # NOMINATIVE_FEATURES
         if _x[0] == 'c' and obj[_x] is not None:
             if _x not in delegate['delegate']:
@@ -83,12 +85,12 @@ def get_delegates_by_solution(solution):
     {'seg': 1, 'delegate': [{'feature': bi, 'value': 3, 'frequency': 4}, ...]}
     """
     _d = S.cursor()
-    _d.execute('select _id_segment from segment where ' + constants.SOLUTION + ' = ?', (solution,))
+    _d.execute('select _id_segment from segment where ? = ?', (SOLUTION, solution))
     all_id_segments = _d.fetchall()
     structured_delegates = []
     for _id_segment in all_id_segments:
         _r = []
-        for _x in constants.ALL_FEATURES:
+        for _x in ALL_FEATURES:
             if _x[0] == 'c':
                 _d.execute('select \'{0}\' as feature, {0} as value, '
                            '      sum(frequency) as frequency '
@@ -97,11 +99,11 @@ def get_delegates_by_solution(solution):
                            '  inner join segment '
                            '  on (cases_in_segment._id_segment = segment._id_segment) '
                            'where cases_in_segment.level = 1 '
-                           '  and segment.' + constants.SOLUTION + ' = ?1 '
-                                                                   '  and segment._id_segment = ?2 '
-                                                                   '  and {0} is not null '
-                                                                   'group by value '
-                           .format(_x), (solution, _id_segment[0]))
+                           '  and segment.{1} = ?1 '
+                           '  and segment._id_segment = ?2 '
+                           '  and {0} is not null '
+                           'group by value '
+                           .format(_x, SOLUTION), (solution, _id_segment[0]))
                 # _r is an array of the form {'feature': ,'value': , 'frequency': }
                 # related only one feature and _id_segment
                 for row in _d.fetchall():
@@ -115,7 +117,7 @@ def get_delegates_by_solution(solution):
             _deg.setdefault(row['feature'], []).append(dict(value=row['value'],
                                                             frequency=row['frequency']))
         _r2 = []
-        for _x in constants.ALL_FEATURES:
+        for _x in ALL_FEATURES:
             if _x[0] == 'n':
                 _d.execute('select \'{0}\' as feature, avg({0}) as value, '
                            '      sum(frequency) as frequency '
@@ -128,7 +130,7 @@ def get_delegates_by_solution(solution):
                            '  and segment._id_segment = ?2 '
                            '  and {0} is not null '
                            'group by segment._id_segment '
-                           .format(_x), (solution, _id_segment[0], constants.SOLUTION))
+                           .format(_x), (solution, _id_segment[0], SOLUTION))
         for row in _d.fetchall():
             _r2.append(dict((_d.description[i][0], value) for i, value in enumerate(row)))
         for row in _r2:
@@ -146,12 +148,12 @@ def get_delegates():
     {'seg': 1, 'delegate': [{'feature': bi, 'value': 3, 'frequency': 4}, ...]}
     """
     _d = S.cursor()
-    _d.execute('select _id_segment, ' + constants.SOLUTION + ' from segment')
+    _d.execute('select _id_segment, ' + SOLUTION + ' from segment')
     all_id_segments = _d.fetchall()
     structured_delegates = []
     for _id_segment in all_id_segments:
         _r = []
-        for _x in constants.ALL_FEATURES:
+        for _x in ALL_FEATURES:
             # NOMINATIVE_FEATURES
             if _x[0] == 'c':
                 _d.execute('select \'{0}\' as feature, {0} as value, '
@@ -178,7 +180,7 @@ def get_delegates():
             _deg.setdefault(row['feature'], []).append(dict(value=row['value'],
                                                             frequency=row['frequency']))
         _r2 = []
-        for _x in constants.ALL_FEATURES:
+        for _x in ALL_FEATURES:
             # quantitative features:
             if _x[0] == 'n':
                 _d.execute('select \'{0}\' as feature, avg({0}) as value, '
@@ -198,7 +200,7 @@ def get_delegates():
             _deg.setdefault(row['feature'], []).append(dict(value=row['value'],
                                                             frequency=row['frequency']))
         # seg is the final delegate that contains all the needed information
-        seg = {'_id_segment': _id_segment[0], 'delegate': _deg, constants.SOLUTION: _id_segment[1]}
+        seg = {'_id_segment': _id_segment[0], 'delegate': _deg, SOLUTION: _id_segment[1]}
         structured_delegates.append(seg)
     return structured_delegates
 
@@ -210,7 +212,7 @@ def get_delegate(_id_segment):
     """
     _r = []
     _d = S.cursor()
-    for _x in constants.ALL_FEATURES:
+    for _x in ALL_FEATURES:
         # nominative features
         if _x[0] == 'c':
             _d.execute('select \'{0}\' as feature, {0} as value, '
@@ -238,7 +240,7 @@ def get_delegate(_id_segment):
         _deg.setdefault(row['feature'], []).append(dict(value=row['value'],
                                                         frequency=row['frequency']))
     _r2 = []
-    for _x in constants.ALL_FEATURES:
+    for _x in ALL_FEATURES:
         # quantitative features
         if _x[0] == 'n':
             _d.execute('select \'{0}\' as feature, avg({0}) as value, '
@@ -274,7 +276,7 @@ def segment_one(obj, iteration_number):
     inserted_in_level_1 = False
     _c = S.cursor()
     # get delegates of all the concerned segments
-    structured_delegates = get_delegates_by_solution(obj[constants.SOLUTION])
+    structured_delegates = get_delegates_by_solution(obj[SOLUTION])
     # save the case in only one segment (in its first level)
     for delegate in structured_delegates:
         similarity = compare_case_delegate(obj, delegate['delegate'], WEIGHTS)
@@ -299,18 +301,18 @@ def segment_all(obj_array, iteration_number):
     segment for _it and store _it)
     """
     # TODO divide obj_array according to obj's solutions
-    for solutions in constants.POSSIBLE_SOLUTIONS:
+    for solutions in POSSIBLE_SOLUTIONS:
         # get delegates of all the concerned segments
         new_delegates = get_delegates_by_solution(solutions)
         for obj in obj_array:
             obj['segmented'] = False
             # if there is no segment
-            if obj[constants.SOLUTION] == solutions and not new_delegates:
+            if obj[SOLUTION] == solutions and not new_delegates:
                 print('_id_case', obj['_id_case'])
                 obj['segmented'] = True
                 new_delegate = create_segment(obj, iteration_number)
                 new_delegates.append(new_delegate)
-            elif obj[constants.SOLUTION] == solutions and new_delegates:
+            elif obj[SOLUTION] == solutions and new_delegates:
                 print('_id_case', obj['_id_case'])
                 i = 0
                 # iterate over segments
