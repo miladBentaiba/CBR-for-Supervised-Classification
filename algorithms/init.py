@@ -47,15 +47,6 @@ class Singleton:
                      "  feature text primary key not null, /* bi, age, shape, margin or density */"
                      "  weight integer not null /* its weight, maximum 1, minimum 0 */"
                      ");")
-        print("select sum(frequency) from cases where {0} is ({1}) limit 1"
-              .format(tuple(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES))))
-        obj = {"c_bi": 5, "n_age": 67, "c_shape": 3, "c_margin": 5, "c_density": 3,
-               "severity": 1, "frequency": 1}
-        _cur.execute("select sum(frequency) from cases where ({0}) is ({1}) limit 1"
-                     .format(','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES))),
-                     tuple(obj[x] for x in ALL_FEATURES))
-        results = _cur.fetchone()
-        print('res', results)
 
     @staticmethod
     def __close__():
