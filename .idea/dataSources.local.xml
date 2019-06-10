@@ -9,6 +9,26 @@
       <secret-storage>master_key</secret-storage>
       <auth-required>false</auth-required>
       <introspection-schemas>*:@</introspection-schemas>
+      <load-sources>user_sources</load-sources>
+    </data-source>
+    <data-source name="jdbc" uuid="be7bf398-d622-45c9-bf40-df20f7f1de4f">
+      <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1" exact-driver-version="3.25">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+      <introspection-schemas>*:@</introspection-schemas>
+      <load-sources>user_sources</load-sources>
+    </data-source>
+    <data-source name="mammography.db" uuid="84de2d54-f010-4432-812f-1e5f5c5e4179">
+      <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1" exact-driver-version="3.25">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+      <introspection-schemas>*:@</introspection-schemas>
     </data-source>
   </component>
 </project>

@@ -1,0 +1,29 @@
+{
+  "DATABASE": "mammography",
+  "ALL_FEATURES":[
+    "c_sex", "n_age", "n_time", "n_number_of_warts", "c_type", "c_area", "c_induration_diameter"
+  ],
+  "SOLUTION": "result_of_treatment",
+  "PROBABILITY_FEATURES":{
+    "c_sex":0.5,
+    "n_age":0.01,
+    "n_time":0.01 ,
+    "n_number_of_warts":0.05,
+    "c_type":0.334,
+    "c_area":0.2,
+    "c_induration_diameter": 0.01,
+    "result_of_treatment":0.5
+  },
+  "MAX_FEATURE":{
+    "n_age":56,
+    "n_time":12,
+    "n_number_of_warts":19,
+    "c_induration_diameter": 70
+  },
+  "MIN_FEATURE":{
+    "n_age":15,
+    "n_time":0,
+    "n_number_of_warts": 1,
+    "c_induration_diameter": 5
+  }
+}
