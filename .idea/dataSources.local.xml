@@ -29,6 +29,7 @@
       <secret-storage>master_key</secret-storage>
       <auth-required>false</auth-required>
       <introspection-schemas>*:@</introspection-schemas>
+      <load-sources>user_sources</load-sources>
     </data-source>
   </component>
 </project>
