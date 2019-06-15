@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/algorithms/CaseBase/randomization.py" dialect="SQLite" />
     <file url="file://$PROJECT_DIR$/algorithms/CaseBase/segmentation.py" dialect="SQLite" />
     <file url="file://$PROJECT_DIR$/algorithms/FeaturesWeights/features_weights.py" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/algorithms/I_NS_CB.py" dialect="SQLite" />
     <file url="file://$PROJECT_DIR$/algorithms/Revise/absolute_validation.py" dialect="SQLite" />
     <file url="file://$PROJECT_DIR$/algorithms/Revise/stochastic_validation.py" dialect="SQLite" />
     <file url="file://$PROJECT_DIR$/algorithms/Rule-Base/rules_generation.py" dialect="SQLite" />

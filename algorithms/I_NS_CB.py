@@ -5,13 +5,7 @@ from constants import SOLUTION
 import json
 from sqlite3 import OperationalError
 from random import shuffle
-
-
-from stochastic_validation import randomness_ratio
-from stochastic_validation import significance
-from rules_generation import rules_generation
-from rules_generation import validation_per_rules
-from segmentation import segment_all
+from constants import ALL_FEATURES
 
 import init
 
@@ -58,18 +52,17 @@ def insert_cases(_items):
     """
     items = [tuple(cas.values()) for cas in _items]
     _c = S.cursor()
-    _c.executemany("with new (bi, age, shape, margin, density, {0}, frequency, randomized,"
-                   " rule, expert) "
-                   "as (values (?, ?, ?, ?, ?, ?, 1, 0, 1, 1)) "
-                   "insert or replace into cases "
-                   "  (_id_case, bi, age, shape, margin, density, {0}, frequency, "
-                   "   randomness, significance, rule, expert, randomized) "
-                   "select old._id_case, new.bi, new.age, new.shape, new.margin, new.density, "
-                   "       new.{0}, old.frequency + 1, old.randomness, old.significance, "
+    new_all_features = ['new.' + x for x in ALL_FEATURES]
+    old_all_features = ['old.' + x for x in ALL_FEATURES]
+
+    _c.executemany("with new ({1}, {0}, frequency, randomized, rule, expert) as ( values ({2}, ? , 1, 0, 1, 1)) "
+                   "insert or replace into cases (_id_case, {1}, {0}, frequency, randomness, significance, rule, "
+                   "                              expert, randomized) "
+                   "select old._id_case, {3}, new.{0}, old.frequency + 1, old.randomness, old.significance, "
                    "       old.rule, new.expert, old.randomized "
-                   "from new left join cases as old on "
-                   " (new.c_bi, new.n_age, new.c_shape, new.c_margin, new.c_density, new.{0})"
-                   " is (old.c_bi, old.n_age, old.c_shape, old.c_margin, old.c_density, old.{0})".format(SOLUTION), items)
+                   "from new left join cases as old on ({3}, new.{0}) is ({4}, old.{0})"
+                   .format(SOLUTION, ','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)),
+                           ','.join(new_all_features), ','.join(old_all_features)), items)
     S.commit()
 
 
@@ -99,7 +92,7 @@ def upload_data():
                                        for i, value in enumerate(row)))
 
     # 2. rules generation
-    #rules_generation()
+    # rules_generation()
 
     # 3. calculate the stochastic and the absolute validity
     """for _it in dictionaries_cases:
@@ -137,7 +130,7 @@ def correction():
             _c.execute('update new_cases set frequency = frequency - 1 where _id_case is ? ', (_id_case[0],))
     S.commit()"""
 
-    _c.execute('select bi, age, shape, margin, density, {0} from new_cases'.format(SOLUTION))
+    _c.execute('select c_bi, n_age, c_shape, c_margin, c_density, {0} from new_cases'.format(SOLUTION))
     results = []
     for row in _c.fetchall():
         results.append(dict((_c.description[i][0], value)
@@ -145,7 +138,7 @@ def correction():
     for res in results:
         _c.execute('update cases set expert = 1 where (bi, age, shape, margin, density, {0}) is '
                    '(?, ?, ?, ?, ?, ?)'.format(SOLUTION), (res['bi'], res['age'], res['shape'], res['margin'],
-                                          res['density'], res[SOLUTION]))
+                                                           res['density'], res[SOLUTION]))
     S.commit()
 
 
