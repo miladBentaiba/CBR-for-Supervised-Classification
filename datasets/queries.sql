@@ -28,4 +28,14 @@ select sum(frequency) from cases where (c_bi, n_age, c_shape, c_margin, c_densit
                is (?, ?, ?, ?, ?) limit 1;
 
 select sum(frequency) from cases where (c_bi,n_age,c_shape,c_margin,c_density)
-                                           is (?, ?, ?, ?, ?) limit 1
+                                           is (?, ?, ?, ?, ?) limit 1;
+
+with new (c_bi, n_age, c_shape, c_margin, c_density, severity, frequency, randomized, rule, expert)
+    as (values (?, ?, ?, ?, ?, ?, 1, 0, 1, 1))
+insert or replace into cases (_id_case, c_bi, n_age, c_shape, c_margin, c_density, severity, frequency,
+                      randomness, significance, rule, expert, randomized)
+select old._id_case, new.c_bi, new.n_age, new.c_shape, new.c_margin, new.c_density, new.severity,
+       old.frequency + 1, old.randomness, old.significance, old.rule, new.expert, old.randomized
+                   from new left join cases as old on
+                       (new.c_bi, new.n_age, new.c_shape, new.c_margin, new.c_density, new.severity)
+                       is (old.c_bi, old.n_age, old.c_shape, old.c_margin, old.c_density, old.severity)

@@ -1,8 +1,8 @@
 """This module segments the cases into three parts solution / problem / level."""
 
 
-from constants import NUMBER_LEVELS
 from constants import PROBABILITY_FEATURES
+from constants import ALL_FEATURES
 
 
 def compare_case_delegate(obj, delegate, _weights):
@@ -54,10 +54,10 @@ def get_level(similarity):
     :param similarity: the similarity between  case and a delegate of a segment
     :return: the corresponding level
     """
-    level_length = round(1 / NUMBER_LEVELS, 2)
+    level_length = round(1 / len(ALL_FEATURES), 2)
     level_position = 1
     level = -1
-    for _x in range(1, NUMBER_LEVELS):
+    for _x in range(1, len(ALL_FEATURES)):
         level_position -= level_length
         level_position = round(level_position, 2)
         if similarity >= level_position:

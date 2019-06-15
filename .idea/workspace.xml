@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a194b26d-c31f-40f3-8bd0-1b2b4f83b541" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasets/immunotherapy/Immunotherapy.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasets/immunotherapy/immunotheray.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasets/mammographic-masses/mammographic.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasets/thyroid-disease/thyroid.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algorithms/I_NS_CB.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/I_NS_CB.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/Retrieve/case_segment_similarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/Retrieve/case_segment_similarity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/Revise/absolute_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/Revise/absolute_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/Rule-Base/rules_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/Rule-Base/rules_generation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/jdbc" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/jdbc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/queries.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +29,33 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="mammography.db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="mammography.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="mammography.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -38,50 +63,73 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datasets/thyroid-disease/constants.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="3" column="88" selection-start-line="3" selection-start-column="88" selection-end-line="3" selection-end-column="107" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/datasets/thyroid-disease/thyroid.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="1721" column="1" selection-start-line="1721" selection-start-column="1" selection-end-line="1721" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/I_NS_CB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2431">
-              <caret line="152" column="20" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="20" />
+            <state relative-caret-position="128">
+              <caret line="124" column="64" selection-start-line="124" selection-start-column="59" selection-end-line="124" selection-end-column="64" />
               <folding>
-                <element signature="e#60#71#0" expanded="true" />
+                <element signature="e#60#64#0" expanded="true" />
+                <element signature="e#443#533#0" />
+                <element signature="e#569#1296#0" />
+                <element signature="e#1329#2496#0" />
+                <element signature="e#2522#4149#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datasets/thyroid-disease/new-thyroid.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="-3076">
-              <caret line="15" column="21" lean-forward="true" selection-end-line="215" />
+        <entry file="file://$PROJECT_DIR$/algorithms/Rule-Base/rules_generation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="35" />
+              <folding>
+                <element signature="e#73#113#0" expanded="true" />
+              </folding>
             </state>
           </provider>
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
-              <column index="0" width="100" />
-              <column index="1" width="100" />
-              <column index="2" width="100" />
-              <column index="3" width="100" />
-              <column index="4" width="100" />
-              <column index="5" width="100" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/algorithms/Revise/absolute_validation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+              <folding>
+                <element signature="e#1#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/Revise/stochastic_validation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="24" column="50" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="50" />
+              <folding>
+                <element signature="e#68#79#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datasets/queries.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="40" column="103" selection-start-line="39" selection-start-column="23" selection-end-line="40" selection-end-column="103" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://be7bf398-d622-45c9-bf40-df20f7f1de4f/schema/main/table/cases">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="60426503-da75-4023-a9d7-d3c9e90376e0">
+              <filtering>
+                <filter text="" />
+              </filtering>
             </state>
           </provider>
         </entry>
@@ -105,13 +153,11 @@
       <find>severity</find>
       <find>{1}</find>
       <find>DATA</find>
-      <find>density</find>
       <find>frequency_ratio</find>
       <find>?</find>
       <find>_s0</find>
       <find>,</find>
       <find>S</find>
-      <find>bi</find>
       <find>order_features</find>
       <find>constants</find>
       <find>56</find>
@@ -119,14 +165,24 @@
       <find>22</find>
       <find>0.</find>
       <find>&quot;?&quot;</find>
+      <find>&quot;</find>
+      <find>bi</find>
+      <find>age</find>
+      <find>shape</find>
+      <find>margin</find>
+      <find>density</find>
+      <find>sever</find>
     </findStrings>
     <replaceStrings>
       <replace>pair[0]</replace>
       <replace>pair[1]</replace>
       <replace>severity</replace>
-      <replace>c_bi</replace>
-      <replace>c_density</replace>
       <replace>null</replace>
+      <replace>c_bi</replace>
+      <replace>n_age</replace>
+      <replace>c_shape</replace>
+      <replace>c_margin</replace>
+      <replace>c_density</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Milad\PycharmProjects\untitled</dir>
@@ -152,14 +208,12 @@
         <option value="$PROJECT_DIR$/algorithms/Reuse/reuse_from_case.py" />
         <option value="$PROJECT_DIR$/algorithms/Reuse/reuse_from_segment.py" />
         <option value="$PROJECT_DIR$/algorithms/Reuse/reuse_from_rules.py" />
-        <option value="$PROJECT_DIR$/algorithms/Revise/absolute_validation.py" />
         <option value="$PROJECT_DIR$/algorithms/Retain/retain_case.py" />
         <option value="$PROJECT_DIR$/algorithms/Revise/coherence_validation.py" />
         <option value="$PROJECT_DIR$/I_S_CB.py" />
         <option value="$PROJECT_DIR$/algorithms/R_S_CB.py" />
         <option value="$PROJECT_DIR$/algorithms/R_NS_CB.py" />
         <option value="$PROJECT_DIR$/venv/Scripts/transcrypt.exe.manifest" />
-        <option value="$PROJECT_DIR$/algorithms/Retrieve/case_segment_similarity.py" />
         <option value="$PROJECT_DIR$/CaseBase/segmentation.py" />
         <option value="$PROJECT_DIR$/__main__.py" />
         <option value="$PROJECT_DIR$/algorithms/__init__.py" />
@@ -174,21 +228,23 @@
         <option value="$PROJECT_DIR$/algorithms/constants.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/212b83d1-864c-454b-8a2c-7c143352b470/console_1.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0832c0bf-c9cf-477c-8850-7dc54676ebe5/console.sql" />
-        <option value="$PROJECT_DIR$/datasets/queries.sql" />
         <option value="$PROJECT_DIR$/algorithms/Revise/stochastic_validation.py" />
         <option value="$PROJECT_DIR$/algorithms/init.py" />
         <option value="$PROJECT_DIR$/algorithms/FeaturesWeights/features_weights.py" />
-        <option value="$PROJECT_DIR$/algorithms/Rule-Base/rules_generation.py" />
         <option value="$PROJECT_DIR$/algorithms/CaseBase/segmentation.py" />
         <option value="$PROJECT_DIR$/algorithms/CaseBase/randomization.py" />
         <option value="$PROJECT_DIR$/datasets/mammographic-masses/constants.json" />
         <option value="$PROJECT_DIR$/datasets/immunotherapy/constants.json" />
         <option value="$PROJECT_DIR$/datasets/immunotherapy/Immunotherapy.data" />
         <option value="$PROJECT_DIR$/datasets/thyroid-disease/constants.json" />
-        <option value="$PROJECT_DIR$/algorithms/I_NS_CB.py" />
         <option value="$PROJECT_DIR$/datasets/immunotherapy/immunotheray.json" />
         <option value="$PROJECT_DIR$/datasets/mammographic-masses/mammographic.json" />
         <option value="$PROJECT_DIR$/datasets/thyroid-disease/thyroid.json" />
+        <option value="$PROJECT_DIR$/datasets/queries.sql" />
+        <option value="$PROJECT_DIR$/algorithms/I_NS_CB.py" />
+        <option value="$PROJECT_DIR$/algorithms/Retrieve/case_segment_similarity.py" />
+        <option value="$PROJECT_DIR$/algorithms/Rule-Base/rules_generation.py" />
+        <option value="$PROJECT_DIR$/algorithms/Revise/absolute_validation.py" />
       </list>
     </option>
   </component>
@@ -219,6 +275,18 @@
             <path>
               <item name="CBR-for-Classification" type="b2602c69:ProjectViewProjectNode" />
               <item name="CBR" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="Revise" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CBR-for-Classification" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CBR" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="Rule-Base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CBR-for-Classification" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CBR" type="462c0819:PsiDirectoryNode" />
               <item name="datasets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -238,7 +306,7 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.console.LAST_STATE" value="false" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/datasets/immunotherapy" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -458,12 +526,12 @@
       <workItem from="1560022820595" duration="12973000" />
       <workItem from="1560090592619" duration="21814000" />
       <workItem from="1560204694871" duration="1844000" />
-      <workItem from="1560595057808" duration="5555000" />
+      <workItem from="1560595057808" duration="7373000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91968000" />
+    <option name="totallyTimeSpent" value="93786000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -476,7 +544,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18910742" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -492,9 +559,9 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5030257" side_tool="true" weight="0.31914893" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49546143" visible="true" weight="0.21603929" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49546143" weight="0.21603929" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3289689" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.3289689" />
+      <window_info anchor="bottom" id="Database Console" order="13" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" show_stripe_button="false" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -517,7 +584,6 @@
     <SUITE FILE_PATH="coverage/CBR_for_Classification$stochastic_validation.coverage" NAME="stochastic_validation Coverage Results" MODIFIED="1560099860740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/Revise" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Scripts/transcrypt-script.py" />
     <entry file="file://$PROJECT_DIR$/venv/Scripts/transcrypt.exe.manifest" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/mypy/typeshed/third_party/2and3/boto/__init__.pyi">
       <provider selected="true" editor-type-id="text-editor">
@@ -528,18 +594,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/Reuse/reuse_from_case.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/Retrieve/case_segment_similarity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#84#119#0" expanded="true" />
-            <element signature="e#221#1794#0" />
-            <element signature="e#1874#2314#0" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="uml://JavaScript-modules-diagram/C:/Users/Milad/PycharmProjects/untitled/algorithms/FeaturesWeights">
       <provider selected="true" editor-type-id="UmlEditorProvider">
@@ -605,16 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/Retrieve/cases_similarity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
-          <folding>
-            <element signature="e#79#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0832c0bf-c9cf-477c-8850-7dc54676ebe5/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -624,15 +668,6 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/be7bf398-d622-45c9-bf40-df20f7f1de4f/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://be7bf398-d622-45c9-bf40-df20f7f1de4f/schema/main/table/cases">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="acb61da2-0f52-4083-877b-54e32d77253b">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
     </entry>
     <entry file="das://be7bf398-d622-45c9-bf40-df20f7f1de4f/schema/main/table/weights">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -649,28 +684,12 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/84de2d54-f010-4432-812f-1e5f5c5e4179/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://84de2d54-f010-4432-812f-1e5f5c5e4179/schema/main/table/cases">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="acb61da2-0f52-4083-877b-54e32d77253b">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://84de2d54-f010-4432-812f-1e5f5c5e4179/schema/main/table/weights">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="acb61da2-0f52-4083-877b-54e32d77253b">
           <filtering>
             <filter text="" />
           </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/queries.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -684,9 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/Revise/absolute_validation.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/FeaturesWeights/features_weights.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-40">
@@ -696,32 +712,6 @@
             <element signature="e#182#3232#0" />
             <element signature="e#3269#3423#0" />
             <element signature="e#3269#4796#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/Rule-Base/rules_generation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="e#73#113#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/CaseBase/segmentation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="294" column="45" selection-start-line="294" selection-start-column="45" selection-end-line="294" selection-end-column="45" />
-          <folding>
-            <element signature="e#83#97#0" expanded="true" />
-            <element signature="e#1330#3690#0" />
-            <element signature="e#3738#7403#0" />
-            <element signature="e#7431#10844#0" />
-            <element signature="e#10882#13870#0" />
-            <element signature="e#13917#15098#0" />
-            <element signature="e#15151#17035#0" />
           </folding>
         </state>
       </provider>
@@ -741,16 +731,6 @@
             <element signature="e#70#81#0" expanded="true" />
             <element signature="e#298#1831#0" />
             <element signature="e#1796#3308#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/Revise/stochastic_validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1221">
-          <caret line="24" column="50" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="50" />
-          <folding>
-            <element signature="e#68#79#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -776,20 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/immunothrapy.names">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/constants.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="95" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/mammographic-masses/mammographic_masses.names">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -797,13 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="54" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/immunotheray.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1819">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -815,13 +774,6 @@
       </provider>
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/mammographic-masses/mammographic.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109843">
-          <caret line="6464" column="17" selection-start-line="6464" selection-start-column="17" selection-end-line="6464" selection-end-column="17" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datasets/mammographic-masses/mammographic_masses.data">
@@ -849,13 +801,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/I_NS_CB.py">
+    <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/constants.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2431">
-          <caret line="152" column="20" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="20" />
-          <folding>
-            <element signature="e#60#71#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" column="95" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/immunothrapy.names">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/immunotheray.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13291">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -866,10 +829,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/mammographic-masses/mammographic.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4162">
+          <caret line="6464" column="17" selection-start-line="6464" selection-start-column="17" selection-end-line="6464" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/thyroid-disease/thyroid.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="1721" column="1" selection-start-line="1721" selection-start-column="1" selection-end-line="1721" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/84de2d54-f010-4432-812f-1e5f5c5e4179/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://84de2d54-f010-4432-812f-1e5f5c5e4179/schema/main/table/cases">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="60426503-da75-4023-a9d7-d3c9e90376e0">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://be7bf398-d622-45c9-bf40-df20f7f1de4f/schema/main/table/cases">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="60426503-da75-4023-a9d7-d3c9e90376e0">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/queries.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="40" column="103" selection-start-line="39" selection-start-column="23" selection-end-line="40" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/CaseBase/segmentation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4692">
+          <caret line="294" column="45" selection-start-line="294" selection-start-column="45" selection-end-line="294" selection-end-column="45" />
+          <folding>
+            <element signature="e#83#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/Retrieve/case_segment_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="62" column="40" lean-forward="true" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+          <folding>
+            <element signature="e#84#126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/Retrieve/cases_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+          <folding>
+            <element signature="e#79#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/Revise/stochastic_validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="24" column="50" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="50" />
+          <folding>
+            <element signature="e#68#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/I_NS_CB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="124" column="64" selection-start-line="124" selection-start-column="59" selection-end-line="124" selection-end-column="64" />
+          <folding>
+            <element signature="e#60#64#0" expanded="true" />
+            <element signature="e#443#533#0" />
+            <element signature="e#569#1296#0" />
+            <element signature="e#1329#2496#0" />
+            <element signature="e#2522#4149#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/Rule-Base/rules_generation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="35" />
+          <folding>
+            <element signature="e#73#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/Revise/absolute_validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+          <folding>
+            <element signature="e#1#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

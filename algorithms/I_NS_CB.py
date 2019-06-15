@@ -1,5 +1,7 @@
 """This module uploads cases from file to the database."""
 
+from constants import SOLUTION
+
 import json
 from sqlite3 import OperationalError
 from random import shuffle
@@ -56,18 +58,18 @@ def insert_cases(_items):
     """
     items = [tuple(cas.values()) for cas in _items]
     _c = S.cursor()
-    _c.executemany("with new (bi, age, shape, margin, density, severity, frequency, randomized,"
+    _c.executemany("with new (bi, age, shape, margin, density, {0}, frequency, randomized,"
                    " rule, expert) "
                    "as (values (?, ?, ?, ?, ?, ?, 1, 0, 1, 1)) "
                    "insert or replace into cases "
-                   "  (_id_case, bi, age, shape, margin, density, severity, frequency, "
+                   "  (_id_case, bi, age, shape, margin, density, {0}, frequency, "
                    "   randomness, significance, rule, expert, randomized) "
                    "select old._id_case, new.bi, new.age, new.shape, new.margin, new.density, "
-                   "       new.severity, old.frequency + 1, old.randomness, old.significance, "
+                   "       new.{0}, old.frequency + 1, old.randomness, old.significance, "
                    "       old.rule, new.expert, old.randomized "
-                   "from new left join cases as old on new.bi = old.bi and new.age = old.age "
-                   "    and new.shape = old.shape and new.margin = old.margin and new.density "
-                   "    and old.density and new.severity = old.severity", items)
+                   "from new left join cases as old on "
+                   " (new.c_bi, new.n_age, new.c_shape, new.c_margin, new.c_density, new.{0})"
+                   " is (old.c_bi, old.n_age, old.c_shape, old.c_margin, old.c_density, old.{0})".format(SOLUTION), items)
     S.commit()
 
 
@@ -90,7 +92,7 @@ def upload_data():
     insert_cases(part_cases)
 
     # get all the inserted cases
-    _c.execute('select _id_case, bi, age, shape, margin, density, severity from cases', ())
+    _c.execute('select _id_case, bi, age, shape, margin, density, {0} from cases'.format(SOLUTION), ())
     dictionaries_cases = []
     for row in _c.fetchall():
         dictionaries_cases.append(dict((_c.description[i][0], value)
@@ -135,16 +137,15 @@ def correction():
             _c.execute('update new_cases set frequency = frequency - 1 where _id_case is ? ', (_id_case[0],))
     S.commit()"""
 
-    _c.execute('select bi, age, shape, margin, density, severity from new_cases')
+    _c.execute('select bi, age, shape, margin, density, {0} from new_cases'.format(SOLUTION))
     results = []
     for row in _c.fetchall():
         results.append(dict((_c.description[i][0], value)
                             for i, value in enumerate(row)))
     for res in results:
-        _c.execute('update cases set expert = 1 where bi is ? and age is ?'
-                   'and shape is ? and margin is ? and density is ? and severity is ?', (
-                       res['bi'], res['age'], res['shape'], res['margin'], res['density'], res['severity']
-                   ))
+        _c.execute('update cases set expert = 1 where (bi, age, shape, margin, density, {0}) is '
+                   '(?, ?, ?, ?, ?, ?)'.format(SOLUTION), (res['bi'], res['age'], res['shape'], res['margin'],
+                                          res['density'], res[SOLUTION]))
     S.commit()
 
 
