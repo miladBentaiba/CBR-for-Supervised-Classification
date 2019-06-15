@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a194b26d-c31f-40f3-8bd0-1b2b4f83b541" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/datasets/thyroid-disease/new-thyroid.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0832c0bf-c9cf-477c-8850-7dc54676ebe5.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasets/immunotherapy/Immunotherapy.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasets/immunotherapy/immunotheray.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasets/mammographic-masses/mammographic.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasets/thyroid-disease/thyroid.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/immunotherapy/Immunotherapy.data" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/immunotherapy/Immunotherapy.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/thyroid-disease/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/thyroid-disease/constants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/I_NS_CB.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/I_NS_CB.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,19 +37,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/datasets/thyroid-disease/constants.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+            <state relative-caret-position="33">
+              <caret line="3" column="88" selection-start-line="3" selection-start-column="88" selection-end-line="3" selection-end-column="107" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/datasets/thyroid-disease/thyroid.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="1721" column="1" selection-start-line="1721" selection-start-column="1" selection-end-line="1721" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/I_NS_CB.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2431">
+              <caret line="152" column="20" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="20" />
+              <folding>
+                <element signature="e#60#71#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/datasets/thyroid-disease/new-thyroid.csv">
-          <provider editor-type-id="csv-text-editor" />
-          <provider selected="true" editor-type-id="csv-table-editor">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="-3076">
+              <caret line="15" column="21" lean-forward="true" selection-end-line="215" />
+            </state>
+          </provider>
+          <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
               <column index="0" width="100" />
               <column index="1" width="100" />
@@ -56,15 +82,6 @@
               <column index="3" width="100" />
               <column index="4" width="100" />
               <column index="5" width="100" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datasets/thyroid-disease/new-thyroid.names">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="58" column="42" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -101,6 +118,7 @@
       <find>14</find>
       <find>22</find>
       <find>0.</find>
+      <find>&quot;?&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>pair[0]</replace>
@@ -108,6 +126,7 @@
       <replace>severity</replace>
       <replace>c_bi</replace>
       <replace>c_density</replace>
+      <replace>null</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Milad\PycharmProjects\untitled</dir>
@@ -136,7 +155,6 @@
         <option value="$PROJECT_DIR$/algorithms/Revise/absolute_validation.py" />
         <option value="$PROJECT_DIR$/algorithms/Retain/retain_case.py" />
         <option value="$PROJECT_DIR$/algorithms/Revise/coherence_validation.py" />
-        <option value="$PROJECT_DIR$/algorithms/I_NS_CB.py" />
         <option value="$PROJECT_DIR$/I_S_CB.py" />
         <option value="$PROJECT_DIR$/algorithms/R_S_CB.py" />
         <option value="$PROJECT_DIR$/algorithms/R_NS_CB.py" />
@@ -167,6 +185,10 @@
         <option value="$PROJECT_DIR$/datasets/immunotherapy/constants.json" />
         <option value="$PROJECT_DIR$/datasets/immunotherapy/Immunotherapy.data" />
         <option value="$PROJECT_DIR$/datasets/thyroid-disease/constants.json" />
+        <option value="$PROJECT_DIR$/algorithms/I_NS_CB.py" />
+        <option value="$PROJECT_DIR$/datasets/immunotherapy/immunotheray.json" />
+        <option value="$PROJECT_DIR$/datasets/mammographic-masses/mammographic.json" />
+        <option value="$PROJECT_DIR$/datasets/thyroid-disease/thyroid.json" />
       </list>
     </option>
   </component>
@@ -197,12 +219,6 @@
             <path>
               <item name="CBR-for-Classification" type="b2602c69:ProjectViewProjectNode" />
               <item name="CBR" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="CaseBase" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CBR-for-Classification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CBR" type="462c0819:PsiDirectoryNode" />
               <item name="datasets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -223,7 +239,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/datasets/thyroid-disease" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/datasets/immunotherapy" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -245,18 +261,18 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Milad\PycharmProjects\CBR\datasets\thyroid-disease" />
-      <recent name="C:\Users\Milad\PycharmProjects\CBR\experiments" />
-      <recent name="C:\Users\Milad\PycharmProjects\CBR\algorithms" />
-      <recent name="C:\Users\Milad\PycharmProjects\untitled\algorithms" />
-      <recent name="C:\Users\Milad\PycharmProjects\untitled\datasets\immunotherapy" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Milad\PycharmProjects\CBR\algorithms" />
       <recent name="C:\Users\Milad\PycharmProjects\untitled" />
       <recent name="C:\Users\Milad\PycharmProjects\untitled\algorithms\FeaturesWeights" />
       <recent name="C:\Users\Milad\PycharmProjects\untitled\algorithms\weights" />
+      <recent name="C:\Users\Milad\PycharmProjects\untitled\algorithms" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Milad\PycharmProjects\CBR\datasets\immunotherapy" />
+      <recent name="C:\Users\Milad\PycharmProjects\CBR\datasets\thyroid-disease" />
+      <recent name="C:\Users\Milad\PycharmProjects\CBR\experiments" />
+      <recent name="C:\Users\Milad\PycharmProjects\CBR\algorithms" />
       <recent name="C:\Users\Milad\PycharmProjects\untitled\algorithms" />
     </key>
   </component>
@@ -442,12 +458,12 @@
       <workItem from="1560022820595" duration="12973000" />
       <workItem from="1560090592619" duration="21814000" />
       <workItem from="1560204694871" duration="1844000" />
-      <workItem from="1560595057808" duration="2748000" />
+      <workItem from="1560595057808" duration="5555000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89161000" />
+    <option name="totallyTimeSpent" value="91968000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -476,7 +492,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5030257" side_tool="true" weight="0.31914893" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49546143" weight="0.21603929" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49546143" visible="true" weight="0.21603929" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3289689" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" show_stripe_button="false" weight="0.3289689" />
@@ -501,25 +517,6 @@
     <SUITE FILE_PATH="coverage/CBR_for_Classification$stochastic_validation.coverage" NAME="stochastic_validation Coverage Results" MODIFIED="1560099860740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/Revise" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/algorithms/Reuse/reuse_from_segment.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/Reuse/reuse_from_rules.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/I_NS_CB.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/I_S_CB.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/R_S_CB.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/R_NS_CB.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/Revise/coherence_validation.py" />
     <entry file="file://$PROJECT_DIR$/venv/Scripts/transcrypt-script.py" />
     <entry file="file://$PROJECT_DIR$/venv/Scripts/transcrypt.exe.manifest" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/mypy/typeshed/third_party/2and3/boto/__init__.pyi">
@@ -758,31 +755,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/mammographic-masses/constants.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/Immunotherapy.data">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1496">
           <caret line="88" column="19" lean-forward="true" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/immunothrapy.names">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/constants.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -800,10 +776,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/immunothrapy.names">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/constants.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="95" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/mammographic-masses/mammographic_masses.names">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/mammographic-masses/constants.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="54" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/immunotheray.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1819">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/immunotherapy/Immunotherapy.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/mammographic-masses/mammographic.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109843">
+          <caret line="6464" column="17" selection-start-line="6464" selection-start-column="17" selection-end-line="6464" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/mammographic-masses/mammographic_masses.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/thyroid-disease/new-thyroid.csv">
       <provider editor-type-id="text-editor" />
-      <provider editor-type-id="csv-text-editor" />
-      <provider selected="true" editor-type-id="csv-table-editor">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-3076">
+          <caret line="15" column="21" lean-forward="true" selection-end-line="215" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
           <column index="0" width="100" />
           <column index="1" width="100" />
@@ -814,10 +849,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/I_NS_CB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2431">
+          <caret line="152" column="20" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="20" />
+          <folding>
+            <element signature="e#60#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/thyroid-disease/constants.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        <state relative-caret-position="33">
+          <caret line="3" column="88" selection-start-line="3" selection-start-column="88" selection-end-line="3" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/thyroid-disease/thyroid.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="1721" column="1" selection-start-line="1721" selection-start-column="1" selection-end-line="1721" selection-end-column="1" />
         </state>
       </provider>
     </entry>
