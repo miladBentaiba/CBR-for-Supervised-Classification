@@ -48,6 +48,7 @@ def create_tables(filename):
             _c.execute(command)
         except OperationalError as msg:
             print("Command skipped: ", msg)
+    S.commit()
 
 
 def insert_cases(_items):
@@ -91,7 +92,6 @@ def upload_data(tables_file, data_file):
     all_cases = []
     for _it in read_json(data_file):
         all_cases.append(_it)
-        print(_it)
 
     # 1. insert cases in the cases table
     shuffle(all_cases)

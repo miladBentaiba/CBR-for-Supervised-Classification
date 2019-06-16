@@ -20,7 +20,7 @@ def create_segment(obj, iteration_number):
     # create the segment first
     cur = S.cursor()
     print('insert into segment (?) values (?)')
-    cur.execute('insert into segment (?) values (?)', (SOLUTION, obj[SOLUTION]))
+    cur.execute('insert into segment ({0}) values (?)'.format(SOLUTION), (obj[SOLUTION],))
     # then, insert the case in the corresponding level of the segment
     # last_row_id means the last created segment
     _id_segment = cur.lastrowid
@@ -383,12 +383,10 @@ def segment_all(obj_array, iteration_number):
             obj['segmented'] = False
             # if there is no segment
             if obj[SOLUTION] == solutions and not new_delegates:
-                print('_id_case', obj['_id_case'])
                 obj['segmented'] = True
                 new_delegate = create_segment(obj, iteration_number)
                 new_delegates.append(new_delegate)
             elif obj[SOLUTION] == solutions and new_delegates:
-                print('_id_case', obj['_id_case'])
                 i = 0
                 # iterate over segments
                 while i < len(new_delegates):

@@ -67,7 +67,7 @@ def randomness_ratio(obj):
                '   where ({1}) is ({2}) '
                '  and ?2 in ({0}) and expert is 1) as f1'
                .format(",".join(map(str, _s1)), ",".join(ALL_FEATURES),
-                       ",".join(['?'] * len(ALL_FEATURES)), SOLUTION),
+                       ",".join(['?'+str(x) for x in range(3, 8)]), SOLUTION),
                (SOLUTION, str(_s0)) + tuple(obj[x] for x in ALL_FEATURES))
     results = _c.fetchone()
     res = {'s0': 0 if results[0] is None else results[0],
