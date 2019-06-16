@@ -1,7 +1,6 @@
 """ This module compares two cases and returns the similarity between them"""
 
 import constants
-from FeaturesWeights.features_weights import DATA
 
 
 def compare_nominative(feature, value1, value2):
@@ -80,4 +79,4 @@ def compare_cases_initial(obj1, obj2):
     return similarity / weights_sum
 
 
-print(compare_cases_initial(DATA[0], DATA[2]))
+# print(compare_cases_initial(DATA[0], DATA[2]))

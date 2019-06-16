@@ -171,11 +171,11 @@ DATA = [
 ]
 
 
-def order_features(_weights):
+def order_features():
     """
     :return: return a list of features from the most weighted to the less weighted
     """
-    return sorted(_weights, key=_weights.get, reverse=True)
+    return sorted(Weighting.get_instance(), key=Weighting.get_instance().get, reverse=True)
 
 
 def features_weighting(data):
@@ -212,7 +212,11 @@ def features_weighting(data):
         if i < len(constants.ALL_FEATURES):
             weight[_x] = (weight[_x] - min_weight) / (max_weight - min_weight)
 
-    return order_features(weight)
+    _cur = S.cursor()
+    print(weight.items())
+    _cur.executemany('insert into weights (feature, weight) values(?, ?)', weight.items())
+    S.commit()
+    return weight
 
 
 class Weighting:
@@ -230,6 +234,7 @@ class Weighting:
         """ Virtually private constructor """
         if Weighting.__instance is None:
             _cur = S.cursor()
+            print('select feature, weight from weights')
             _cur.execute('select feature, weight from weights')
             results = _cur.fetchall()
             if not results:
@@ -239,6 +244,5 @@ class Weighting:
                 for _x in results:
                     self.__instance[_x[0]] = _x[1]
 
-    @staticmethod
-    def order_features():
-        return sorted(Weighting.__instance, key=Weighting.__instance.get, reverse=True)
+
+print(Weighting.get_instance())

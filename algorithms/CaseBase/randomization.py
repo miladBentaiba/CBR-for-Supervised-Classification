@@ -2,11 +2,10 @@
 
 import json
 
-from FeaturesWeights.features_weights import Weighting
+from features_weights import order_features
 import init
 from constants import ALL_FEATURES
 from constants import SOLUTION
-
 
 S = init.Singleton.get_instance()
 
@@ -18,7 +17,7 @@ def features_interchanging(obj1, obj2):
     :return: at most two generated cases by the most weighted features interchanging
     """
     _c = S.cursor()
-    ordered_features = Weighting.order_features()
+    ordered_features = order_features()
     new_cases = []
     # number of features to substitute is number_substitutions
     obj3 = dict(obj1)
@@ -30,6 +29,8 @@ def features_interchanging(obj1, obj2):
         obj4[feature] = obj1[feature]
     if obj3 not in (obj1, obj2):
         obj3.pop('_id_case')
+        print('select count(*) from cases where ({0}, ?) is ({1})'
+              .format(','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES))))
         _c.execute('select count(*) from cases where ({0}, ?) is ({1})'
                    .format(','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES))),
                    (SOLUTION,) + tuple(obj3[x] for x in ALL_FEATURES) + (obj3[SOLUTION],))
@@ -39,6 +40,8 @@ def features_interchanging(obj1, obj2):
 
     if obj4 not in (obj1, obj2, obj3):
         obj4.pop('_id_case')
+        print('select count(*) from cases where ({0}, ?) is ({1})'
+              .format(','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES))))
         _c.execute('select count(*) from cases where ({0}, ?) is ({1})'
                    .format(','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES))),
                    (SOLUTION,) + tuple(obj4[x] for x in ALL_FEATURES) + (obj4[SOLUTION],))
@@ -58,6 +61,7 @@ def randomization(iteration_number):
     print('[')
     # new_cases = []
     _d = S.cursor()
+    print('select distinct _id_segment from segment')
     _d.execute('select distinct _id_segment from segment')
     segments = _d.fetchall()
     # for each segment
@@ -66,6 +70,11 @@ def randomization(iteration_number):
         # for each level in the segment
         _c = S.cursor()
         # get all the cases
+        print('select cases._id_case, {0}, ? '
+              ' from cases inner join cases_in_segment '
+              '             on (cases._id_case = cases_in_segment._id_case)'
+              ' where cases_in_segment._id_segment = ? and level = 1'
+              .format(','.join(ALL_FEATURES)), (SOLUTION, _id_segment[0]))
         _c.execute('select cases._id_case, {0}, ? '
                    ' from cases inner join cases_in_segment '
                    '             on (cases._id_case = cases_in_segment._id_case)'

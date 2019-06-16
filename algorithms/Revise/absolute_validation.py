@@ -1,9 +1,10 @@
-
 from FeaturesWeights.features_weights import Weighting
 from constants import SOLUTION
+from features_weights import order_features
 import init
 
 S = init.Singleton.get_instance()
+_weights = Weighting.get_instance()
 
 
 def validation_per_rules(obj):
@@ -17,7 +18,7 @@ def validation_per_rules(obj):
     i = 0
     valid = None
     where_clause = ''
-    ordered_features = Weighting.order_features()
+    ordered_features = order_features()
     for feature in ordered_features:
         i += 1
         where_clause += ' and ' + feature + ' is ' + \
@@ -25,6 +26,8 @@ def validation_per_rules(obj):
         null_values = ''
         for j in range(i, len(ordered_features)):
             null_values += ' and ' + ordered_features[j] + ' is null'
+        print('select distinct ? from rules where 1 {0}{1}'
+              .format(where_clause, null_values))
         _c.execute('select distinct ? from rules where 1 {0}{1}'
                    .format(where_clause, null_values), (SOLUTION,))
         results = _c.fetchall()
