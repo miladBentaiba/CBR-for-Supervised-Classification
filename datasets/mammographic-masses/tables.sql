@@ -1,11 +1,11 @@
 CREATE TABLE IF NOT EXISTS cases
 (
     _id_case integer PRIMARY KEY AUTOINCREMENT,
-    bi int check (bi in (0,1,2,3,4,5,6)),
-    age int check (age <101),
-    shape int check(shape in (1,2,3,4)),
-    margin int check(margin in (1,2,3,4,5)),
-    density int check (density in (1,2,3,4)),
+    c_bi int check (c_bi in (0,1,2,3,4,5,6)),
+    n_age int check (n_age <101),
+    c_shape int check(c_shape in (1,2,3,4)),
+    c_margin int check(c_margin in (1,2,3,4,5)),
+    c_density int check (c_density in (1,2,3,4)),
     severity int check (severity in (0,1)), /* solution part */
     frequency int DEFAULT 1 NOT NULL, /* number of times the case exists*/
     randomness int DEFAULT null, /* a value used to calculate the stochastic validity */
@@ -14,12 +14,12 @@ CREATE TABLE IF NOT EXISTS cases
     expert boolean DEFAULT null, /* does the expert approved its validity? */
     randomized boolean not null default false,
     stochasticity int default null,
-    CONSTRAINT constraint_case UNIQUE (bi, age, shape, margin, density, severity)
+    CONSTRAINT constraint_case UNIQUE (c_bi, n_age, c_shape, c_margin, c_density, severity)
 );
 
 CREATE TABLE IF NOT EXISTS weights
 (
-  feature text primary key not null, /* bi, age, shape, margin or density */
+  feature text primary key not null, /* c_bi, n_age, c_shape, c_margin or c_density */
   weight integer not null /* its weight, maximum 1, minimum 0 */
 );
 
@@ -43,34 +43,34 @@ CREATE TABLE IF NOT EXISTS segment
 Create table IF NOT EXISTS rules
 (
   _id_rule integer primary key autoincrement not null,
-  bi int check (bi in (0,1,2,3,4,5,6)) default null,
-  age int check (age <101) default null,
-  shape int check(shape in (1,2,3,4)) default null,
-  margin int check(margin in (1,2,3,4,5)) default null,
-  density int check (density in (1,2,3,4)) default null,
+  c_bi int check (c_bi in (0,1,2,3,4,5,6)) default null,
+  n_age int check (n_age <101) default null,
+  c_shape int check(c_shape in (1,2,3,4)) default null,
+  c_margin int check(c_margin in (1,2,3,4,5)) default null,
+  c_density int check (c_density in (1,2,3,4)) default null,
   severity int check (severity in (0,1)) not null, /* solution */
-  CONSTRAINT constraint_rules_1 UNIQUE (bi, age, shape, margin, density)
+  CONSTRAINT constraint_rules_1 UNIQUE (c_bi, n_age, c_shape, c_margin, c_density)
 );
 
 CREATE TABLE IF NOT EXISTS test_cases
 (
     _id_case integer PRIMARY KEY AUTOINCREMENT,
-    bi int check (bi in (0,1,2,3,4,5,6)),
-    age int check (age <101),
-    shape int check(shape in (1,2,3,4)),
-    margin int check(margin in (1,2,3,4,5)),
-    density int check (density in (1,2,3,4)),
+    c_bi int check (c_bi in (0,1,2,3,4,5,6)),
+    n_age int check (n_age <101),
+    c_shape int check(c_shape in (1,2,3,4)),
+    c_margin int check(c_margin in (1,2,3,4,5)),
+    c_density int check (c_density in (1,2,3,4)),
     severity int check (severity in (0,1)) /* solution part */
 );
 
 CREATE TABLE IF NOT EXISTS new_cases
 (
     _id_case integer PRIMARY KEY AUTOINCREMENT,
-    bi int check (bi in (0,1,2,3,4,5,6)),
-    age int check (age <101),
-    shape int check(shape in (1,2,3,4)),
-    margin int check(margin in (1,2,3,4,5)),
-    density int check (density in (1,2,3,4)),
+    c_bi int check (c_bi in (0,1,2,3,4,5,6)),
+    n_age int check (n_age <101),
+    c_shape int check(c_shape in (1,2,3,4)),
+    c_margin int check(c_margin in (1,2,3,4,5)),
+    c_density int check (c_density in (1,2,3,4)),
     severity int check (severity in (0,1)), /* solution part */
     frequency int DEFAULT 1 NOT NULL, /* number of times the case exists*/
     randomness int DEFAULT null, /* a value used to calculate the stochastic validity */
@@ -78,5 +78,5 @@ CREATE TABLE IF NOT EXISTS new_cases
     rule boolean DEFAULT null, /* is it valid according to rules? */
     expert boolean DEFAULT null, /* does the expert approved its validity? */
     randomized boolean not null default false,
-    CONSTRAINT constraint_case UNIQUE (bi, age, shape, margin, density, severity)
+    CONSTRAINT constraint_case UNIQUE (c_bi, n_age, c_shape, c_margin, c_density, severity)
 );
