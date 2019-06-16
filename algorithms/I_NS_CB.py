@@ -6,6 +6,11 @@ import json
 from sqlite3 import OperationalError
 from random import shuffle
 from constants import ALL_FEATURES
+from rules_generation import rules_generation
+from stochastic_validation import randomness_ratio
+from stochastic_validation import significance
+from absolute_validation import validation_per_rules
+from segmentation import segment_all
 
 import init
 
@@ -66,17 +71,17 @@ def insert_cases(_items):
     S.commit()
 
 
-def upload_data():
+def upload_data(tables_file, data_file):
     """
     :return: upload data to cases table
     """
     # create tables in the database
     _c = S.cursor()
-    create_tables('../database/tables.sql')
+    create_tables('../database/' + tables_file)
 
     # read the json from file
     all_cases = []
-    for _it in read_json('../data/native.txt'):
+    for _it in read_json('../data/' + data_file):
         all_cases.append(_it)
 
     # 1. insert cases in the cases table
@@ -85,17 +90,17 @@ def upload_data():
     insert_cases(part_cases)
 
     # get all the inserted cases
-    _c.execute('select _id_case, bi, age, shape, margin, density, {0} from cases'.format(SOLUTION), ())
+    _c.execute('select _id_case, {1}, {0} from cases'.format(SOLUTION, ','.join(ALL_FEATURES)), ())
     dictionaries_cases = []
     for row in _c.fetchall():
         dictionaries_cases.append(dict((_c.description[i][0], value)
                                        for i, value in enumerate(row)))
 
     # 2. rules generation
-    # rules_generation()
+    rules_generation()
 
     # 3. calculate the stochastic and the absolute validity
-    """for _it in dictionaries_cases:
+    for _it in dictionaries_cases:
         # calculate the stochastic validity of the case
         _it['randomness'] = randomness_ratio(_it)
         _it['significance'] = significance(_it)
@@ -103,45 +108,41 @@ def upload_data():
         _e.execute('select frequency from cases where _id_case = ?', (_it['_id_case'],))
         _it['frequency'] = _e.fetchone()[0]
         _it['rule'] = validation_per_rules(_it)
-    segment_all(dictionaries_cases, 0)"""
+    segment_all(dictionaries_cases, 0)
 
-    """# update the stochastic and absolute validity of the case
+    # update the stochastic and absolute validity of the case
     items = [(cas['randomness'], cas['significance'], cas['rule'], cas['_id_case'])
              for cas in dictionaries_cases]
-    _c.executemany('update cases set randomness = ?1, significance = ?2, rule = ?3 '
-                   'where _id_case = ?4', items)"""
+    _c.executemany('update cases set randomness = ?, significance = ?, rule = ? where _id_case = ?', items)
     S.commit()
 
 
 def correction():
     _c = S.cursor()
-    """_c.execute('select bi, age, shape, margin, density, severity from test_cases')
+    _c.execute('select {0}, {1} from test_cases'.format(",".join(ALL_FEATURES), SOLUTION))
     results = []
     for row in _c.fetchall():
-        results.append(dict((_c.description[i][0], value)
-                                       for i, value in enumerate(row)))
+        results.append(dict((_c.description[i][0], value) for i, value in enumerate(row)))
     for res in results:
-        _c.execute('select _id_case from new_cases where bi is ? and age is ?'
-                   'and shape is ? and margin is ? and density is ? and severity is ?', (
-            res['bi'], res['age'], res['shape'], res['margin'], res['density'], res['severity']
-        ))
+        _c.execute('select _id_case from new_cases where ({0}, {1}) is ({2}, ?)'
+                   .format(",".join(ALL_FEATURES), SOLUTION, ','.join(['?'] * len(ALL_FEATURES))),
+                   (tuple(res[x] for x in ALL_FEATURES), res[SOLUTION]))
         _id_case = _c.fetchone()
         if _id_case is not None:
             _c.execute('update new_cases set frequency = frequency - 1 where _id_case is ? ', (_id_case[0],))
-    S.commit()"""
+    S.commit()
 
-    _c.execute('select c_bi, n_age, c_shape, c_margin, c_density, {0} from new_cases'.format(SOLUTION))
+    _c.execute('select {1}, {0} from new_cases'.format(SOLUTION, ",".join(ALL_FEATURES)))
     results = []
     for row in _c.fetchall():
         results.append(dict((_c.description[i][0], value)
                             for i, value in enumerate(row)))
     for res in results:
-        _c.execute('update cases set expert = 1 where (bi, age, shape, margin, density, {0}) is '
-                   '(?, ?, ?, ?, ?, ?)'.format(SOLUTION), (res['bi'], res['age'], res['shape'], res['margin'],
-                                                           res['density'], res[SOLUTION]))
+        _c.execute('update cases set expert = 1 where ({1}, {0}) is ({2}, ?)'
+                   .format(SOLUTION, ",".join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)),
+                           (tuple(res[x] for x in ALL_FEATURES), res[SOLUTION]) + res[SOLUTION]))
     S.commit()
 
-
 # correction()
-upload_data()
+# upload_data()
 # rules_generation()

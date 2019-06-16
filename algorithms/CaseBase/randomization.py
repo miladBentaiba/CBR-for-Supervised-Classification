@@ -70,8 +70,7 @@ def randomization(iteration_number):
                    ' from cases inner join cases_in_segment '
                    '             on (cases._id_case = cases_in_segment._id_case)'
                    ' where cases_in_segment._id_segment = ? and level = 1'
-                   .format(','.join(ALL_FEATURES)),
-                   (SOLUTION, _id_segment[0],))
+                   .format(','.join(ALL_FEATURES)), (SOLUTION, _id_segment[0]))
         cases = []
         # structure the query results in jsonArray
         for row in _c.fetchall():
