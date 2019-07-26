@@ -1,5 +1,21 @@
 """ This module contains the constants used in the project """
 
+import json
+
+CONST = {}
+data_file = "../datasets/mammographic-masses/mammographic.json"
+all_cases = []
+
+
+def read_json(url):
+    """parse json file into data"""
+    with open(url) as file:
+        return json.load(file)
+
+
+for _it in read_json(data_file):
+    all_cases.append(_it)
+
 DATABASE = 'mammography'
 
 ALL_FEATURES = ['c_bi', 'n_age', 'c_shape', 'c_margin', 'c_density']

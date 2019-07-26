@@ -1,0 +1,8 @@
+MCC
+https://en.wikipedia.org/wiki/Matthews_correlation_coefficient
+
+AUC (Area Under The Curve) ROC (Receiver Operating Characteristics) curve
+https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5
+
+change the AUC curve depending on the number of starting cases
+(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150,
