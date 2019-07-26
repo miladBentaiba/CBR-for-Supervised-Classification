@@ -97,3 +97,24 @@ select
                                                    is (?3,?4,?5,?6,?7) and ?2 in (0) and expert is 1) as f1;
 
 
+with new (c_bi,n_age,c_shape,c_margin,c_density, severity, frequency, randomized, rule, expert)
+    as ( values (5,49,4,5,3, 1 , 1, 0, null, 1))
+insert or replace into cases (_id_case, c_bi,n_age,c_shape,c_margin,c_density, severity,
+                              frequency, randomness, significance, rule, expert, randomized)
+select old._id_case, new.c_bi,new.n_age,new.c_shape,new.c_margin,new.c_density, new.severity,
+                              old.frequency + 1, old.randomness, old.significance, old.rule, new.expert,
+       old.randomized
+from new left join cases as old
+on (new.c_bi,new.n_age,new.c_shape,new.c_margin,new.c_density, new.severity)
+is (old.c_bi,old.n_age,old.c_shape,old.c_margin,old.c_density, old.severity);
+
+select distinct * from cases;
+
+with new (c_bi,n_age,c_shape,c_margin,c_density, severity, frequency, randomized, rule, expert)
+as ( values (55,46,4,3,3, 1 , 1, 0, null, 1))
+insert or replace into cases (_id_case, c_bi,n_age,c_shape,c_margin,c_density, severity, frequency, randomness,
+                              significance, rule, expert, randomized)
+select old._id_case, new.c_bi,new.n_age,new.c_shape,new.c_margin,new.c_density, new.severity, old.frequency + 1,
+       old.randomness, old.significance, old.rule, new.expert, old.randomized
+from new left join cases as old on (new.c_bi,new.n_age,new.c_shape,new.c_margin,new.c_density, new.severity)
+                                is (old.c_bi,old.n_age,old.c_shape,old.c_margin,old.c_density, old.severity) ;

@@ -56,7 +56,7 @@ def insert_cases(_items):
     _c = S.cursor()
     new_all_features = ['new.' + x for x in ALL_FEATURES]
     old_all_features = ['old.' + x for x in ALL_FEATURES]
-    print("with new ({1}, {0}, frequency, randomized, rule, expert) as ( values ({2}, ? , 1, 0, 1, 1)) "
+    print("with new ({1}, {0}, frequency, randomized, rule, expert) as ( values ({2}, ? , 1, 0, null, 1)) "
           "insert or replace into cases (_id_case, {1}, {0}, frequency, randomness, significance, rule, "
           "                              expert, randomized) "
           "select old._id_case, {3}, new.{0}, old.frequency + 1, old.randomness, old.significance, "
@@ -92,8 +92,8 @@ def upload_data(tables_file, data_file):
 
     # 1. insert cases in the cases table
     print("1. insert cases in the cases table")
-    shuffle(all_cases)
-    part_cases = all_cases[:50]
+    # shuffle(all_cases)
+    part_cases = all_cases#[:50]
     insert_cases(part_cases)
 
     # get all the inserted cases
