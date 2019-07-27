@@ -7,8 +7,8 @@ from sqlite3 import OperationalError
 from random import shuffle
 from constants import ALL_FEATURES
 
-
 import init
+
 S = init.Singleton.get_instance()
 
 
@@ -43,7 +43,9 @@ def create_tables(filename):
             _c.execute(command)
         except OperationalError as msg:
             print("Command skipped: ", msg)
+            return False
     S.commit()
+    return True
 
 
 def insert_cases(_items):
@@ -82,19 +84,20 @@ def upload_data(tables_file, data_file):
     # create tables in the database
     print("create tables in the database")
     _c = S.cursor()
-    create_tables(tables_file)
+    created = create_tables(tables_file)
+    if created:
+        # read the json from file
+        print("read the json from file")
+        all_cases = []
+        for _it in read_json(data_file):
+            all_cases.append(_it)
 
-    # read the json from file
-    print("read the json from file")
-    all_cases = []
-    for _it in read_json(data_file):
-        all_cases.append(_it)
-
-    # 1. insert cases in the cases table
-    print("1. insert cases in the cases table")
-    # shuffle(all_cases)
-    part_cases = all_cases#[:50]
-    insert_cases(part_cases)
+        # 1. insert cases in the cases table
+        print("1. insert cases in the cases table")
+        # shuffle(all_cases)
+        part_cases = all_cases  # [:50]
+        insert_cases(part_cases)
+        S.commit()
 
     # get all the inserted cases
     print("get all the inserted cases")
@@ -115,7 +118,8 @@ def upload_data(tables_file, data_file):
     from stochastic_validation import randomness_ratio
     from stochastic_validation import significance
     from absolute_validation import validation_per_rules
-    from segmentation import segment_all
+    from stochastic_validation import stochastic_validity
+
     for _it in dictionaries_cases:
         # calculate the stochastic validity of the case
         _it['randomness'] = randomness_ratio(_it)
@@ -124,15 +128,21 @@ def upload_data(tables_file, data_file):
         print('select frequency from cases where _id_case = ?')
         _e.execute('select frequency from cases where _id_case = ?', (_it['_id_case'],))
         _it['frequency'] = _e.fetchone()[0]
+        _it['stochasticity'] = stochastic_validity(_it)
         _it['rule'] = validation_per_rules(_it)
-    segment_all(dictionaries_cases, 0)
+
+    print("case-base segmentation")
+    from segmentation import segment_all
+    if created:
+        segment_all(dictionaries_cases, 0)
 
     # update the stochastic and absolute validity of the case
     print("update the stochastic and absolute validity of the case")
-    items = [(cas['randomness'], cas['significance'], cas['rule'], cas['_id_case'])
+    items = [(cas['randomness'], cas['significance'], cas['rule'], cas['stochasticity'], cas['_id_case'])
              for cas in dictionaries_cases]
-    print('update cases set randomness = ?, significance = ?, rule = ? where _id_case = ?')
-    _c.executemany('update cases set randomness = ?, significance = ?, rule = ? where _id_case = ?', items)
+    print('update cases set randomness = ?, significance = ?, rule = ?, stochasticity=? where _id_case = ?')
+    _c.executemany('update cases set randomness = ?, significance = ?, rule = ? , '
+                   ' stochasticity=? where _id_case = ?', items)
     S.commit()
 
 

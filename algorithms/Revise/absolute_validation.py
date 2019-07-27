@@ -37,8 +37,10 @@ def validation_per_rules(obj):
         elif len(results) == 1 and results[0][0] != obj[SOLUTION]:
             valid = False
             break
-        elif results:
+        elif results: # len(results) > 1
             valid = None
-        else:  # len(results) > 1
+            break
+        else:  # len(results) == 0
             valid = None
+            break
     return valid

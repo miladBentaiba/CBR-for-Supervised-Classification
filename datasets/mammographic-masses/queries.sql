@@ -118,3 +118,7 @@ select old._id_case, new.c_bi,new.n_age,new.c_shape,new.c_margin,new.c_density, 
        old.randomness, old.significance, old.rule, new.expert, old.randomized
 from new left join cases as old on (new.c_bi,new.n_age,new.c_shape,new.c_margin,new.c_density, new.severity)
                                 is (old.c_bi,old.n_age,old.c_shape,old.c_margin,old.c_density, old.severity) ;
+
+select sum(frequency) from cases;
+
+select * from cases where rule is false;

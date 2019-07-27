@@ -39,6 +39,7 @@ def randomness_ratio(obj):
     """
     _s0 = obj[SOLUTION]
     _s1 = POSSIBLE_SOLUTIONS.copy()
+    print("*************", _s0, _s1)
     # _s1 contains all other solutions except the solution of obj
     _s1.remove(obj[SOLUTION])
     _c = S.cursor()
@@ -87,10 +88,10 @@ def significance(obj):
     """
     _c = S.cursor()
     print('select distinct ? from cases where ({0}, expert) '
-          'is ({1}, 1)'.format(','.join(ALL_FEATURES), ",".join(['?'] * len(ALL_FEATURES))))
+          'is ({1}, 1)'.format(','.join(ALL_FEATURES), ",".join(['?'] * len(ALL_FEATURES))),  (obj[SOLUTION],) + tuple(obj[x] for x in ALL_FEATURES))
     _c.execute('select distinct ? from cases where ({0}, expert) '
                'is ({1}, 1)'.format(','.join(ALL_FEATURES), ",".join(['?'] * len(ALL_FEATURES))),
-               (SOLUTION,) + tuple(obj[x] for x in ALL_FEATURES))
+               (obj[SOLUTION],) + tuple(obj[x] for x in ALL_FEATURES))
     results = _c.fetchall()
     if results and (obj[SOLUTION],) in results:
         signif = 1

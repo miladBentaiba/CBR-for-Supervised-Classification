@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a194b26d-c31f-40f3-8bd0-1b2b4f83b541" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/212b83d1-864c-454b-8a2c-7c143352b470.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/84de2d54-f010-4432-812f-1e5f5c5e4179.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/be7bf398-d622-45c9-bf40-df20f7f1de4f.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c924f4f0-7722-427b-a018-78113d44b573.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algorithms/I_S_CB.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/I_S_CB.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/R_S_CB.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/R_S_CB.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/Revise/absolute_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/Revise/absolute_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/Revise/stochastic_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/Revise/stochastic_validation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algorithms/mammography.db" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/mammography.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/mammographic-masses/mammographic.json" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/mammographic-masses/mammographic.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/mammographic-masses/mammographic_masses.data" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/mammographic-masses/mammographic_masses.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datasets/mammographic-masses/queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/mammographic-masses/queries.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/mammographic-masses/tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/mammographic-masses/tables.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -314,7 +310,7 @@
       <workItem from="1560764934655" duration="3356000" />
       <workItem from="1563792272576" duration="6441000" />
       <workItem from="1564151744953" duration="257000" />
-      <workItem from="1564152539302" duration="1420000" />
+      <workItem from="1564152539302" duration="8616000" />
     </task>
     <servers />
   </component>
@@ -348,26 +344,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/algorithms/I_S_CB.py</url>
-          <line>82</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/algorithms/I_S_CB.py</url>
-          <line>83</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/algorithms/I_S_CB.py</url>
-          <line>84</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/algorithms/I_S_CB.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/algorithms/FeaturesWeights/features_weights.py</url>
           <line>236</line>
           <option name="timeStamp" value="6" />
@@ -376,21 +352,6 @@
           <url>file://$PROJECT_DIR$/algorithms/FeaturesWeights/features_weights.py</url>
           <line>237</line>
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/algorithms/I_S_CB.py</url>
-          <line>172</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/algorithms/I_S_CB.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/algorithms/I_S_CB.py</url>
-          <line>109</line>
-          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -403,6 +364,6 @@
     <SUITE FILE_PATH="coverage/CBR_for_Classification$features_weights.coverage" NAME="features_weights Coverage Results" MODIFIED="1560693043726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/FeaturesWeights" />
     <SUITE FILE_PATH="coverage/CBR_for_Classification$stochastic_validation.coverage" NAME="stochastic_validation Coverage Results" MODIFIED="1560099860740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/Revise" />
     <SUITE FILE_PATH="coverage/CBR_for_Classification$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1564139508654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms" />
-    <SUITE FILE_PATH="coverage/CBR_for_Classification$I_S_CB.coverage" NAME="I_S_CB Coverage Results" MODIFIED="1564153973222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms" />
+    <SUITE FILE_PATH="coverage/CBR_for_Classification$I_S_CB.coverage" NAME="I_S_CB Coverage Results" MODIFIED="1564233650835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS cases
+CREATE TABLE cases
 (
     _id_case integer PRIMARY KEY AUTOINCREMENT,
     c_bi int check (c_bi in (0,1,2,3,4,5,6)),
@@ -17,13 +17,13 @@ CREATE TABLE IF NOT EXISTS cases
     CONSTRAINT constraint_case UNIQUE (c_bi, n_age, c_shape, c_margin, c_density, severity)
 );
 
-CREATE TABLE IF NOT EXISTS weights
+CREATE TABLE weights
 (
   feature text primary key not null, /* c_bi, n_age, c_shape, c_margin or c_density */
   weight integer not null /* its weight, maximum 1, minimum 0 */
 );
 
-CREATE TABLE IF NOT EXISTS cases_in_segment
+CREATE TABLE cases_in_segment
 (
     _id integer PRIMARY KEY AUTOINCREMENT,
     _id_segment integer not null,
@@ -34,13 +34,13 @@ CREATE TABLE IF NOT EXISTS cases_in_segment
     FOREIGN KEY(_id_case) REFERENCES cases(_id_case)
 );
 
-CREATE TABLE IF NOT EXISTS segment
+CREATE TABLE segment
 (
     _id_segment integer PRIMARY KEY autoincrement not null,
     severity int NOT NULL check (severity in (0,1)) /* severity of the cases stored in the segment */
 );
 
-Create table IF NOT EXISTS rules
+Create table rules
 (
   _id_rule integer primary key autoincrement not null,
   c_bi int check (c_bi in (0,1,2,3,4,5,6)) default null,
@@ -52,7 +52,7 @@ Create table IF NOT EXISTS rules
   CONSTRAINT constraint_rules_1 UNIQUE (c_bi, n_age, c_shape, c_margin, c_density)
 );
 
-CREATE TABLE IF NOT EXISTS test_cases
+CREATE TABLE test_cases
 (
     _id_case integer PRIMARY KEY AUTOINCREMENT,
     c_bi int check (c_bi in (0,1,2,3,4,5,6)),
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS test_cases
     severity int check (severity in (0,1)) /* solution part */
 );
 
-CREATE TABLE IF NOT EXISTS new_cases
+CREATE TABLE new_cases
 (
     _id_case integer PRIMARY KEY AUTOINCREMENT,
     c_bi int check (c_bi in (0,1,2,3,4,5,6)),
