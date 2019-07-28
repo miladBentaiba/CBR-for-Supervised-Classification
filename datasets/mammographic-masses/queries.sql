@@ -122,3 +122,24 @@ from new left join cases as old on (new.c_bi,new.n_age,new.c_shape,new.c_margin,
 select sum(frequency) from cases;
 
 select * from cases where rule is false;
+
+select * from rules;
+
+select c_bi, c_margin, c_density, c_shape, n_age from rules where c_bi = 0;
+
+select distinct severity from rules
+where 1
+  and c_bi is 6
+  and c_margin is null
+  and c_density is null
+  and c_shape is null
+  and n_age is null;
+
+select distinct severity
+from rules
+where 1
+  and c_bi is 6
+  and c_margin is 5
+  and c_density is 3
+  and c_shape is 4
+  and n_age is null;

@@ -25,7 +25,6 @@ def frequency_ratio(obj):
                .format(','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES))),
                tuple(obj[x] for x in ALL_FEATURES))
     results = _c.fetchone()[0]
-    print(results)
     return obj['frequency'] / results
 
 
@@ -39,7 +38,6 @@ def randomness_ratio(obj):
     """
     _s0 = obj[SOLUTION]
     _s1 = POSSIBLE_SOLUTIONS.copy()
-    print("*************", _s0, _s1)
     # _s1 contains all other solutions except the solution of obj
     _s1.remove(obj[SOLUTION])
     _c = S.cursor()
