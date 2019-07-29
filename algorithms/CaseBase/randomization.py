@@ -20,6 +20,16 @@ def features_interchanging(obj1, obj2):
     ordered_features = order_features()
     new_cases = []
     # number of features to substitute is number_substitutions
+    try:
+        obj1.pop('_id_case')
+    except:
+        pass
+    try:
+        obj2.pop('_id_case')
+    except:
+        pass
+    # obj1.pop("_id_case")
+    # obj2.pop("_id_case")
     obj3 = dict(obj1)
     obj4 = dict(obj2)
     number_substitutions = len(ALL_FEATURES) - 1  # level
@@ -48,6 +58,11 @@ def features_interchanging(obj1, obj2):
         numb = _c.fetchone()[0]
         if numb == 0:
             new_cases.append(json.dumps(obj4))
+    # print("new_cases:", new_cases)
+    # print("old cases:", obj1)
+    # print("old cases:", obj2)
+    # print("old cases:", obj3)
+    # print("old cases:", obj4)
 
     return new_cases
 
@@ -98,3 +113,5 @@ def randomization():
                     # new_cases = new_cases + added
 
     print(']')
+
+# randomization()
