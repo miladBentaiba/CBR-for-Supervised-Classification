@@ -19,8 +19,8 @@ def frequency_ratio(obj):
     :return: ratio of the frequency of the case divided by the ratio of its problem part
     """
     _c = S.cursor()
-    print("select sum(frequency) from cases where ({0}) is ({1}) limit 1"
-          .format(','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES))))
+    # print("select sum(frequency) from cases where ({0}) is ({1}) limit 1"
+    #       .format(','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES))))
     _c.execute("select sum(frequency) from cases where ({0}) is ({1}) limit 1"
                .format(','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES))),
                tuple(obj[x] for x in ALL_FEATURES))
@@ -41,19 +41,19 @@ def randomness_ratio(obj):
     # _s1 contains all other solutions except the solution of obj
     _s1.remove(obj[SOLUTION])
     _c = S.cursor()
-    print('select (select sum(frequency) from cases where '
-          '{3}=?1 and expert is 1) as s0,'
-          '(select sum(frequency) from cases '
-          'where ?2 in ({0}) and '
-          'expert is 1) as s1, '
-          ' (select sum(frequency) from cases '
-          '   where ({1}, ?2, '
-          'expert) is ({2}, ?1, 1) ) as f0, '
-          ' (select sum(frequency) from cases '
-          '   where ({1}) is ({2}) '
-          '  and ?2 in ({0}) and expert is 1) as f1'
-          .format(",".join(map(str, _s1)), ",".join(ALL_FEATURES),
-                  ",".join(['?'] * len(ALL_FEATURES)), SOLUTION))
+    # print('select (select sum(frequency) from cases where '
+    #       '{3}=?1 and expert is 1) as s0,'
+    #       '(select sum(frequency) from cases '
+    #       'where ?2 in ({0}) and '
+    #       'expert is 1) as s1, '
+    #       ' (select sum(frequency) from cases '
+    #       '   where ({1}, ?2, '
+    #       'expert) is ({2}, ?1, 1) ) as f0, '
+    #       ' (select sum(frequency) from cases '
+    #       '   where ({1}) is ({2}) '
+    #       '  and ?2 in ({0}) and expert is 1) as f1'
+    #       .format(",".join(map(str, _s1)), ",".join(ALL_FEATURES),
+    #               ",".join(['?'] * len(ALL_FEATURES)), SOLUTION))
     _c.execute('select (select sum(frequency) from cases where '
                '{3}=?1 and expert is 1) as s0,'
                '(select sum(frequency) from cases '
@@ -85,8 +85,8 @@ def significance(obj):
     if they don't have the same solution
     """
     _c = S.cursor()
-    print('select distinct ? from cases where ({0}, expert) '
-          'is ({1}, 1)'.format(','.join(ALL_FEATURES), ",".join(['?'] * len(ALL_FEATURES))),  (obj[SOLUTION],) + tuple(obj[x] for x in ALL_FEATURES))
+    # print('select distinct ? from cases where ({0}, expert) '
+    #       'is ({1}, 1)'.format(','.join(ALL_FEATURES), ",".join(['?'] * len(ALL_FEATURES))),  (obj[SOLUTION],) + tuple(obj[x] for x in ALL_FEATURES))
     _c.execute('select distinct ? from cases where ({0}, expert) '
                'is ({1}, 1)'.format(','.join(ALL_FEATURES), ",".join(['?'] * len(ALL_FEATURES))),
                (obj[SOLUTION],) + tuple(obj[x] for x in ALL_FEATURES))
@@ -96,7 +96,7 @@ def significance(obj):
     elif results and (obj[SOLUTION],) not in results:
         signif = 0
     else:
-        print('select {0}, ? from cases where expert is 1'.format(','.join(ALL_FEATURES)))
+        # print('select {0}, ? from cases where expert is 1'.format(','.join(ALL_FEATURES)))
         _c.execute('select {0}, ? from cases where expert is 1'
                    .format(','.join(ALL_FEATURES)), (SOLUTION,))
         results = _c.fetchall()

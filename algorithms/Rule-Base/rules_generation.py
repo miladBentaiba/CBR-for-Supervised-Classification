@@ -23,15 +23,15 @@ def rules_generation():
         where_clause += ' and ' + feature + ' is not null'
         for solution in POSSIBLE_SOLUTIONS:
             columns = ",".join(column_list)
-            print("insert or ignore into rules ({0}, {2})"
-                  " select distinct {0}, {2} from"
-                  "  (select distinct {0}, {2} from cases"
-                  "  where ({0}) in ("
-                  "    select {0} from cases where expert = 1 and {2} = ?1)"
-                  "   and ({0}) not in ("
-                  "    select {0} from cases where expert = 1 and {2} <> ?1)"
-                  "  ) where 1 {1}"
-                  .format(columns, where_clause, SOLUTION), (solution,))
+            # print("insert or ignore into rules ({0}, {2})"
+            #       " select distinct {0}, {2} from"
+            #       "  (select distinct {0}, {2} from cases"
+            #       "  where ({0}) in ("
+            #       "    select {0} from cases where expert = 1 and {2} = ?1)"
+            #       "   and ({0}) not in ("
+            #       "    select {0} from cases where expert = 1 and {2} <> ?1)"
+            #       "  ) where 1 {1}"
+            #       .format(columns, where_clause, SOLUTION), (solution,))
             _c.execute("insert or ignore into rules ({0}, {2})"
                        " select distinct {0}, {2} from"
                        "  (select distinct {0}, {2} from cases"

@@ -213,7 +213,7 @@ def features_weighting(data):
             weight[_x] = (weight[_x] - min_weight) / (max_weight - min_weight)
 
     _cur = S.cursor()
-    print(weight.items())
+    # print(weight.items())
     _cur.executemany('insert into weights (feature, weight) values(?, ?)', weight.items())
     S.commit()
     return weight
@@ -234,7 +234,7 @@ class Weighting:
         """ Virtually private constructor """
         if Weighting.__instance is None:
             _cur = S.cursor()
-            print('select feature, weight from weights')
+            # print('select feature, weight from weights')
             _cur.execute('select feature, weight from weights')
             results = _cur.fetchall()
             if not results:
@@ -245,4 +245,4 @@ class Weighting:
                     self.__instance[_x[0]] = _x[1]
 
 
-print(Weighting.get_instance())
+# print(Weighting.get_instance())

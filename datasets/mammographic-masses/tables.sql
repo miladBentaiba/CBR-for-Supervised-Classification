@@ -78,5 +78,6 @@ CREATE TABLE new_cases
     rule boolean DEFAULT null, /* is it valid according to rules? */
     expert boolean DEFAULT null, /* does the expert approved its validity? */
     randomized boolean not null default false,
+    segmented boolean not null default false,
     CONSTRAINT constraint_case UNIQUE (c_bi, n_age, c_shape, c_margin, c_density, severity)
 );

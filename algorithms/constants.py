@@ -13,8 +13,8 @@ def read_json(url):
         return json.load(file)
 
 
-for _it in read_json(data_file):
-    all_cases.append(_it)
+# for _it in read_json(data_file):
+#     all_cases.append(_it)
 
 DATABASE = 'mammography'
 

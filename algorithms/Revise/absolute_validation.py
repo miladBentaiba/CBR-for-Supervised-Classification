@@ -25,8 +25,8 @@ def validation_per_rules(obj):
         null_values = ''
         for j in range(i, len(ordered_features)):
             null_values += ' and ' + ordered_features[j] + ' is null'
-        print('select distinct {2} from rules where 1 {0}{1}'
-              .format(where_clause, null_values, SOLUTION))
+        # print('select distinct {2} from rules where 1 {0}{1}'
+        #       .format(where_clause, null_values, SOLUTION))
         _c.execute('select distinct {2} from rules where 1 {0}{1}'
                    .format(where_clause, null_values, SOLUTION))
         results = _c.fetchall()

@@ -19,13 +19,12 @@ def create_segment(obj, iteration_number):
     # last_insert_rowid() means incremental value of _id_segment
     # create the segment first
     cur = S.cursor()
-    print('insert into segment (?) values (?)')
+    # print('insert into segment (?) values (?)')
     cur.execute('insert into segment ({0}) values (?)'.format(SOLUTION), (obj[SOLUTION],))
     # then, insert the case in the corresponding level of the segment
     # last_row_id means the last created segment
     _id_segment = cur.lastrowid
-    print('insert into cases_in_segment (_id_case, _id_segment, iteration) values '
-          '(?,?,?)')
+    # print('insert into cases_in_segment (_id_case, _id_segment, iteration) values (?,?,?)')
     cur.execute(
         'insert into cases_in_segment (_id_case, _id_segment, iteration) values '
         '(?,?,?)', (obj['_id_case'], _id_segment, iteration_number))
@@ -45,7 +44,7 @@ def insert_into_existing_segment(delegate, obj, iteration_number):
     :return: insert the case in the segment and return nothing
     """
     _c = S.cursor()
-    print('insert into cases_in_segment (_id_segment, _id_case, iteration, level) values (?,?,?,?)')
+    # print('insert into cases_in_segment (_id_segment, _id_case, iteration, level) values (?,?,?,?)')
     _c.execute(
         'insert into cases_in_segment (_id_segment, _id_case, iteration, level) values (?,?,?,?)', (
             delegate['_id_segment'], obj['_id_case'], iteration_number, 1))
@@ -89,7 +88,7 @@ def get_delegates_by_solution(solution):
     {'seg': 1, 'delegate': [{'feature': bi, 'value': 3, 'frequency': 4}, ...]}
     """
     _d = S.cursor()
-    print('select _id_segment from segment where ? = ?')
+    # print('select _id_segment from segment where ? = ?')
     _d.execute('select _id_segment from segment where ? = ?', (SOLUTION, solution))
     all_id_segments = _d.fetchall()
     structured_delegates = []
@@ -97,18 +96,18 @@ def get_delegates_by_solution(solution):
         _r = []
         for _x in ALL_FEATURES:
             if _x[0] == 'c':
-                print('select \'{0}\' as feature, {0} as value, '
-                      '      sum(frequency) as frequency '
-                      'from cases inner join cases_in_segment '
-                      '  on (cases._id_case = cases_in_segment._id_case) '
-                      '  inner join segment '
-                      '  on (cases_in_segment._id_segment = segment._id_segment) '
-                      'where cases_in_segment.level = 1 '
-                      '  and segment.{1} = ?1 '
-                      '  and segment._id_segment = ?2 '
-                      '  and {0} is not null '
-                      'group by value '
-                      .format(_x, SOLUTION), (solution, _id_segment[0]))
+                # print('select \'{0}\' as feature, {0} as value, '
+                #       '      sum(frequency) as frequency '
+                #       'from cases inner join cases_in_segment '
+                #       '  on (cases._id_case = cases_in_segment._id_case) '
+                #       '  inner join segment '
+                #       '  on (cases_in_segment._id_segment = segment._id_segment) '
+                #       'where cases_in_segment.level = 1 '
+                #       '  and segment.{1} = ?1 '
+                #       '  and segment._id_segment = ?2 '
+                #       '  and {0} is not null '
+                #       'group by value '
+                #       .format(_x, SOLUTION), (solution, _id_segment[0]))
                 _d.execute('select \'{0}\' as feature, {0} as value, '
                            '      sum(frequency) as frequency '
                            'from cases inner join cases_in_segment '
@@ -136,18 +135,18 @@ def get_delegates_by_solution(solution):
         _r2 = []
         for _x in ALL_FEATURES:
             if _x[0] == 'n':
-                print('select \'{0}\' as feature, avg({0}) as value, '
-                      '      sum(frequency) as frequency '
-                      'from cases inner join cases_in_segment '
-                      '  on (cases._id_case = cases_in_segment._id_case) '
-                      '  inner join segment '
-                      '  on (cases_in_segment._id_segment = segment._id_segment) '
-                      'where cases_in_segment.level = 1 '
-                      '  and segment.?3 = ?1 '
-                      '  and segment._id_segment = ?2 '
-                      '  and {0} is not null '
-                      'group by segment._id_segment '
-                      .format(_x))
+                # print('select \'{0}\' as feature, avg({0}) as value, '
+                #       '      sum(frequency) as frequency '
+                #       'from cases inner join cases_in_segment '
+                #       '  on (cases._id_case = cases_in_segment._id_case) '
+                #       '  inner join segment '
+                #       '  on (cases_in_segment._id_segment = segment._id_segment) '
+                #       'where cases_in_segment.level = 1 '
+                #       '  and segment.?3 = ?1 '
+                #       '  and segment._id_segment = ?2 '
+                #       '  and {0} is not null '
+                #       'group by segment._id_segment '
+                #       .format(_x))
                 _d.execute('select \'{0}\' as feature, avg({0}) as value, '
                            '      sum(frequency) as frequency '
                            'from cases inner join cases_in_segment '
@@ -177,7 +176,7 @@ def get_delegates():
     {'seg': 1, 'delegate': [{'feature': bi, 'value': 3, 'frequency': 4}, ...]}
     """
     _d = S.cursor()
-    print('select _id_segment, {0} from segment'.format(SOLUTION))
+    # print('select _id_segment, {0} from segment'.format(SOLUTION))
     _d.execute('select _id_segment, {0} from segment'.format(SOLUTION))
     all_id_segments = _d.fetchall()
     structured_delegates = []
@@ -186,17 +185,17 @@ def get_delegates():
         for _x in ALL_FEATURES:
             # NOMINATIVE_FEATURES
             if _x[0] == 'c':
-                print('select \'{0}\' as feature, {0} as value, '
-                      '      sum(frequency) as frequency '
-                      'from cases inner join cases_in_segment '
-                      '  on (cases._id_case = cases_in_segment._id_case) '
-                      '  inner join segment '
-                      '  on (cases_in_segment._id_segment = segment._id_segment) '
-                      'where cases_in_segment.level = 1 '
-                      '  and segment._id_segment = ? '
-                      '  and {0} is not null '
-                      'group by value '
-                      .format(_x), (_id_segment[0],))
+                # print('select \'{0}\' as feature, {0} as value, '
+                #       '      sum(frequency) as frequency '
+                #       'from cases inner join cases_in_segment '
+                #       '  on (cases._id_case = cases_in_segment._id_case) '
+                #       '  inner join segment '
+                #       '  on (cases_in_segment._id_segment = segment._id_segment) '
+                #       'where cases_in_segment.level = 1 '
+                #       '  and segment._id_segment = ? '
+                #       '  and {0} is not null '
+                #       'group by value '
+                #       .format(_x), (_id_segment[0],))
                 _d.execute('select \'{0}\' as feature, {0} as value, '
                            '      sum(frequency) as frequency '
                            'from cases inner join cases_in_segment '
@@ -224,17 +223,17 @@ def get_delegates():
         for _x in ALL_FEATURES:
             # quantitative features:
             if _x[0] == 'n':
-                print('select \'{0}\' as feature, avg({0}) as value, '
-                      '      sum(frequency) as frequency '
-                      'from cases inner join cases_in_segment '
-                      '  on (cases._id_case = cases_in_segment._id_case) '
-                      '  inner join segment '
-                      '  on (cases_in_segment._id_segment = segment._id_segment) '
-                      'where cases_in_segment.level = 1 '
-                      '  and segment._id_segment = ? '
-                      '  and {0} is not null '
-                      'group by segment._id_segment '
-                      .format(_x))
+                # print('select \'{0}\' as feature, avg({0}) as value, '
+                #       '      sum(frequency) as frequency '
+                #       'from cases inner join cases_in_segment '
+                #       '  on (cases._id_case = cases_in_segment._id_case) '
+                #       '  inner join segment '
+                #       '  on (cases_in_segment._id_segment = segment._id_segment) '
+                #       'where cases_in_segment.level = 1 '
+                #       '  and segment._id_segment = ? '
+                #       '  and {0} is not null '
+                #       'group by segment._id_segment '
+                #       .format(_x))
                 _d.execute('select \'{0}\' as feature, avg({0}) as value, '
                            '      sum(frequency) as frequency '
                            'from cases inner join cases_in_segment '
@@ -267,18 +266,18 @@ def get_delegate(_id_segment):
     for _x in ALL_FEATURES:
         # nominative features
         if _x[0] == 'c':
-            print('select \'{0}\' as feature, {0} as value, '
-                  '      sum(frequency) as frequency '
-                  'from cases inner join cases_in_segment '
-                  '  on (cases._id_case = cases_in_segment._id_case) '
-                  '  inner join segment '
-                  '  on (cases_in_segment._id_segment = segment._id_segment) '
-                  'where cases_in_segment.level = 1 '
-                  # '  and cases.stochasticity >= 1 '
-                  '  and segment._id_segment = ? '
-                  '  and {0} is not null '
-                  'group by value '
-                  .format(_x))
+            # print('select \'{0}\' as feature, {0} as value, '
+            #       '      sum(frequency) as frequency '
+            #       'from cases inner join cases_in_segment '
+            #       '  on (cases._id_case = cases_in_segment._id_case) '
+            #       '  inner join segment '
+            #       '  on (cases_in_segment._id_segment = segment._id_segment) '
+            #       'where cases_in_segment.level = 1 '
+            #       # '  and cases.stochasticity >= 1 '
+            #       '  and segment._id_segment = ? '
+            #       '  and {0} is not null '
+            #       'group by value '
+            #       .format(_x))
             _d.execute('select \'{0}\' as feature, {0} as value, '
                        '      sum(frequency) as frequency '
                        'from cases inner join cases_in_segment '
@@ -307,17 +306,17 @@ def get_delegate(_id_segment):
     for _x in ALL_FEATURES:
         # quantitative features
         if _x[0] == 'n':
-            print(('select \'{0}\' as feature, avg({0}) as value, '
-                   '      sum(frequency) as frequency '
-                   'from cases inner join cases_in_segment '
-                   '  on (cases._id_case = cases_in_segment._id_case) '
-                   '  inner join segment '
-                   '  on (cases_in_segment._id_segment = segment._id_segment) '
-                   'where cases_in_segment.level = 1 '
-                   '  and segment._id_segment = ? '
-                   '  and {0} is not null '
-                   'group by segment._id_segment '
-                   .format(_x)))
+            # print(('select \'{0}\' as feature, avg({0}) as value, '
+            #        '      sum(frequency) as frequency '
+            #        'from cases inner join cases_in_segment '
+            #        '  on (cases._id_case = cases_in_segment._id_case) '
+            #        '  inner join segment '
+            #        '  on (cases_in_segment._id_segment = segment._id_segment) '
+            #        'where cases_in_segment.level = 1 '
+            #        '  and segment._id_segment = ? '
+            #        '  and {0} is not null '
+            #        'group by segment._id_segment '
+            #        .format(_x)))
             _d.execute('select \'{0}\' as feature, avg({0}) as value, '
                        '      sum(frequency) as frequency '
                        'from cases inner join cases_in_segment '
