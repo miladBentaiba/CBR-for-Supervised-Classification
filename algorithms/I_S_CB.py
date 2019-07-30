@@ -58,14 +58,14 @@ def insert_cases(_items):
     _c = S.cursor()
     new_all_features = ['new.' + x for x in ALL_FEATURES]
     old_all_features = ['old.' + x for x in ALL_FEATURES]
-    print("with new ({1}, {0}, frequency, randomized, rule, expert) as ( values ({2}, ? , 1, 0, null, 1)) "
-          "insert or replace into cases (_id_case, {1}, {0}, frequency, randomness, significance, rule, "
-          "                              expert, randomized) "
-          "select old._id_case, {3}, new.{0}, old.frequency + 1, old.randomness, old.significance, "
-          "       old.rule, new.expert, old.randomized "
-          "from new left join cases as old on ({3}, new.{0}) is ({4}, old.{0})"
-          .format(SOLUTION, ','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)),
-                  ','.join(new_all_features), ','.join(old_all_features)), items)
+    # print("with new ({1}, {0}, frequency, randomized, rule, expert) as ( values ({2}, ? , 1, 0, null, 1)) "
+    #       "insert or replace into cases (_id_case, {1}, {0}, frequency, randomness, significance, rule, "
+    #       "                              expert, randomized) "
+    #       "select old._id_case, {3}, new.{0}, old.frequency + 1, old.randomness, old.significance, "
+    #       "       old.rule, new.expert, old.randomized "
+    #       "from new left join cases as old on ({3}, new.{0}) is ({4}, old.{0})"
+    #       .format(SOLUTION, ','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)),
+    #               ','.join(new_all_features), ','.join(old_all_features)), items)
     _c.executemany("with new ({1}, {0}, frequency, randomized, rule, expert) as ( values ({2}, ? , 1, 0, 1, 1)) "
                    "insert or replace into cases (_id_case, {1}, {0}, frequency, randomness, significance, rule, "
                    "                              expert, randomized) "
@@ -133,8 +133,7 @@ def upload_data(tables_file, data_file):
 
     # print("case-base segmentation")
     from segmentation import segment_all
-    if created:
-        segment_all(dictionaries_cases, 0)
+
 
     # update the stochastic and absolute validity of the case
     # print("update the stochastic and absolute validity of the case")
@@ -144,6 +143,19 @@ def upload_data(tables_file, data_file):
     _c.executemany('update cases set randomness = ?, significance = ?, rule = ? , '
                    ' stochasticity=? where _id_case = ?', items)
     S.commit()
+    if created:
+        print("segmentation")
+        _c.execute('select _id_case, {1}, {0}, randomness, significance, frequency,'
+                   ' stochasticity, rule from cases where segmented = 0'
+                   .format(SOLUTION, ','.join(ALL_FEATURES)), ())
+        dictionaries_cases = []
+        for row in _c.fetchall():
+            dictionaries_cases.append(dict((_c.description[i][0], value)
+                                           for i, value in enumerate(row)))
+        print(len(dictionaries_cases))
+        segment_all(dictionaries_cases, 0)
+        _c.execute('update cases set segmented = 1')
+        S.commit()
 
 
 def correction():
@@ -180,9 +192,18 @@ def correction():
 
 
 # correction()
-upload_data('../datasets/mammographic-masses/tables.sql',
-            '../datasets/mammographic-masses/mammographic.json')
-# rules_generation()
-
-# from randomization import randomization
-# randomization()
+# upload_data('../datasets/mammographic-masses/tables.sql',
+#             '../datasets/mammographic-masses/mammographic.json')
+_c = S.cursor()
+_c.execute('select _id_case, {1}, {0}, randomness, significance, frequency,'
+           ' stochasticity, rule from cases where segmented = 0'
+                   .format(SOLUTION, ','.join(ALL_FEATURES)), ())
+dictionaries_cases = []
+for row in _c.fetchall():
+    dictionaries_cases.append(dict((_c.description[i][0], value)
+                                   for i, value in enumerate(row)))
+print(len(dictionaries_cases))
+from segmentation import segment_all
+segment_all(dictionaries_cases, 0)
+_c.execute('update cases set segmented = 1')
+S.commit()

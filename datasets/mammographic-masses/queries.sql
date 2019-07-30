@@ -143,3 +143,11 @@ where 1
   and c_density is 3
   and c_shape is 4
   and n_age is null;
+
+update cases set randomized = false;
+
+update cases set segmented = 0;
+
+select * from cases where segmented is false;
+
+select * from cases where segmented = 1

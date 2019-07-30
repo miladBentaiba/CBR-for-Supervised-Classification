@@ -14,6 +14,7 @@ CREATE TABLE cases
     expert boolean DEFAULT null, /* does the expert approved its validity? */
     randomized boolean not null default false,
     stochasticity int default null,
+    segmented boolean not null default false,
     CONSTRAINT constraint_case UNIQUE (c_bi, n_age, c_shape, c_margin, c_density, severity)
 );
 

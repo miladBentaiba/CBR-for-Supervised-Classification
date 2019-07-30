@@ -28,8 +28,6 @@ def features_interchanging(obj1, obj2):
         obj2.pop('_id_case')
     except:
         pass
-    # obj1.pop("_id_case")
-    # obj2.pop("_id_case")
     obj3 = dict(obj1)
     obj4 = dict(obj2)
     number_substitutions = len(ALL_FEATURES) - 1  # level
@@ -42,8 +40,8 @@ def features_interchanging(obj1, obj2):
         #       .format(','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)), SOLUTION),
         #       tuple(obj3[x] for x in ALL_FEATURES) + (obj3[SOLUTION],))
         _c.execute('select count(*) from cases where ({0}, {2}) is ({1}, ?)'
-              .format(','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)), SOLUTION),
-              tuple(obj3[x] for x in ALL_FEATURES) + (obj3[SOLUTION],))
+                   .format(','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)), SOLUTION),
+                   tuple(obj3[x] for x in ALL_FEATURES) + (obj3[SOLUTION],))
         numb = _c.fetchone()[0]
         if numb == 0:
             new_cases.append(json.dumps(obj3))
@@ -58,12 +56,6 @@ def features_interchanging(obj1, obj2):
         numb = _c.fetchone()[0]
         if numb == 0:
             new_cases.append(json.dumps(obj4))
-    # print("new_cases:", new_cases)
-    # print("old cases:", obj1)
-    # print("old cases:", obj2)
-    # print("old cases:", obj3)
-    # print("old cases:", obj4)
-
     return new_cases
 
 
@@ -87,12 +79,12 @@ def randomization():
         # print('select cases._id_case, {0}, {1} '
         #       ' from cases inner join cases_in_segment '
         #       '             on (cases._id_case = cases_in_segment._id_case)'
-        #       ' where cases_in_segment._id_segment = ? and level = 1'
+        #       ' where cases_in_segment._id_segment = ? and level = 1 and cases.randomized is false'
         #       .format(','.join(ALL_FEATURES), SOLUTION), (_id_segment[0],))
         _c.execute('select cases._id_case, {0}, {1} '
                    ' from cases inner join cases_in_segment '
                    '             on (cases._id_case = cases_in_segment._id_case)'
-                   ' where cases_in_segment._id_segment = ? and level = 1'
+                   ' where cases_in_segment._id_segment = ? and level = 1 and cases.randomized is false'
                    .format(','.join(ALL_FEATURES), SOLUTION), (_id_segment[0],))
         cases = []
         # structure the query results in jsonArray
@@ -113,5 +105,5 @@ def randomization():
                     # new_cases = new_cases + added
 
     print(']')
-
-# randomization()
+    # _d.execute('update cases set randomized = 1')
+    # S.commit()
