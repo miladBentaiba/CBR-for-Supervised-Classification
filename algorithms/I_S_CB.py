@@ -130,10 +130,9 @@ def upload_data(tables_file, data_file):
         _it['frequency'] = _e.fetchone()[0]
         _it['stochasticity'] = stochastic_validity(_it)
         _it['rule'] = validation_per_rules(_it)
-
+    S.commit()
     # print("case-base segmentation")
     from segmentation import segment_all
-
 
     # update the stochastic and absolute validity of the case
     # print("update the stochastic and absolute validity of the case")
@@ -143,19 +142,22 @@ def upload_data(tables_file, data_file):
     _c.executemany('update cases set randomness = ?, significance = ?, rule = ? , '
                    ' stochasticity=? where _id_case = ?', items)
     S.commit()
-    if created:
-        print("segmentation")
-        _c.execute('select _id_case, {1}, {0}, randomness, significance, frequency,'
-                   ' stochasticity, rule from cases where segmented = 0'
-                   .format(SOLUTION, ','.join(ALL_FEATURES)), ())
-        dictionaries_cases = []
-        for row in _c.fetchall():
-            dictionaries_cases.append(dict((_c.description[i][0], value)
-                                           for i, value in enumerate(row)))
-        print(len(dictionaries_cases))
-        segment_all(dictionaries_cases, 0)
-        _c.execute('update cases set segmented = 1')
-        S.commit()
+
+
+    print("segmentation")
+    _c.execute('select _id_case, segmented from cases')
+    print(_c.fetchall())
+    _c.execute('select _id_case, {1}, {0}, randomness, significance, frequency,'
+               ' stochasticity, rule from cases where segmented = "false"'
+               .format(SOLUTION, ','.join(ALL_FEATURES)), ())
+    dictionaries_cases = []
+    for row in _c.fetchall():
+        dictionaries_cases.append(dict((_c.description[i][0], value)
+                                       for i, value in enumerate(row)))
+    print(len(dictionaries_cases))
+    segment_all(dictionaries_cases, 0)
+    _c.execute('update cases set segmented = "true"')
+    S.commit()
 
 
 def correction():
@@ -191,19 +193,5 @@ def correction():
     S.commit()
 
 
-# correction()
-# upload_data('../datasets/mammographic-masses/tables.sql',
-#             '../datasets/mammographic-masses/mammographic.json')
-_c = S.cursor()
-_c.execute('select _id_case, {1}, {0}, randomness, significance, frequency,'
-           ' stochasticity, rule from cases where segmented = 0'
-                   .format(SOLUTION, ','.join(ALL_FEATURES)), ())
-dictionaries_cases = []
-for row in _c.fetchall():
-    dictionaries_cases.append(dict((_c.description[i][0], value)
-                                   for i, value in enumerate(row)))
-print(len(dictionaries_cases))
-from segmentation import segment_all
-segment_all(dictionaries_cases, 0)
-_c.execute('update cases set segmented = 1')
-S.commit()
+upload_data('../datasets/mammographic-masses/tables.sql',
+            '../datasets/mammographic-masses/mammographic.json')
