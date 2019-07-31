@@ -1,7 +1,7 @@
 """ This module allows for rule generation using fully valid cases """
 
-from constants import POSSIBLE_SOLUTIONS
-from constants import SOLUTION
+from constantsMammographicMasses import POSSIBLE_SOLUTIONS
+from constantsMammographicMasses import SOLUTION
 from FeaturesWeights.features_weights import Weighting
 from features_weights import order_features
 import init

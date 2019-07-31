@@ -2,7 +2,7 @@
 import init
 from itertools import combinations
 
-import constants
+import constantsMammographicMasses
 
 S = init.Singleton.get_instance()
 DATA = [
@@ -184,12 +184,12 @@ def features_weighting(data):
     """
     weight = {}
     # initiate the weights to 0
-    for _x, f in enumerate(constants.ALL_FEATURES):
+    for _x, f in enumerate(constantsMammographicMasses.ALL_FEATURES):
         weight[list(data[0].keys())[_x]] = 0
     # calculate the weights using all possible pairs
     for pair in list(combinations(data, 2)):
-        comparator = 1 if pair[0][constants.SOLUTION] == pair[1][constants.SOLUTION] else -1
-        for i, _x in enumerate(constants.ALL_FEATURES):
+        comparator = 1 if pair[0][constantsMammographicMasses.SOLUTION] == pair[1][constantsMammographicMasses.SOLUTION] else -1
+        for i, _x in enumerate(constantsMammographicMasses.ALL_FEATURES):
             # iterate over features
             # if feature is quantitative (n = numerical)
             if _x[0] == 'n':
@@ -209,7 +209,7 @@ def features_weighting(data):
     min_weight = weight[min(weight, key=weight.get)]
 
     for i, _x in enumerate(data[0]):
-        if i < len(constants.ALL_FEATURES):
+        if i < len(constantsMammographicMasses.ALL_FEATURES):
             weight[_x] = (weight[_x] - min_weight) / (max_weight - min_weight)
 
     _cur = S.cursor()

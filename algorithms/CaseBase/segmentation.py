@@ -3,9 +3,9 @@
 import sqlite3
 
 import init
-from constants import SOLUTION
-from constants import ALL_FEATURES
-from constants import POSSIBLE_SOLUTIONS
+from constantsMammographicMasses import SOLUTION
+from constantsMammographicMasses import ALL_FEATURES
+from constantsMammographicMasses import POSSIBLE_SOLUTIONS
 from Retrieve.case_segment_similarity import compare_case_delegate
 from Retrieve.case_segment_similarity import get_level
 from features_weights import Weighting

@@ -1,8 +1,8 @@
 """This module segments the cases into three parts solution / problem / level."""
 
 
-from constants import PROBABILITY_FEATURES
-from constants import ALL_FEATURES
+from constantsMammographicMasses import PROBABILITY_FEATURES
+from constantsMammographicMasses import ALL_FEATURES
 
 
 def compare_case_delegate(obj, delegate, _weights):

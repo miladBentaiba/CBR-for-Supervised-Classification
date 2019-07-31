@@ -1,11 +1,11 @@
 """This module uploads cases from file to the database."""
 
-from constants import SOLUTION
+from constantsMammographicMasses import SOLUTION
 
 import json
 from sqlite3 import OperationalError
 from random import shuffle
-from constants import ALL_FEATURES
+from constantsMammographicMasses import ALL_FEATURES
 
 import init
 
@@ -113,6 +113,28 @@ def upload_data(tables_file, data_file):
     from rules_generation import rules_generation
     rules_generation()
 
+    I_S_CB_validation(dictionaries_cases)
+    I_S_CB_segment()
+
+
+def I_S_CB_segment():
+    # print("case-base segmentation")
+    _c = S.cursor()
+    from segmentation import segment_all
+    _c.execute('select _id_case, {1}, {0}, randomness, significance, frequency,'
+               ' stochasticity, rule from cases where segmented = "false"'
+               .format(SOLUTION, ','.join(ALL_FEATURES)), ())
+    dictionaries_cases = []
+    for row in _c.fetchall():
+        dictionaries_cases.append(dict((_c.description[i][0], value)
+                                       for i, value in enumerate(row)))
+    segment_all(dictionaries_cases, 0)
+    _c.execute('update cases set segmented = "true"')
+    S.commit()
+
+
+def I_S_CB_validation(dictionaries_cases):
+    _c = S.cursor()
     # 3. calculate the stochastic and the absolute validity
     # print("3. calculate the stochastic and the absolute validity")
     from stochastic_validation import randomness_ratio
@@ -131,8 +153,6 @@ def upload_data(tables_file, data_file):
         _it['stochasticity'] = stochastic_validity(_it)
         _it['rule'] = validation_per_rules(_it)
     S.commit()
-    # print("case-base segmentation")
-    from segmentation import segment_all
 
     # update the stochastic and absolute validity of the case
     # print("update the stochastic and absolute validity of the case")
@@ -141,22 +161,6 @@ def upload_data(tables_file, data_file):
     # print('update cases set randomness = ?, significance = ?, rule = ?, stochasticity=? where _id_case = ?')
     _c.executemany('update cases set randomness = ?, significance = ?, rule = ? , '
                    ' stochasticity=? where _id_case = ?', items)
-    S.commit()
-
-
-    print("segmentation")
-    _c.execute('select _id_case, segmented from cases')
-    print(_c.fetchall())
-    _c.execute('select _id_case, {1}, {0}, randomness, significance, frequency,'
-               ' stochasticity, rule from cases where segmented = "false"'
-               .format(SOLUTION, ','.join(ALL_FEATURES)), ())
-    dictionaries_cases = []
-    for row in _c.fetchall():
-        dictionaries_cases.append(dict((_c.description[i][0], value)
-                                       for i, value in enumerate(row)))
-    print(len(dictionaries_cases))
-    segment_all(dictionaries_cases, 0)
-    _c.execute('update cases set segmented = "true"')
     S.commit()
 
 

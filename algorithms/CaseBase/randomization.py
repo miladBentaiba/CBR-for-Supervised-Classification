@@ -4,8 +4,8 @@ import json
 
 from features_weights import order_features
 import init
-from constants import ALL_FEATURES
-from constants import SOLUTION
+from constantsMammographicMasses import ALL_FEATURES
+from constantsMammographicMasses import SOLUTION
 
 S = init.Singleton.get_instance()
 
@@ -84,7 +84,7 @@ def randomization():
         _c.execute('select cases._id_case, {0}, {1} '
                    ' from cases inner join cases_in_segment '
                    '             on (cases._id_case = cases_in_segment._id_case)'
-                   ' where cases_in_segment._id_segment = ? and level = 1 and cases.randomized is false'
+                   ' where cases_in_segment._id_segment = ? and level = 1 and cases.randomized is "false"'
                    .format(','.join(ALL_FEATURES), SOLUTION), (_id_segment[0],))
         cases = []
         # structure the query results in jsonArray

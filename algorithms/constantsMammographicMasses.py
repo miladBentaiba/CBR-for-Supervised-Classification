@@ -16,7 +16,7 @@ def read_json(url):
 # for _it in read_json(data_file):
 #     all_cases.append(_it)
 
-DATABASE = 'mammography'
+DATABASE = 'mammography-r-all'
 
 ALL_FEATURES = ['c_bi', 'n_age', 'c_shape', 'c_margin', 'c_density']
 

@@ -4,9 +4,9 @@ import json
 
 from init import Singleton
 from Retrieve.cases_similarity import compare_cases
-from constants import SOLUTION
-from constants import POSSIBLE_SOLUTIONS
-from constants import ALL_FEATURES
+from constantsMammographicMasses import SOLUTION
+from constantsMammographicMasses import POSSIBLE_SOLUTIONS
+from constantsMammographicMasses import ALL_FEATURES
 from FeaturesWeights.features_weights import Weighting
 
 S = Singleton.get_instance()
