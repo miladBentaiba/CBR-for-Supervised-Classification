@@ -6,7 +6,8 @@
     "n_number_of_warts": 14,
     "c_type": 3,
     "n_area": 51,
-    "c_induration_diameter": 50
+    "c_induration_diameter": 50,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -15,7 +16,8 @@
     "n_number_of_warts": 2,
     "c_type": 3,
     "n_area": 900,
-    "c_induration_diameter": 70
+    "c_induration_diameter": 70,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -24,7 +26,8 @@
     "n_number_of_warts": 2,
     "c_type": 1,
     "n_area": 100,
-    "c_induration_diameter": 25
+    "c_induration_diameter": 25,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -33,7 +36,8 @@
     "n_number_of_warts": 9,
     "c_type": 3,
     "n_area": 80,
-    "c_induration_diameter": 30
+    "c_induration_diameter": 30,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -42,7 +46,8 @@
     "n_number_of_warts": 6,
     "c_type": 1,
     "n_area": 45,
-    "c_induration_diameter": 8
+    "c_induration_diameter": 8,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -51,7 +56,8 @@
     "n_number_of_warts": 3,
     "c_type": 3,
     "n_area": 84,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -60,7 +66,8 @@
     "n_number_of_warts": 2,
     "c_type": 2,
     "n_area": 8,
-    "c_induration_diameter": 6
+    "c_induration_diameter": 6,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -69,7 +76,8 @@
     "n_number_of_warts": 4,
     "c_type": 1,
     "n_area": 9,
-    "c_induration_diameter": 2
+    "c_induration_diameter": 2,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -78,7 +86,8 @@
     "n_number_of_warts": 2,
     "c_type": 1,
     "n_area": 225,
-    "c_induration_diameter": 8
+    "c_induration_diameter": 8,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -87,7 +96,8 @@
     "n_number_of_warts": 6,
     "c_type": 3,
     "n_area": 35,
-    "c_induration_diameter": 5
+    "c_induration_diameter": 5,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 2,
@@ -96,7 +106,8 @@
     "n_number_of_warts": 2,
     "c_type": 1,
     "n_area": 30,
-    "c_induration_diameter": 3
+    "c_induration_diameter": 3,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -105,7 +116,8 @@
     "n_number_of_warts": 12,
     "c_type": 3,
     "n_area": 25,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -114,7 +126,8 @@
     "n_number_of_warts": 1,
     "c_type": 2,
     "n_area": 49,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 2,
@@ -123,7 +136,8 @@
     "n_number_of_warts": 12,
     "c_type": 1,
     "n_area": 48,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -132,7 +146,8 @@
     "n_number_of_warts": 7,
     "c_type": 1,
     "n_area": 143,
-    "c_induration_diameter": 6
+    "c_induration_diameter": 6,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -141,7 +156,8 @@
     "n_number_of_warts": 2,
     "c_type": 2,
     "n_area": 150,
-    "c_induration_diameter": 8
+    "c_induration_diameter": 8,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -150,7 +166,8 @@
     "n_number_of_warts": 6,
     "c_type": 2,
     "n_area": 6,
-    "c_induration_diameter": 5
+    "c_induration_diameter": 5,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -159,7 +176,8 @@
     "n_number_of_warts": 10,
     "c_type": 2,
     "n_area": 43,
-    "c_induration_diameter": 3
+    "c_induration_diameter": 3,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -168,7 +186,8 @@
     "n_number_of_warts": 19,
     "c_type": 1,
     "n_area": 56,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -177,7 +196,8 @@
     "n_number_of_warts": 2,
     "c_type": 1,
     "n_area": 6,
-    "c_induration_diameter": 6
+    "c_induration_diameter": 6,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -186,7 +206,8 @@
     "n_number_of_warts": 3,
     "c_type": 3,
     "n_area": 47,
-    "c_induration_diameter": 3
+    "c_induration_diameter": 3,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -195,7 +216,8 @@
     "n_number_of_warts": 2,
     "c_type": 1,
     "n_area": 60,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -204,7 +226,8 @@
     "n_number_of_warts": 6,
     "c_type": 1,
     "n_area": 50,
-    "c_induration_diameter": 9
+    "c_induration_diameter": 9,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 1,
@@ -213,7 +236,8 @@
     "n_number_of_warts": 2,
     "c_type": 1,
     "n_area": 300,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -222,7 +246,8 @@
     "n_number_of_warts": 4,
     "c_type": 3,
     "n_area": 70,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -231,7 +256,8 @@
     "n_number_of_warts": 2,
     "c_type": 1,
     "n_area": 20,
-    "c_induration_diameter": 5
+    "c_induration_diameter": 5,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -240,7 +266,8 @@
     "n_number_of_warts": 10,
     "c_type": 3,
     "n_area": 30,
-    "c_induration_diameter": 45
+    "c_induration_diameter": 45,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -249,7 +276,8 @@
     "n_number_of_warts": 6,
     "c_type": 1,
     "n_area": 30,
-    "c_induration_diameter": 25
+    "c_induration_diameter": 25,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 2,
@@ -258,7 +286,8 @@
     "n_number_of_warts": 12,
     "c_type": 1,
     "n_area": 25,
-    "c_induration_diameter": 50
+    "c_induration_diameter": 50,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 2,
@@ -267,7 +296,8 @@
     "n_number_of_warts": 18,
     "c_type": 3,
     "n_area": 45,
-    "c_induration_diameter": 2
+    "c_induration_diameter": 2,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -276,7 +306,8 @@
     "n_number_of_warts": 1,
     "c_type": 3,
     "n_area": 43,
-    "c_induration_diameter": 50
+    "c_induration_diameter": 50,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -285,7 +316,8 @@
     "n_number_of_warts": 2,
     "c_type": 3,
     "n_area": 87,
-    "c_induration_diameter": 70
+    "c_induration_diameter": 70,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -294,7 +326,8 @@
     "n_number_of_warts": 7,
     "c_type": 1,
     "n_area": 50,
-    "c_induration_diameter": 25
+    "c_induration_diameter": 25,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -303,7 +336,8 @@
     "n_number_of_warts": 1,
     "c_type": 1,
     "n_area": 174,
-    "c_induration_diameter": 30
+    "c_induration_diameter": 30,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -312,7 +346,8 @@
     "n_number_of_warts": 3,
     "c_type": 1,
     "n_area": 502,
-    "c_induration_diameter": 8
+    "c_induration_diameter": 8,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -321,7 +356,8 @@
     "n_number_of_warts": 7,
     "c_type": 3,
     "n_area": 64,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 2,
@@ -330,7 +366,8 @@
     "n_number_of_warts": 11,
     "c_type": 2,
     "n_area": 21,
-    "c_induration_diameter": 6
+    "c_induration_diameter": 6,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 1,
@@ -339,7 +376,8 @@
     "n_number_of_warts": 3,
     "c_type": 1,
     "n_area": 504,
-    "c_induration_diameter": 2
+    "c_induration_diameter": 2,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -348,7 +386,8 @@
     "n_number_of_warts": 5,
     "c_type": 1,
     "n_area": 99,
-    "c_induration_diameter": 8
+    "c_induration_diameter": 8,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -357,7 +396,8 @@
     "n_number_of_warts": 4,
     "c_type": 1,
     "n_area": 72,
-    "c_induration_diameter": 5
+    "c_induration_diameter": 5,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 2,
@@ -366,7 +406,8 @@
     "n_number_of_warts": 9,
     "c_type": 1,
     "n_area": 352,
-    "c_induration_diameter": 3
+    "c_induration_diameter": 3,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -375,7 +416,8 @@
     "n_number_of_warts": 10,
     "c_type": 2,
     "n_area": 69,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -384,7 +426,8 @@
     "n_number_of_warts": 1,
     "c_type": 2,
     "n_area": 163,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 1,
@@ -393,7 +436,8 @@
     "n_number_of_warts": 2,
     "c_type": 1,
     "n_area": 33,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 2,
@@ -402,7 +446,8 @@
     "n_number_of_warts": 5,
     "c_type": 2,
     "n_area": 51,
-    "c_induration_diameter": 6
+    "c_induration_diameter": 6,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -411,7 +456,8 @@
     "n_number_of_warts": 3,
     "c_type": 1,
     "n_area": 17,
-    "c_induration_diameter": 8
+    "c_induration_diameter": 8,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -420,7 +466,8 @@
     "n_number_of_warts": 13,
     "c_type": 2,
     "n_area": 13,
-    "c_induration_diameter": 5
+    "c_induration_diameter": 5,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -429,7 +476,8 @@
     "n_number_of_warts": 2,
     "c_type": 2,
     "n_area": 57,
-    "c_induration_diameter": 3
+    "c_induration_diameter": 3,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -438,7 +486,8 @@
     "n_number_of_warts": 6,
     "c_type": 1,
     "n_area": 32,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -447,7 +496,8 @@
     "n_number_of_warts": 14,
     "c_type": 1,
     "n_area": 87,
-    "c_induration_diameter": 6
+    "c_induration_diameter": 6,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 2,
@@ -456,7 +506,8 @@
     "n_number_of_warts": 10,
     "c_type": 3,
     "n_area": 45,
-    "c_induration_diameter": 3
+    "c_induration_diameter": 3,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -465,7 +516,8 @@
     "n_number_of_warts": 5,
     "c_type": 1,
     "n_area": 63,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -474,7 +526,8 @@
     "n_number_of_warts": 4,
     "c_type": 2,
     "n_area": 14,
-    "c_induration_diameter": 9
+    "c_induration_diameter": 9,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -483,7 +536,8 @@
     "n_number_of_warts": 2,
     "c_type": 1,
     "n_area": 43,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -492,7 +546,8 @@
     "n_number_of_warts": 8,
     "c_type": 1,
     "n_area": 58,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -501,7 +556,8 @@
     "n_number_of_warts": 13,
     "c_type": 3,
     "n_area": 43,
-    "c_induration_diameter": 5
+    "c_induration_diameter": 5,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -510,7 +566,8 @@
     "n_number_of_warts": 3,
     "c_type": 3,
     "n_area": 23,
-    "c_induration_diameter": 45
+    "c_induration_diameter": 45,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -519,7 +576,8 @@
     "n_number_of_warts": 1,
     "c_type": 2,
     "n_area": 30,
-    "c_induration_diameter": 25
+    "c_induration_diameter": 25,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -528,7 +586,8 @@
     "n_number_of_warts": 7,
     "c_type": 1,
     "n_area": 31,
-    "c_induration_diameter": 50
+    "c_induration_diameter": 50,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 1,
@@ -537,7 +596,8 @@
     "n_number_of_warts": 3,
     "c_type": 2,
     "n_area": 37,
-    "c_induration_diameter": 2
+    "c_induration_diameter": 2,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -546,7 +606,8 @@
     "n_number_of_warts": 14,
     "c_type": 2,
     "n_area": 67,
-    "c_induration_diameter": 50
+    "c_induration_diameter": 50,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -555,7 +616,8 @@
     "n_number_of_warts": 8,
     "c_type": 2,
     "n_area": 42,
-    "c_induration_diameter": 70
+    "c_induration_diameter": 70,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -564,7 +626,8 @@
     "n_number_of_warts": 5,
     "c_type": 1,
     "n_area": 63,
-    "c_induration_diameter": 25
+    "c_induration_diameter": 25,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -573,7 +636,8 @@
     "n_number_of_warts": 12,
     "c_type": 1,
     "n_area": 72,
-    "c_induration_diameter": 30
+    "c_induration_diameter": 30,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -582,7 +646,8 @@
     "n_number_of_warts": 2,
     "c_type": 1,
     "n_area": 44,
-    "c_induration_diameter": 8
+    "c_induration_diameter": 8,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -591,7 +656,8 @@
     "n_number_of_warts": 12,
     "c_type": 3,
     "n_area": 75,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -600,7 +666,8 @@
     "n_number_of_warts": 8,
     "c_type": 1,
     "n_area": 208,
-    "c_induration_diameter": 6
+    "c_induration_diameter": 6,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 2,
@@ -609,7 +676,8 @@
     "n_number_of_warts": 6,
     "c_type": 1,
     "n_area": 80,
-    "c_induration_diameter": 2
+    "c_induration_diameter": 2,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -618,7 +686,8 @@
     "n_number_of_warts": 4,
     "c_type": 3,
     "n_area": 41,
-    "c_induration_diameter": 8
+    "c_induration_diameter": 8,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -627,7 +696,8 @@
     "n_number_of_warts": 8,
     "c_type": 1,
     "n_area": 57,
-    "c_induration_diameter": 5
+    "c_induration_diameter": 5,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 1,
@@ -636,7 +706,8 @@
     "n_number_of_warts": 1,
     "c_type": 1,
     "n_area": 59,
-    "c_induration_diameter": 3
+    "c_induration_diameter": 3,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -645,7 +716,8 @@
     "n_number_of_warts": 4,
     "c_type": 3,
     "n_area": 25,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -654,7 +726,8 @@
     "n_number_of_warts": 7,
     "c_type": 2,
     "n_area": 379,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 2,
@@ -663,7 +736,8 @@
     "n_number_of_warts": 1,
     "c_type": 1,
     "n_area": 65,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -672,7 +746,8 @@
     "n_number_of_warts": 9,
     "c_type": 2,
     "n_area": 49,
-    "c_induration_diameter": 6
+    "c_induration_diameter": 6,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -681,7 +756,8 @@
     "n_number_of_warts": 13,
     "c_type": 2,
     "n_area": 367,
-    "c_induration_diameter": 8
+    "c_induration_diameter": 8,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -690,7 +766,8 @@
     "n_number_of_warts": 5,
     "c_type": 2,
     "n_area": 13,
-    "c_induration_diameter": 5
+    "c_induration_diameter": 5,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -699,7 +776,8 @@
     "n_number_of_warts": 8,
     "c_type": 1,
     "n_area": 40,
-    "c_induration_diameter": 3
+    "c_induration_diameter": 3,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -708,7 +786,8 @@
     "n_number_of_warts": 7,
     "c_type": 1,
     "n_area": 507,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -717,7 +796,8 @@
     "n_number_of_warts": 3,
     "c_type": 3,
     "n_area": 91,
-    "c_induration_diameter": 6
+    "c_induration_diameter": 6,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 1,
@@ -726,7 +806,8 @@
     "n_number_of_warts": 2,
     "c_type": 1,
     "n_area": 88,
-    "c_induration_diameter": 3
+    "c_induration_diameter": 3,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -735,7 +816,8 @@
     "n_number_of_warts": 11,
     "c_type": 1,
     "n_area": 47,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -744,7 +826,8 @@
     "n_number_of_warts": 8,
     "c_type": 2,
     "n_area": 73,
-    "c_induration_diameter": 9
+    "c_induration_diameter": 9,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 2,
@@ -753,7 +836,8 @@
     "n_number_of_warts": 1,
     "c_type": 1,
     "n_area": 55,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 2,
@@ -762,7 +846,8 @@
     "n_number_of_warts": 6,
     "c_type": 1,
     "n_area": 81,
-    "c_induration_diameter": 7
+    "c_induration_diameter": 7,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -771,7 +856,8 @@
     "n_number_of_warts": 8,
     "c_type": 3,
     "n_area": 69,
-    "c_induration_diameter": 5
+    "c_induration_diameter": 5,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -780,7 +866,8 @@
     "n_number_of_warts": 8,
     "c_type": 2,
     "n_area": 56,
-    "c_induration_diameter": 45
+    "c_induration_diameter": 45,
+    "result_of_treatment": 1
   },
   {
     "c_sex": 1,
@@ -789,7 +876,8 @@
     "n_number_of_warts": 4,
     "c_type": 1,
     "n_area": 91,
-    "c_induration_diameter": 25
+    "c_induration_diameter": 25,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 1,
@@ -798,7 +886,8 @@
     "n_number_of_warts": 9,
     "c_type": 1,
     "n_area": 43,
-    "c_induration_diameter": 50
+    "c_induration_diameter": 50,
+    "result_of_treatment": 0
   },
   {
     "c_sex": 2,
@@ -807,6 +896,7 @@
     "n_number_of_warts": 6,
     "c_type": 1,
     "n_area": 19,
-    "c_induration_diameter": 2
+    "c_induration_diameter": 2,
+    "result_of_treatment": 1
   }
 ]
