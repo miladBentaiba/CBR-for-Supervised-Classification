@@ -1,7 +1,7 @@
 """ allow for only one connexion and one close of the database """
 
 import sqlite3
-from constantsMammographicMasses import DATABASE
+from constants import DATABASE
 
 
 class Singleton:

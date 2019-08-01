@@ -7,10 +7,10 @@ from I_S_CB import I_S_CB_segment
 upload_data('../datasets/mammographic-masses/tables.sql',
             '../datasets/mammographic-masses/mammographic.json')
 
-randomization()
+# randomization()
 all_cases = []
 for _it in read_json("../datasets/mammographic-masses/rando1.json"):
     all_cases.append(_it)
-insert_cases(all_cases)
-I_S_CB_validation(all_cases)
-I_S_CB_segment()
+# insert_cases(all_cases)
+# I_S_CB_validation(all_cases)
+# I_S_CB_segment()

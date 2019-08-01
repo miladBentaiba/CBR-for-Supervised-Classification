@@ -1,5 +1,5 @@
 {
-  "DATABASE": "mammography",
+  "DATABASE": "immunotheraphy",
   "ALL_FEATURES":[
     "c_sex", "n_age", "n_time", "n_number_of_warts", "c_type", "n_area", "c_induration_diameter"
   ],

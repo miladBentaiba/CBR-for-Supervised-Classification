@@ -1,11 +1,11 @@
 """This module uploads cases from file to the database."""
 
-from constantsMammographicMasses import SOLUTION
+from constants import SOLUTION, TABLES, DATA
 
 import json
 from sqlite3 import OperationalError
 from random import shuffle
-from constantsMammographicMasses import ALL_FEATURES
+from constants import ALL_FEATURES, TABLES
 
 import init
 
@@ -18,14 +18,12 @@ def read_json(url):
         return json.load(file)
 
 
-def create_tables(filename):
+def create_tables():
     """
-    :param filename: the file that contains sql code
-          for tables creation
     :return: tables will be created in the database
     """
     # Open and read the file as a single buffer
-    _fd = open(filename, 'r')
+    _fd = open(TABLES[0], 'r')
     sql_file = _fd.read()
     _fd.close()
     _c = S.cursor()
@@ -35,9 +33,6 @@ def create_tables(filename):
 
     # Execute every command from the input file
     for command in sql_commands:
-        # This will skip and report errors
-        # For example, if the tables do not yet exist, this will skip over
-        # the DROP TABLE commands
         try:
             # print(command)
             _c.execute(command)
@@ -77,14 +72,14 @@ def insert_cases(_items):
     S.commit()
 
 
-def upload_data(tables_file, data_file):
+def upload_data(data_file):
     """
     :return: upload data to cases table
     """
     # create tables in the database
     # print("create tables in the database")
     _c = S.cursor()
-    created = create_tables(tables_file)
+    created = create_tables()
     if created:
         # read the json from file
         # print("read the json from file")
@@ -197,5 +192,4 @@ def correction():
     S.commit()
 
 
-upload_data('../datasets/mammographic-masses/tables.sql',
-            '../datasets/mammographic-masses/mammographic.json')
+upload_data(DATA)

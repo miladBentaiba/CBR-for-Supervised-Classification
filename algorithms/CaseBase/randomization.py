@@ -30,6 +30,7 @@ def features_interchanging(obj1, obj2):
         pass
     obj3 = dict(obj1)
     obj4 = dict(obj2)
+
     number_substitutions = len(ALL_FEATURES) - 1  # level
     for index in range(number_substitutions):
         feature = ordered_features[index]
@@ -56,6 +57,7 @@ def features_interchanging(obj1, obj2):
         numb = _c.fetchone()[0]
         if numb == 0:
             new_cases.append(json.dumps(obj4))
+
     return new_cases
 
 
@@ -90,6 +92,7 @@ def randomization():
         # structure the query results in jsonArray
         for row in _c.fetchall():
             cases.append(dict((_c.description[i][0], value) for i, value in enumerate(row)))
+
 
         # do the attributes interchanging
         for i, cs1 in enumerate(cases):
