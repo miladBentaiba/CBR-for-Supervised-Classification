@@ -35,43 +35,84 @@ def read_json(url):
 # DATA = '../datasets/mammographic-masses/mammographic.json'
 
 # ------------------------------------------------------------------------------------------------------------
-# immunotheraphy
-data_file = "../datasets/immunotheraphy/immunotheraphy.json"
+# # immunotheraphy
+# data_file = "../datasets/immunotheraphy/immunotheraphy.json"
+#
+# DATABASE = 'immunotheraphy'
+#
+# ALL_FEATURES = ["c_sex", "n_age", "n_time", "n_number_of_warts", "c_type", "n_area", "c_induration_diameter"]
+#
+# SOLUTION = "result_of_treatment"
+#
+# PROBABILITY_FEATURES = {
+#     "c_sex": 0.5,
+#     "n_age": 0.01,
+#     "n_time": 0.01,
+#     "n_number_of_warts": 0.05,
+#     "c_type": 0.334,
+#     "n_area": 0.01,
+#     "c_induration_diameter": 0.01,
+#     "result_of_treatment": 0.5
+# }
+#
+# MAX_FEATURE = {
+#     "n_age": 56,
+#     "n_time": 12,
+#     "n_number_of_warts": 19,
+#     "c_induration_diameter": 70,
+#     "n_area": 900
+# }
+# MIN_FEATURE = {
+#     "n_age": 15,
+#     "n_time": 0,
+#     "n_number_of_warts": 1,
+#     "c_induration_diameter": 5,
+#     "n_area": 6
+# }
+#
+# POSSIBLE_SOLUTIONS = [0, 1]
+#
+# TABLES = '../datasets/immunotherapy/tables.sql',
+#
+# DATA = '../datasets/immunotherapy/immunotheray.json'
 
-DATABASE = 'immunotheraphy'
+#-----------------------------------------------------------------------------
+# Thyroid
+data_file = "../datasets/thyroid/thyroid.json"
 
-ALL_FEATURES = ["c_sex", "n_age", "n_time", "n_number_of_warts", "c_type", "n_area", "c_induration_diameter"]
+DATABASE = 'thyroid'
 
-SOLUTION = "result_of_treatment"
+ALL_FEATURES = ["n_t3_resin", "n_total_serum_thyroxin", "n_total_serum_triiodothyronine",
+                "n_TSH", "n_difference_of_TSH"]
+
+SOLUTION = "class"
 
 PROBABILITY_FEATURES = {
-    "c_sex": 0.5,
-    "n_age": 0.01,
-    "n_time": 0.01,
-    "n_number_of_warts": 0.05,
-    "c_type": 0.334,
-    "n_area": 0.01,
-    "c_induration_diameter": 0.01,
-    "result_of_treatment": 0.5
+    "n_t3_resin":0.01,
+    "n_total_serum_thyroxin":0.01,
+    "n_total_serum_triiodothyronine":0.01,
+    "n_TSH":0.2,
+    "n_difference_of_TSH":0.2,
+    "class": 0.334
 }
 
 MAX_FEATURE = {
-    "n_age": 56,
-    "n_time": 12,
-    "n_number_of_warts": 19,
-    "c_induration_diameter": 70,
-    "n_area": 900
+    "n_t3_resin":144,
+    "n_total_serum_thyroxin": 22.3,
+    "n_total_serum_triiodothyronine": 10.0,
+    "n_TSH": 56.4,
+    "n_difference_of_TSH": 40.8
 }
 MIN_FEATURE = {
-    "n_age": 15,
-    "n_time": 0,
-    "n_number_of_warts": 1,
-    "c_induration_diameter": 5,
-    "n_area": 6
+    "n_t3_resin":65,
+    "n_total_serum_thyroxin": 0.5,
+    "n_total_serum_triiodothyronine": 0.2,
+    "n_TSH": 0.3,
+    "n_difference_of_TSH": -0.7
 }
 
-POSSIBLE_SOLUTIONS = [0, 1]
+POSSIBLE_SOLUTIONS = [1, 2, 3]
 
-TABLES = '../datasets/immunotherapy/tables.sql',
+TABLES = '../datasets/thyroid/tables.sql',
 
-DATA = '../datasets/immunotherapy/immunotheray.json'
+DATA = '../datasets/thyroid/thyroid.json'

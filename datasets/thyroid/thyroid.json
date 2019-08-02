@@ -1,1722 +1,1722 @@
 [
   {
     "class": 1,
-    "n_t3-resin": 107,
-    "n_total-serum-thyroxin": 10.1,
-    "n_total-serum-triiodothyronine": 2.2,
+    "n_t3_resin": 107,
+    "n_total_serum_thyroxin": 10.1,
+    "n_total_serum_triiodothyronine": 2.2,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": 2.7
+    "n_difference_of_TSH": 2.7
   },
   {
     "class": 1,
-    "n_t3-resin": 113,
-    "n_total-serum-thyroxin": 9.9,
-    "n_total-serum-triiodothyronine": 3.1,
+    "n_t3_resin": 113,
+    "n_total_serum_thyroxin": 9.9,
+    "n_total_serum_triiodothyronine": 3.1,
     "n_TSH": 2,
-    "n_difference-of-TSH": 5.9
+    "n_difference_of_TSH": 5.9
   },
   {
     "class": 1,
-    "n_t3-resin": 127,
-    "n_total-serum-thyroxin": 12.9,
-    "n_total-serum-triiodothyronine": 2.4,
+    "n_t3_resin": 127,
+    "n_total_serum_thyroxin": 12.9,
+    "n_total_serum_triiodothyronine": 2.4,
     "n_TSH": 1.4,
-    "n_difference-of-TSH": 0.6
+    "n_difference_of_TSH": 0.6
   },
   {
     "class": 1,
-    "n_t3-resin": 109,
-    "n_total-serum-thyroxin": 5.3,
-    "n_total-serum-triiodothyronine": 1.6,
+    "n_t3_resin": 109,
+    "n_total_serum_thyroxin": 5.3,
+    "n_total_serum_triiodothyronine": 1.6,
     "n_TSH": 1.4,
-    "n_difference-of-TSH": 1.5
+    "n_difference_of_TSH": 1.5
   },
   {
     "class": 1,
-    "n_t3-resin": 105,
-    "n_total-serum-thyroxin": 7.3,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 105,
+    "n_total_serum_thyroxin": 7.3,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 1.5,
-    "n_difference-of-TSH": -0.1
+    "n_difference_of_TSH": -0.1
   },
   {
     "class": 1,
-    "n_t3-resin": 105,
-    "n_total-serum-thyroxin": 6.1,
-    "n_total-serum-triiodothyronine": 2.1,
+    "n_t3_resin": 105,
+    "n_total_serum_thyroxin": 6.1,
+    "n_total_serum_triiodothyronine": 2.1,
     "n_TSH": 1.4,
-    "n_difference-of-TSH": 7
+    "n_difference_of_TSH": 7
   },
   {
     "class": 1,
-    "n_t3-resin": 110,
-    "n_total-serum-thyroxin": 10.4,
-    "n_total-serum-triiodothyronine": 1.6,
+    "n_t3_resin": 110,
+    "n_total_serum_thyroxin": 10.4,
+    "n_total_serum_triiodothyronine": 1.6,
     "n_TSH": 1.6,
-    "n_difference-of-TSH": 2.7
+    "n_difference_of_TSH": 2.7
   },
   {
     "class": 1,
-    "n_t3-resin": 114,
-    "n_total-serum-thyroxin": 9.9,
-    "n_total-serum-triiodothyronine": 2.4,
+    "n_t3_resin": 114,
+    "n_total_serum_thyroxin": 9.9,
+    "n_total_serum_triiodothyronine": 2.4,
     "n_TSH": 1.5,
-    "n_difference-of-TSH": 5.7
+    "n_difference_of_TSH": 5.7
   },
   {
     "class": 1,
-    "n_t3-resin": 106,
-    "n_total-serum-thyroxin": 9.4,
-    "n_total-serum-triiodothyronine": 2.2,
+    "n_t3_resin": 106,
+    "n_total_serum_thyroxin": 9.4,
+    "n_total_serum_triiodothyronine": 2.2,
     "n_TSH": 1.5,
-    "n_difference-of-TSH": 0
+    "n_difference_of_TSH": 0
   },
   {
     "class": 1,
-    "n_t3-resin": 107,
-    "n_total-serum-thyroxin": 13,
-    "n_total-serum-triiodothyronine": 1.1,
+    "n_t3_resin": 107,
+    "n_total_serum_thyroxin": 13,
+    "n_total_serum_triiodothyronine": 1.1,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": 3.1
+    "n_difference_of_TSH": 3.1
   },
   {
     "class": 1,
-    "n_t3-resin": 106,
-    "n_total-serum-thyroxin": 4.2,
-    "n_total-serum-triiodothyronine": 1.2,
+    "n_t3_resin": 106,
+    "n_total_serum_thyroxin": 4.2,
+    "n_total_serum_triiodothyronine": 1.2,
     "n_TSH": 1.6,
-    "n_difference-of-TSH": 1.4
+    "n_difference_of_TSH": 1.4
   },
   {
     "class": 1,
-    "n_t3-resin": 110,
-    "n_total-serum-thyroxin": 11.3,
-    "n_total-serum-triiodothyronine": 2.3,
+    "n_t3_resin": 110,
+    "n_total_serum_thyroxin": 11.3,
+    "n_total_serum_triiodothyronine": 2.3,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": 3.3
+    "n_difference_of_TSH": 3.3
   },
   {
     "class": 1,
-    "n_t3-resin": 116,
-    "n_total-serum-thyroxin": 9.2,
-    "n_total-serum-triiodothyronine": 2.7,
+    "n_t3_resin": 116,
+    "n_total_serum_thyroxin": 9.2,
+    "n_total_serum_triiodothyronine": 2.7,
     "n_TSH": 1,
-    "n_difference-of-TSH": 4.2
+    "n_difference_of_TSH": 4.2
   },
   {
     "class": 1,
-    "n_t3-resin": 112,
-    "n_total-serum-thyroxin": 8.1,
-    "n_total-serum-triiodothyronine": 1.9,
+    "n_t3_resin": 112,
+    "n_total_serum_thyroxin": 8.1,
+    "n_total_serum_triiodothyronine": 1.9,
     "n_TSH": 3.7,
-    "n_difference-of-TSH": 2
+    "n_difference_of_TSH": 2
   },
   {
     "class": 1,
-    "n_t3-resin": 122,
-    "n_total-serum-thyroxin": 9.7,
-    "n_total-serum-triiodothyronine": 1.6,
+    "n_t3_resin": 122,
+    "n_total_serum_thyroxin": 9.7,
+    "n_total_serum_triiodothyronine": 1.6,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": 2.2
+    "n_difference_of_TSH": 2.2
   },
   {
     "class": 1,
-    "n_t3-resin": 109,
-    "n_total-serum-thyroxin": 8.4,
-    "n_total-serum-triiodothyronine": 2.1,
+    "n_t3_resin": 109,
+    "n_total_serum_thyroxin": 8.4,
+    "n_total_serum_triiodothyronine": 2.1,
     "n_TSH": 1.1,
-    "n_difference-of-TSH": 3.6
+    "n_difference_of_TSH": 3.6
   },
   {
     "class": 1,
-    "n_t3-resin": 111,
-    "n_total-serum-thyroxin": 8.4,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 111,
+    "n_total_serum_thyroxin": 8.4,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 0.8,
-    "n_difference-of-TSH": 1.2
+    "n_difference_of_TSH": 1.2
   },
   {
     "class": 1,
-    "n_t3-resin": 114,
-    "n_total-serum-thyroxin": 6.7,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 114,
+    "n_total_serum_thyroxin": 6.7,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 1,
-    "n_difference-of-TSH": 3.5
+    "n_difference_of_TSH": 3.5
   },
   {
     "class": 1,
-    "n_t3-resin": 119,
-    "n_total-serum-thyroxin": 10.6,
-    "n_total-serum-triiodothyronine": 2.1,
+    "n_t3_resin": 119,
+    "n_total_serum_thyroxin": 10.6,
+    "n_total_serum_triiodothyronine": 2.1,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 1.1
+    "n_difference_of_TSH": 1.1
   },
   {
     "class": 1,
-    "n_t3-resin": 115,
-    "n_total-serum-thyroxin": 7.1,
-    "n_total-serum-triiodothyronine": 1.3,
+    "n_t3_resin": 115,
+    "n_total_serum_thyroxin": 7.1,
+    "n_total_serum_triiodothyronine": 1.3,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 2
+    "n_difference_of_TSH": 2
   },
   {
     "class": 1,
-    "n_t3-resin": 101,
-    "n_total-serum-thyroxin": 7.8,
-    "n_total-serum-triiodothyronine": 1.2,
+    "n_t3_resin": 101,
+    "n_total_serum_thyroxin": 7.8,
+    "n_total_serum_triiodothyronine": 1.2,
     "n_TSH": 1,
-    "n_difference-of-TSH": 1.7
+    "n_difference_of_TSH": 1.7
   },
   {
     "class": 1,
-    "n_t3-resin": 103,
-    "n_total-serum-thyroxin": 10.1,
-    "n_total-serum-triiodothyronine": 1.3,
+    "n_t3_resin": 103,
+    "n_total_serum_thyroxin": 10.1,
+    "n_total_serum_triiodothyronine": 1.3,
     "n_TSH": 0.7,
-    "n_difference-of-TSH": 0.1
+    "n_difference_of_TSH": 0.1
   },
   {
     "class": 1,
-    "n_t3-resin": 109,
-    "n_total-serum-thyroxin": 10.4,
-    "n_total-serum-triiodothyronine": 1.9,
+    "n_t3_resin": 109,
+    "n_total_serum_thyroxin": 10.4,
+    "n_total_serum_triiodothyronine": 1.9,
     "n_TSH": 0.4,
-    "n_difference-of-TSH": -0.1
+    "n_difference_of_TSH": -0.1
   },
   {
     "class": 1,
-    "n_t3-resin": 102,
-    "n_total-serum-thyroxin": 7.6,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 102,
+    "n_total_serum_thyroxin": 7.6,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 2,
-    "n_difference-of-TSH": 2.5
+    "n_difference_of_TSH": 2.5
   },
   {
     "class": 1,
-    "n_t3-resin": 121,
-    "n_total-serum-thyroxin": 10.1,
-    "n_total-serum-triiodothyronine": 1.7,
+    "n_t3_resin": 121,
+    "n_total_serum_thyroxin": 10.1,
+    "n_total_serum_triiodothyronine": 1.7,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 0.1
+    "n_difference_of_TSH": 0.1
   },
   {
     "class": 1,
-    "n_t3-resin": 100,
-    "n_total-serum-thyroxin": 6.1,
-    "n_total-serum-triiodothyronine": 2.4,
+    "n_t3_resin": 100,
+    "n_total_serum_thyroxin": 6.1,
+    "n_total_serum_triiodothyronine": 2.4,
     "n_TSH": 1.8,
-    "n_difference-of-TSH": 3.8
+    "n_difference_of_TSH": 3.8
   },
   {
     "class": 1,
-    "n_t3-resin": 106,
-    "n_total-serum-thyroxin": 9.6,
-    "n_total-serum-triiodothyronine": 2.4,
+    "n_t3_resin": 106,
+    "n_total_serum_thyroxin": 9.6,
+    "n_total_serum_triiodothyronine": 2.4,
     "n_TSH": 1,
-    "n_difference-of-TSH": 1.3
+    "n_difference_of_TSH": 1.3
   },
   {
     "class": 1,
-    "n_t3-resin": 116,
-    "n_total-serum-thyroxin": 10.1,
-    "n_total-serum-triiodothyronine": 2.2,
+    "n_t3_resin": 116,
+    "n_total_serum_thyroxin": 10.1,
+    "n_total_serum_triiodothyronine": 2.2,
     "n_TSH": 1.6,
-    "n_difference-of-TSH": 0.8
+    "n_difference_of_TSH": 0.8
   },
   {
     "class": 1,
-    "n_t3-resin": 105,
-    "n_total-serum-thyroxin": 11.1,
-    "n_total-serum-triiodothyronine": 2,
+    "n_t3_resin": 105,
+    "n_total_serum_thyroxin": 11.1,
+    "n_total_serum_triiodothyronine": 2,
     "n_TSH": 1,
-    "n_difference-of-TSH": 1
+    "n_difference_of_TSH": 1
   },
   {
     "class": 1,
-    "n_t3-resin": 110,
-    "n_total-serum-thyroxin": 10.4,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 110,
+    "n_total_serum_thyroxin": 10.4,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 1,
-    "n_difference-of-TSH": 2.3
+    "n_difference_of_TSH": 2.3
   },
   {
     "class": 1,
-    "n_t3-resin": 120,
-    "n_total-serum-thyroxin": 8.4,
-    "n_total-serum-triiodothyronine": 1.1,
+    "n_t3_resin": 120,
+    "n_total_serum_thyroxin": 8.4,
+    "n_total_serum_triiodothyronine": 1.1,
     "n_TSH": 1.4,
-    "n_difference-of-TSH": 1.4
+    "n_difference_of_TSH": 1.4
   },
   {
     "class": 1,
-    "n_t3-resin": 116,
-    "n_total-serum-thyroxin": 11.1,
-    "n_total-serum-triiodothyronine": 2,
+    "n_t3_resin": 116,
+    "n_total_serum_thyroxin": 11.1,
+    "n_total_serum_triiodothyronine": 2,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": 2.3
+    "n_difference_of_TSH": 2.3
   },
   {
     "class": 1,
-    "n_t3-resin": 110,
-    "n_total-serum-thyroxin": 7.8,
-    "n_total-serum-triiodothyronine": 1.9,
+    "n_t3_resin": 110,
+    "n_total_serum_thyroxin": 7.8,
+    "n_total_serum_triiodothyronine": 1.9,
     "n_TSH": 2.1,
-    "n_difference-of-TSH": 6.4
+    "n_difference_of_TSH": 6.4
   },
   {
     "class": 1,
-    "n_t3-resin": 90,
-    "n_total-serum-thyroxin": 8.1,
-    "n_total-serum-triiodothyronine": 1.6,
+    "n_t3_resin": 90,
+    "n_total_serum_thyroxin": 8.1,
+    "n_total_serum_triiodothyronine": 1.6,
     "n_TSH": 1.4,
-    "n_difference-of-TSH": 1.1
+    "n_difference_of_TSH": 1.1
   },
   {
     "class": 1,
-    "n_t3-resin": 117,
-    "n_total-serum-thyroxin": 12.2,
-    "n_total-serum-triiodothyronine": 1.9,
+    "n_t3_resin": 117,
+    "n_total_serum_thyroxin": 12.2,
+    "n_total_serum_triiodothyronine": 1.9,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": 3.9
+    "n_difference_of_TSH": 3.9
   },
   {
     "class": 1,
-    "n_t3-resin": 117,
-    "n_total-serum-thyroxin": 11,
-    "n_total-serum-triiodothyronine": 1.4,
+    "n_t3_resin": 117,
+    "n_total_serum_thyroxin": 11,
+    "n_total_serum_triiodothyronine": 1.4,
     "n_TSH": 1.5,
-    "n_difference-of-TSH": 2.1
+    "n_difference_of_TSH": 2.1
   },
   {
     "class": 1,
-    "n_t3-resin": 113,
-    "n_total-serum-thyroxin": 9,
-    "n_total-serum-triiodothyronine": 2,
+    "n_t3_resin": 113,
+    "n_total_serum_thyroxin": 9,
+    "n_total_serum_triiodothyronine": 2,
     "n_TSH": 1.8,
-    "n_difference-of-TSH": 1.6
+    "n_difference_of_TSH": 1.6
   },
   {
     "class": 1,
-    "n_t3-resin": 106,
-    "n_total-serum-thyroxin": 9.4,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 106,
+    "n_total_serum_thyroxin": 9.4,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 0.8,
-    "n_difference-of-TSH": 0.5
+    "n_difference_of_TSH": 0.5
   },
   {
     "class": 1,
-    "n_t3-resin": 130,
-    "n_total-serum-thyroxin": 9.5,
-    "n_total-serum-triiodothyronine": 1.7,
+    "n_t3_resin": 130,
+    "n_total_serum_thyroxin": 9.5,
+    "n_total_serum_triiodothyronine": 1.7,
     "n_TSH": 0.4,
-    "n_difference-of-TSH": 3.2
+    "n_difference_of_TSH": 3.2
   },
   {
     "class": 1,
-    "n_t3-resin": 100,
-    "n_total-serum-thyroxin": 10.5,
-    "n_total-serum-triiodothyronine": 2.4,
+    "n_t3_resin": 100,
+    "n_total_serum_thyroxin": 10.5,
+    "n_total_serum_triiodothyronine": 2.4,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": 1.9
+    "n_difference_of_TSH": 1.9
   },
   {
     "class": 1,
-    "n_t3-resin": 121,
-    "n_total-serum-thyroxin": 10.1,
-    "n_total-serum-triiodothyronine": 2.4,
+    "n_t3_resin": 121,
+    "n_total_serum_thyroxin": 10.1,
+    "n_total_serum_triiodothyronine": 2.4,
     "n_TSH": 0.8,
-    "n_difference-of-TSH": 3
+    "n_difference_of_TSH": 3
   },
   {
     "class": 1,
-    "n_t3-resin": 110,
-    "n_total-serum-thyroxin": 9.2,
-    "n_total-serum-triiodothyronine": 1.6,
+    "n_t3_resin": 110,
+    "n_total_serum_thyroxin": 9.2,
+    "n_total_serum_triiodothyronine": 1.6,
     "n_TSH": 1.5,
-    "n_difference-of-TSH": 0.3
+    "n_difference_of_TSH": 0.3
   },
   {
     "class": 1,
-    "n_t3-resin": 129,
-    "n_total-serum-thyroxin": 11.9,
-    "n_total-serum-triiodothyronine": 2.7,
+    "n_t3_resin": 129,
+    "n_total_serum_thyroxin": 11.9,
+    "n_total_serum_triiodothyronine": 2.7,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": 3.5
+    "n_difference_of_TSH": 3.5
   },
   {
     "class": 1,
-    "n_t3-resin": 121,
-    "n_total-serum-thyroxin": 13.5,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 121,
+    "n_total_serum_thyroxin": 13.5,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 1.6,
-    "n_difference-of-TSH": 0.5
+    "n_difference_of_TSH": 0.5
   },
   {
     "class": 1,
-    "n_t3-resin": 123,
-    "n_total-serum-thyroxin": 8.1,
-    "n_total-serum-triiodothyronine": 2.3,
+    "n_t3_resin": 123,
+    "n_total_serum_thyroxin": 8.1,
+    "n_total_serum_triiodothyronine": 2.3,
     "n_TSH": 1,
-    "n_difference-of-TSH": 5.1
+    "n_difference_of_TSH": 5.1
   },
   {
     "class": 1,
-    "n_t3-resin": 107,
-    "n_total-serum-thyroxin": 8.4,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 107,
+    "n_total_serum_thyroxin": 8.4,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 1.5,
-    "n_difference-of-TSH": 0.8
+    "n_difference_of_TSH": 0.8
   },
   {
     "class": 1,
-    "n_t3-resin": 109,
-    "n_total-serum-thyroxin": 10,
-    "n_total-serum-triiodothyronine": 1.3,
+    "n_t3_resin": 109,
+    "n_total_serum_thyroxin": 10,
+    "n_total_serum_triiodothyronine": 1.3,
     "n_TSH": 1.8,
-    "n_difference-of-TSH": 4.3
+    "n_difference_of_TSH": 4.3
   },
   {
     "class": 1,
-    "n_t3-resin": 120,
-    "n_total-serum-thyroxin": 6.8,
-    "n_total-serum-triiodothyronine": 1.9,
+    "n_t3_resin": 120,
+    "n_total_serum_thyroxin": 6.8,
+    "n_total_serum_triiodothyronine": 1.9,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 1.9
+    "n_difference_of_TSH": 1.9
   },
   {
     "class": 1,
-    "n_t3-resin": 100,
-    "n_total-serum-thyroxin": 9.5,
-    "n_total-serum-triiodothyronine": 2.5,
+    "n_t3_resin": 100,
+    "n_total_serum_thyroxin": 9.5,
+    "n_total_serum_triiodothyronine": 2.5,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": -0.2
+    "n_difference_of_TSH": -0.2
   },
   {
     "class": 1,
-    "n_t3-resin": 118,
-    "n_total-serum-thyroxin": 8.1,
-    "n_total-serum-triiodothyronine": 1.9,
+    "n_t3_resin": 118,
+    "n_total_serum_thyroxin": 8.1,
+    "n_total_serum_triiodothyronine": 1.9,
     "n_TSH": 1.5,
-    "n_difference-of-TSH": 13.7
+    "n_difference_of_TSH": 13.7
   },
   {
     "class": 1,
-    "n_t3-resin": 100,
-    "n_total-serum-thyroxin": 11.3,
-    "n_total-serum-triiodothyronine": 2.5,
+    "n_t3_resin": 100,
+    "n_total_serum_thyroxin": 11.3,
+    "n_total_serum_triiodothyronine": 2.5,
     "n_TSH": 0.7,
-    "n_difference-of-TSH": -0.3
+    "n_difference_of_TSH": -0.3
   },
   {
     "class": 1,
-    "n_t3-resin": 103,
-    "n_total-serum-thyroxin": 12.2,
-    "n_total-serum-triiodothyronine": 1.2,
+    "n_t3_resin": 103,
+    "n_total_serum_thyroxin": 12.2,
+    "n_total_serum_triiodothyronine": 1.2,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 2.7
+    "n_difference_of_TSH": 2.7
   },
   {
     "class": 1,
-    "n_t3-resin": 115,
-    "n_total-serum-thyroxin": 8.1,
-    "n_total-serum-triiodothyronine": 1.7,
+    "n_t3_resin": 115,
+    "n_total_serum_thyroxin": 8.1,
+    "n_total_serum_triiodothyronine": 1.7,
     "n_TSH": 0.6,
-    "n_difference-of-TSH": 2.2
+    "n_difference_of_TSH": 2.2
   },
   {
     "class": 1,
-    "n_t3-resin": 119,
-    "n_total-serum-thyroxin": 8,
-    "n_total-serum-triiodothyronine": 2,
+    "n_t3_resin": 119,
+    "n_total_serum_thyroxin": 8,
+    "n_total_serum_triiodothyronine": 2,
     "n_TSH": 0.6,
-    "n_difference-of-TSH": 3.2
+    "n_difference_of_TSH": 3.2
   },
   {
     "class": 1,
-    "n_t3-resin": 106,
-    "n_total-serum-thyroxin": 9.4,
-    "n_total-serum-triiodothyronine": 1.7,
+    "n_t3_resin": 106,
+    "n_total_serum_thyroxin": 9.4,
+    "n_total_serum_triiodothyronine": 1.7,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": 3.1
+    "n_difference_of_TSH": 3.1
   },
   {
     "class": 1,
-    "n_t3-resin": 114,
-    "n_total-serum-thyroxin": 10.9,
-    "n_total-serum-triiodothyronine": 2.1,
+    "n_t3_resin": 114,
+    "n_total_serum_thyroxin": 10.9,
+    "n_total_serum_triiodothyronine": 2.1,
     "n_TSH": 0.3,
-    "n_difference-of-TSH": 1.4
+    "n_difference_of_TSH": 1.4
   },
   {
     "class": 1,
-    "n_t3-resin": 93,
-    "n_total-serum-thyroxin": 8.9,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 93,
+    "n_total_serum_thyroxin": 8.9,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 0.8,
-    "n_difference-of-TSH": 2.7
+    "n_difference_of_TSH": 2.7
   },
   {
     "class": 1,
-    "n_t3-resin": 120,
-    "n_total-serum-thyroxin": 10.4,
-    "n_total-serum-triiodothyronine": 2.1,
+    "n_t3_resin": 120,
+    "n_total_serum_thyroxin": 10.4,
+    "n_total_serum_triiodothyronine": 2.1,
     "n_TSH": 1.1,
-    "n_difference-of-TSH": 1.8
+    "n_difference_of_TSH": 1.8
   },
   {
     "class": 1,
-    "n_t3-resin": 106,
-    "n_total-serum-thyroxin": 11.3,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 106,
+    "n_total_serum_thyroxin": 11.3,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": 1
+    "n_difference_of_TSH": 1
   },
   {
     "class": 1,
-    "n_t3-resin": 110,
-    "n_total-serum-thyroxin": 8.7,
-    "n_total-serum-triiodothyronine": 1.9,
+    "n_t3_resin": 110,
+    "n_total_serum_thyroxin": 8.7,
+    "n_total_serum_triiodothyronine": 1.9,
     "n_TSH": 1.6,
-    "n_difference-of-TSH": 4.4
+    "n_difference_of_TSH": 4.4
   },
   {
     "class": 1,
-    "n_t3-resin": 103,
-    "n_total-serum-thyroxin": 8.1,
-    "n_total-serum-triiodothyronine": 1.4,
+    "n_t3_resin": 103,
+    "n_total_serum_thyroxin": 8.1,
+    "n_total_serum_triiodothyronine": 1.4,
     "n_TSH": 0.5,
-    "n_difference-of-TSH": 3.8
+    "n_difference_of_TSH": 3.8
   },
   {
     "class": 1,
-    "n_t3-resin": 101,
-    "n_total-serum-thyroxin": 7.1,
-    "n_total-serum-triiodothyronine": 2.2,
+    "n_t3_resin": 101,
+    "n_total_serum_thyroxin": 7.1,
+    "n_total_serum_triiodothyronine": 2.2,
     "n_TSH": 0.8,
-    "n_difference-of-TSH": 2.2
+    "n_difference_of_TSH": 2.2
   },
   {
     "class": 1,
-    "n_t3-resin": 115,
-    "n_total-serum-thyroxin": 10.4,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 115,
+    "n_total_serum_thyroxin": 10.4,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 1.6,
-    "n_difference-of-TSH": 2
+    "n_difference_of_TSH": 2
   },
   {
     "class": 1,
-    "n_t3-resin": 116,
-    "n_total-serum-thyroxin": 10,
-    "n_total-serum-triiodothyronine": 1.7,
+    "n_t3_resin": 116,
+    "n_total_serum_thyroxin": 10,
+    "n_total_serum_triiodothyronine": 1.7,
     "n_TSH": 1.5,
-    "n_difference-of-TSH": 4.3
+    "n_difference_of_TSH": 4.3
   },
   {
     "class": 1,
-    "n_t3-resin": 117,
-    "n_total-serum-thyroxin": 9.2,
-    "n_total-serum-triiodothyronine": 1.9,
+    "n_t3_resin": 117,
+    "n_total_serum_thyroxin": 9.2,
+    "n_total_serum_triiodothyronine": 1.9,
     "n_TSH": 1.5,
-    "n_difference-of-TSH": 6.8
+    "n_difference_of_TSH": 6.8
   },
   {
     "class": 1,
-    "n_t3-resin": 106,
-    "n_total-serum-thyroxin": 6.7,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 106,
+    "n_total_serum_thyroxin": 6.7,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": 3.9
+    "n_difference_of_TSH": 3.9
   },
   {
     "class": 1,
-    "n_t3-resin": 118,
-    "n_total-serum-thyroxin": 10.5,
-    "n_total-serum-triiodothyronine": 2.1,
+    "n_t3_resin": 118,
+    "n_total_serum_thyroxin": 10.5,
+    "n_total_serum_triiodothyronine": 2.1,
     "n_TSH": 0.7,
-    "n_difference-of-TSH": 3.5
+    "n_difference_of_TSH": 3.5
   },
   {
     "class": 1,
-    "n_t3-resin": 97,
-    "n_total-serum-thyroxin": 7.8,
-    "n_total-serum-triiodothyronine": 1.3,
+    "n_t3_resin": 97,
+    "n_total_serum_thyroxin": 7.8,
+    "n_total_serum_triiodothyronine": 1.3,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": 0.9
+    "n_difference_of_TSH": 0.9
   },
   {
     "class": 1,
-    "n_t3-resin": 113,
-    "n_total-serum-thyroxin": 11.1,
-    "n_total-serum-triiodothyronine": 1.7,
+    "n_t3_resin": 113,
+    "n_total_serum_thyroxin": 11.1,
+    "n_total_serum_triiodothyronine": 1.7,
     "n_TSH": 0.8,
-    "n_difference-of-TSH": 2.3
+    "n_difference_of_TSH": 2.3
   },
   {
     "class": 1,
-    "n_t3-resin": 104,
-    "n_total-serum-thyroxin": 6.3,
-    "n_total-serum-triiodothyronine": 2,
+    "n_t3_resin": 104,
+    "n_total_serum_thyroxin": 6.3,
+    "n_total_serum_triiodothyronine": 2,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": 4
+    "n_difference_of_TSH": 4
   },
   {
     "class": 1,
-    "n_t3-resin": 96,
-    "n_total-serum-thyroxin": 9.4,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 96,
+    "n_total_serum_thyroxin": 9.4,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 1,
-    "n_difference-of-TSH": 3.1
+    "n_difference_of_TSH": 3.1
   },
   {
     "class": 1,
-    "n_t3-resin": 120,
-    "n_total-serum-thyroxin": 12.4,
-    "n_total-serum-triiodothyronine": 2.4,
+    "n_t3_resin": 120,
+    "n_total_serum_thyroxin": 12.4,
+    "n_total_serum_triiodothyronine": 2.4,
     "n_TSH": 0.8,
-    "n_difference-of-TSH": 1.9
+    "n_difference_of_TSH": 1.9
   },
   {
     "class": 1,
-    "n_t3-resin": 133,
-    "n_total-serum-thyroxin": 9.7,
-    "n_total-serum-triiodothyronine": 2.9,
+    "n_t3_resin": 133,
+    "n_total_serum_thyroxin": 9.7,
+    "n_total_serum_triiodothyronine": 2.9,
     "n_TSH": 0.8,
-    "n_difference-of-TSH": 1.9
+    "n_difference_of_TSH": 1.9
   },
   {
     "class": 1,
-    "n_t3-resin": 126,
-    "n_total-serum-thyroxin": 9.4,
-    "n_total-serum-triiodothyronine": 2.3,
+    "n_t3_resin": 126,
+    "n_total_serum_thyroxin": 9.4,
+    "n_total_serum_triiodothyronine": 2.3,
     "n_TSH": 1,
-    "n_difference-of-TSH": 4
+    "n_difference_of_TSH": 4
   },
   {
     "class": 1,
-    "n_t3-resin": 113,
-    "n_total-serum-thyroxin": 8.5,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 113,
+    "n_total_serum_thyroxin": 8.5,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 0.8,
-    "n_difference-of-TSH": 0.5
+    "n_difference_of_TSH": 0.5
   },
   {
     "class": 1,
-    "n_t3-resin": 109,
-    "n_total-serum-thyroxin": 9.7,
-    "n_total-serum-triiodothyronine": 1.4,
+    "n_t3_resin": 109,
+    "n_total_serum_thyroxin": 9.7,
+    "n_total_serum_triiodothyronine": 1.4,
     "n_TSH": 1.1,
-    "n_difference-of-TSH": 2.1
+    "n_difference_of_TSH": 2.1
   },
   {
     "class": 1,
-    "n_t3-resin": 119,
-    "n_total-serum-thyroxin": 12.9,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 119,
+    "n_total_serum_thyroxin": 12.9,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 3.6
+    "n_difference_of_TSH": 3.6
   },
   {
     "class": 1,
-    "n_t3-resin": 101,
-    "n_total-serum-thyroxin": 7.1,
-    "n_total-serum-triiodothyronine": 1.6,
+    "n_t3_resin": 101,
+    "n_total_serum_thyroxin": 7.1,
+    "n_total_serum_triiodothyronine": 1.6,
     "n_TSH": 1.5,
-    "n_difference-of-TSH": 1.6
+    "n_difference_of_TSH": 1.6
   },
   {
     "class": 1,
-    "n_t3-resin": 108,
-    "n_total-serum-thyroxin": 10.4,
-    "n_total-serum-triiodothyronine": 2.1,
+    "n_t3_resin": 108,
+    "n_total_serum_thyroxin": 10.4,
+    "n_total_serum_triiodothyronine": 2.1,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 2.4
+    "n_difference_of_TSH": 2.4
   },
   {
     "class": 1,
-    "n_t3-resin": 117,
-    "n_total-serum-thyroxin": 6.7,
-    "n_total-serum-triiodothyronine": 2.2,
+    "n_t3_resin": 117,
+    "n_total_serum_thyroxin": 6.7,
+    "n_total_serum_triiodothyronine": 2.2,
     "n_TSH": 1.8,
-    "n_difference-of-TSH": 6.7
+    "n_difference_of_TSH": 6.7
   },
   {
     "class": 1,
-    "n_t3-resin": 115,
-    "n_total-serum-thyroxin": 15.3,
-    "n_total-serum-triiodothyronine": 2.3,
+    "n_t3_resin": 115,
+    "n_total_serum_thyroxin": 15.3,
+    "n_total_serum_triiodothyronine": 2.3,
     "n_TSH": 2,
-    "n_difference-of-TSH": 2
+    "n_difference_of_TSH": 2
   },
   {
     "class": 1,
-    "n_t3-resin": 91,
-    "n_total-serum-thyroxin": 8,
-    "n_total-serum-triiodothyronine": 1.7,
+    "n_t3_resin": 91,
+    "n_total_serum_thyroxin": 8,
+    "n_total_serum_triiodothyronine": 1.7,
     "n_TSH": 2.1,
-    "n_difference-of-TSH": 4.6
+    "n_difference_of_TSH": 4.6
   },
   {
     "class": 1,
-    "n_t3-resin": 103,
-    "n_total-serum-thyroxin": 8.5,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 103,
+    "n_total_serum_thyroxin": 8.5,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 1.9,
-    "n_difference-of-TSH": 1.1
+    "n_difference_of_TSH": 1.1
   },
   {
     "class": 1,
-    "n_t3-resin": 98,
-    "n_total-serum-thyroxin": 9.1,
-    "n_total-serum-triiodothyronine": 1.4,
+    "n_t3_resin": 98,
+    "n_total_serum_thyroxin": 9.1,
+    "n_total_serum_triiodothyronine": 1.4,
     "n_TSH": 1.9,
-    "n_difference-of-TSH": -0.3
+    "n_difference_of_TSH": -0.3
   },
   {
     "class": 1,
-    "n_t3-resin": 111,
-    "n_total-serum-thyroxin": 7.8,
-    "n_total-serum-triiodothyronine": 2,
+    "n_t3_resin": 111,
+    "n_total_serum_thyroxin": 7.8,
+    "n_total_serum_triiodothyronine": 2,
     "n_TSH": 1.8,
-    "n_difference-of-TSH": 4.1
+    "n_difference_of_TSH": 4.1
   },
   {
     "class": 1,
-    "n_t3-resin": 107,
-    "n_total-serum-thyroxin": 13,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 107,
+    "n_total_serum_thyroxin": 13,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 2.8,
-    "n_difference-of-TSH": 1.7
+    "n_difference_of_TSH": 1.7
   },
   {
     "class": 1,
-    "n_t3-resin": 119,
-    "n_total-serum-thyroxin": 11.4,
-    "n_total-serum-triiodothyronine": 2.3,
+    "n_t3_resin": 119,
+    "n_total_serum_thyroxin": 11.4,
+    "n_total_serum_triiodothyronine": 2.3,
     "n_TSH": 2.2,
-    "n_difference-of-TSH": 1.6
+    "n_difference_of_TSH": 1.6
   },
   {
     "class": 1,
-    "n_t3-resin": 122,
-    "n_total-serum-thyroxin": 11.8,
-    "n_total-serum-triiodothyronine": 2.7,
+    "n_t3_resin": 122,
+    "n_total_serum_thyroxin": 11.8,
+    "n_total_serum_triiodothyronine": 2.7,
     "n_TSH": 1.7,
-    "n_difference-of-TSH": 2.3
+    "n_difference_of_TSH": 2.3
   },
   {
     "class": 1,
-    "n_t3-resin": 105,
-    "n_total-serum-thyroxin": 8.1,
-    "n_total-serum-triiodothyronine": 2,
+    "n_t3_resin": 105,
+    "n_total_serum_thyroxin": 8.1,
+    "n_total_serum_triiodothyronine": 2,
     "n_TSH": 1.9,
-    "n_difference-of-TSH": -0.5
+    "n_difference_of_TSH": -0.5
   },
   {
     "class": 1,
-    "n_t3-resin": 109,
-    "n_total-serum-thyroxin": 7.6,
-    "n_total-serum-triiodothyronine": 1.3,
+    "n_t3_resin": 109,
+    "n_total_serum_thyroxin": 7.6,
+    "n_total_serum_triiodothyronine": 1.3,
     "n_TSH": 2.2,
-    "n_difference-of-TSH": 1.9
+    "n_difference_of_TSH": 1.9
   },
   {
     "class": 1,
-    "n_t3-resin": 105,
-    "n_total-serum-thyroxin": 9.5,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 105,
+    "n_total_serum_thyroxin": 9.5,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 1.6,
-    "n_difference-of-TSH": 3.6
+    "n_difference_of_TSH": 3.6
   },
   {
     "class": 1,
-    "n_t3-resin": 112,
-    "n_total-serum-thyroxin": 5.9,
-    "n_total-serum-triiodothyronine": 1.7,
+    "n_t3_resin": 112,
+    "n_total_serum_thyroxin": 5.9,
+    "n_total_serum_triiodothyronine": 1.7,
     "n_TSH": 2,
-    "n_difference-of-TSH": 1.3
+    "n_difference_of_TSH": 1.3
   },
   {
     "class": 1,
-    "n_t3-resin": 112,
-    "n_total-serum-thyroxin": 9.5,
-    "n_total-serum-triiodothyronine": 2,
+    "n_t3_resin": 112,
+    "n_total_serum_thyroxin": 9.5,
+    "n_total_serum_triiodothyronine": 2,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": 0.7
+    "n_difference_of_TSH": 0.7
   },
   {
     "class": 1,
-    "n_t3-resin": 98,
-    "n_total-serum-thyroxin": 8.6,
-    "n_total-serum-triiodothyronine": 1.6,
+    "n_t3_resin": 98,
+    "n_total_serum_thyroxin": 8.6,
+    "n_total_serum_triiodothyronine": 1.6,
     "n_TSH": 1.6,
-    "n_difference-of-TSH": 6
+    "n_difference_of_TSH": 6
   },
   {
     "class": 1,
-    "n_t3-resin": 109,
-    "n_total-serum-thyroxin": 12.4,
-    "n_total-serum-triiodothyronine": 2.3,
+    "n_t3_resin": 109,
+    "n_total_serum_thyroxin": 12.4,
+    "n_total_serum_triiodothyronine": 2.3,
     "n_TSH": 1.7,
-    "n_difference-of-TSH": 0.8
+    "n_difference_of_TSH": 0.8
   },
   {
     "class": 1,
-    "n_t3-resin": 114,
-    "n_total-serum-thyroxin": 9.1,
-    "n_total-serum-triiodothyronine": 2.6,
+    "n_t3_resin": 114,
+    "n_total_serum_thyroxin": 9.1,
+    "n_total_serum_triiodothyronine": 2.6,
     "n_TSH": 1.5,
-    "n_difference-of-TSH": 1.5
+    "n_difference_of_TSH": 1.5
   },
   {
     "class": 1,
-    "n_t3-resin": 114,
-    "n_total-serum-thyroxin": 11.1,
-    "n_total-serum-triiodothyronine": 2.4,
+    "n_t3_resin": 114,
+    "n_total_serum_thyroxin": 11.1,
+    "n_total_serum_triiodothyronine": 2.4,
     "n_TSH": 2,
-    "n_difference-of-TSH": -0.3
+    "n_difference_of_TSH": -0.3
   },
   {
     "class": 1,
-    "n_t3-resin": 110,
-    "n_total-serum-thyroxin": 8.4,
-    "n_total-serum-triiodothyronine": 1.4,
+    "n_t3_resin": 110,
+    "n_total_serum_thyroxin": 8.4,
+    "n_total_serum_triiodothyronine": 1.4,
     "n_TSH": 1,
-    "n_difference-of-TSH": 1.9
+    "n_difference_of_TSH": 1.9
   },
   {
     "class": 1,
-    "n_t3-resin": 120,
-    "n_total-serum-thyroxin": 7.1,
-    "n_total-serum-triiodothyronine": 1.2,
+    "n_t3_resin": 120,
+    "n_total_serum_thyroxin": 7.1,
+    "n_total_serum_triiodothyronine": 1.2,
     "n_TSH": 1.5,
-    "n_difference-of-TSH": 4.3
+    "n_difference_of_TSH": 4.3
   },
   {
     "class": 1,
-    "n_t3-resin": 108,
-    "n_total-serum-thyroxin": 10.9,
-    "n_total-serum-triiodothyronine": 1.2,
+    "n_t3_resin": 108,
+    "n_total_serum_thyroxin": 10.9,
+    "n_total_serum_triiodothyronine": 1.2,
     "n_TSH": 1.9,
-    "n_difference-of-TSH": 1
+    "n_difference_of_TSH": 1
   },
   {
     "class": 1,
-    "n_t3-resin": 108,
-    "n_total-serum-thyroxin": 8.7,
-    "n_total-serum-triiodothyronine": 1.2,
+    "n_t3_resin": 108,
+    "n_total_serum_thyroxin": 8.7,
+    "n_total_serum_triiodothyronine": 1.2,
     "n_TSH": 2.2,
-    "n_difference-of-TSH": 2.5
+    "n_difference_of_TSH": 2.5
   },
   {
     "class": 1,
-    "n_t3-resin": 116,
-    "n_total-serum-thyroxin": 11.9,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 116,
+    "n_total_serum_thyroxin": 11.9,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 1.9,
-    "n_difference-of-TSH": 1.5
+    "n_difference_of_TSH": 1.5
   },
   {
     "class": 1,
-    "n_t3-resin": 113,
-    "n_total-serum-thyroxin": 11.5,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 113,
+    "n_total_serum_thyroxin": 11.5,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 1.9,
-    "n_difference-of-TSH": 2.9
+    "n_difference_of_TSH": 2.9
   },
   {
     "class": 1,
-    "n_t3-resin": 105,
-    "n_total-serum-thyroxin": 7,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 105,
+    "n_total_serum_thyroxin": 7,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 2.7,
-    "n_difference-of-TSH": 4.3
+    "n_difference_of_TSH": 4.3
   },
   {
     "class": 1,
-    "n_t3-resin": 114,
-    "n_total-serum-thyroxin": 8.4,
-    "n_total-serum-triiodothyronine": 1.6,
+    "n_t3_resin": 114,
+    "n_total_serum_thyroxin": 8.4,
+    "n_total_serum_triiodothyronine": 1.6,
     "n_TSH": 1.6,
-    "n_difference-of-TSH": -0.2
+    "n_difference_of_TSH": -0.2
   },
   {
     "class": 1,
-    "n_t3-resin": 114,
-    "n_total-serum-thyroxin": 8.1,
-    "n_total-serum-triiodothyronine": 1.6,
+    "n_t3_resin": 114,
+    "n_total_serum_thyroxin": 8.1,
+    "n_total_serum_triiodothyronine": 1.6,
     "n_TSH": 1.6,
-    "n_difference-of-TSH": 0.5
+    "n_difference_of_TSH": 0.5
   },
   {
     "class": 1,
-    "n_t3-resin": 105,
-    "n_total-serum-thyroxin": 11.1,
-    "n_total-serum-triiodothyronine": 1.1,
+    "n_t3_resin": 105,
+    "n_total_serum_thyroxin": 11.1,
+    "n_total_serum_triiodothyronine": 1.1,
     "n_TSH": 0.8,
-    "n_difference-of-TSH": 1.2
+    "n_difference_of_TSH": 1.2
   },
   {
     "class": 1,
-    "n_t3-resin": 107,
-    "n_total-serum-thyroxin": 13.8,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 107,
+    "n_total_serum_thyroxin": 13.8,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 1,
-    "n_difference-of-TSH": 1.9
+    "n_difference_of_TSH": 1.9
   },
   {
     "class": 1,
-    "n_t3-resin": 116,
-    "n_total-serum-thyroxin": 11.5,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 116,
+    "n_total_serum_thyroxin": 11.5,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 1.4,
-    "n_difference-of-TSH": 5.4
+    "n_difference_of_TSH": 5.4
   },
   {
     "class": 1,
-    "n_t3-resin": 102,
-    "n_total-serum-thyroxin": 9.5,
-    "n_total-serum-triiodothyronine": 1.4,
+    "n_t3_resin": 102,
+    "n_total_serum_thyroxin": 9.5,
+    "n_total_serum_triiodothyronine": 1.4,
     "n_TSH": 1.1,
-    "n_difference-of-TSH": 1.6
+    "n_difference_of_TSH": 1.6
   },
   {
     "class": 1,
-    "n_t3-resin": 116,
-    "n_total-serum-thyroxin": 16.1,
-    "n_total-serum-triiodothyronine": 0.9,
+    "n_t3_resin": 116,
+    "n_total_serum_thyroxin": 16.1,
+    "n_total_serum_triiodothyronine": 0.9,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 1.5
+    "n_difference_of_TSH": 1.5
   },
   {
     "class": 1,
-    "n_t3-resin": 118,
-    "n_total-serum-thyroxin": 10.6,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 118,
+    "n_total_serum_thyroxin": 10.6,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 1.4,
-    "n_difference-of-TSH": 3
+    "n_difference_of_TSH": 3
   },
   {
     "class": 1,
-    "n_t3-resin": 109,
-    "n_total-serum-thyroxin": 8.9,
-    "n_total-serum-triiodothyronine": 1.7,
+    "n_t3_resin": 109,
+    "n_total_serum_thyroxin": 8.9,
+    "n_total_serum_triiodothyronine": 1.7,
     "n_TSH": 1,
-    "n_difference-of-TSH": 0.9
+    "n_difference_of_TSH": 0.9
   },
   {
     "class": 1,
-    "n_t3-resin": 110,
-    "n_total-serum-thyroxin": 7,
-    "n_total-serum-triiodothyronine": 1,
+    "n_t3_resin": 110,
+    "n_total_serum_thyroxin": 7,
+    "n_total_serum_triiodothyronine": 1,
     "n_TSH": 1.6,
-    "n_difference-of-TSH": 4.3
+    "n_difference_of_TSH": 4.3
   },
   {
     "class": 1,
-    "n_t3-resin": 104,
-    "n_total-serum-thyroxin": 9.6,
-    "n_total-serum-triiodothyronine": 1.1,
+    "n_t3_resin": 104,
+    "n_total_serum_thyroxin": 9.6,
+    "n_total_serum_triiodothyronine": 1.1,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 0.8
+    "n_difference_of_TSH": 0.8
   },
   {
     "class": 1,
-    "n_t3-resin": 105,
-    "n_total-serum-thyroxin": 8.7,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 105,
+    "n_total_serum_thyroxin": 8.7,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 1.1,
-    "n_difference-of-TSH": 1.5
+    "n_difference_of_TSH": 1.5
   },
   {
     "class": 1,
-    "n_t3-resin": 102,
-    "n_total-serum-thyroxin": 8.5,
-    "n_total-serum-triiodothyronine": 1.2,
+    "n_t3_resin": 102,
+    "n_total_serum_thyroxin": 8.5,
+    "n_total_serum_triiodothyronine": 1.2,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 1.4
+    "n_difference_of_TSH": 1.4
   },
   {
     "class": 1,
-    "n_t3-resin": 112,
-    "n_total-serum-thyroxin": 6.8,
-    "n_total-serum-triiodothyronine": 1.7,
+    "n_t3_resin": 112,
+    "n_total_serum_thyroxin": 6.8,
+    "n_total_serum_triiodothyronine": 1.7,
     "n_TSH": 1.4,
-    "n_difference-of-TSH": 3.3
+    "n_difference_of_TSH": 3.3
   },
   {
     "class": 1,
-    "n_t3-resin": 111,
-    "n_total-serum-thyroxin": 8.5,
-    "n_total-serum-triiodothyronine": 1.6,
+    "n_t3_resin": 111,
+    "n_total_serum_thyroxin": 8.5,
+    "n_total_serum_triiodothyronine": 1.6,
     "n_TSH": 1.1,
-    "n_difference-of-TSH": 3.9
+    "n_difference_of_TSH": 3.9
   },
   {
     "class": 1,
-    "n_t3-resin": 111,
-    "n_total-serum-thyroxin": 8.5,
-    "n_total-serum-triiodothyronine": 1.6,
+    "n_t3_resin": 111,
+    "n_total_serum_thyroxin": 8.5,
+    "n_total_serum_triiodothyronine": 1.6,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": 7.7
+    "n_difference_of_TSH": 7.7
   },
   {
     "class": 1,
-    "n_t3-resin": 103,
-    "n_total-serum-thyroxin": 7.3,
-    "n_total-serum-triiodothyronine": 1,
+    "n_t3_resin": 103,
+    "n_total_serum_thyroxin": 7.3,
+    "n_total_serum_triiodothyronine": 1,
     "n_TSH": 0.7,
-    "n_difference-of-TSH": 0.5
+    "n_difference_of_TSH": 0.5
   },
   {
     "class": 1,
-    "n_t3-resin": 98,
-    "n_total-serum-thyroxin": 10.4,
-    "n_total-serum-triiodothyronine": 1.6,
+    "n_t3_resin": 98,
+    "n_total_serum_thyroxin": 10.4,
+    "n_total_serum_triiodothyronine": 1.6,
     "n_TSH": 2.3,
-    "n_difference-of-TSH": -0.7
+    "n_difference_of_TSH": -0.7
   },
   {
     "class": 1,
-    "n_t3-resin": 117,
-    "n_total-serum-thyroxin": 7.8,
-    "n_total-serum-triiodothyronine": 2,
+    "n_t3_resin": 117,
+    "n_total_serum_thyroxin": 7.8,
+    "n_total_serum_triiodothyronine": 2,
     "n_TSH": 1,
-    "n_difference-of-TSH": 3.9
+    "n_difference_of_TSH": 3.9
   },
   {
     "class": 1,
-    "n_t3-resin": 111,
-    "n_total-serum-thyroxin": 9.1,
-    "n_total-serum-triiodothyronine": 1.7,
+    "n_t3_resin": 111,
+    "n_total_serum_thyroxin": 9.1,
+    "n_total_serum_triiodothyronine": 1.7,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": 4.1
+    "n_difference_of_TSH": 4.1
   },
   {
     "class": 1,
-    "n_t3-resin": 101,
-    "n_total-serum-thyroxin": 6.3,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 101,
+    "n_total_serum_thyroxin": 6.3,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": 2.9
+    "n_difference_of_TSH": 2.9
   },
   {
     "class": 1,
-    "n_t3-resin": 106,
-    "n_total-serum-thyroxin": 8.9,
-    "n_total-serum-triiodothyronine": 0.7,
+    "n_t3_resin": 106,
+    "n_total_serum_thyroxin": 8.9,
+    "n_total_serum_triiodothyronine": 0.7,
     "n_TSH": 1,
-    "n_difference-of-TSH": 2.3
+    "n_difference_of_TSH": 2.3
   },
   {
     "class": 1,
-    "n_t3-resin": 102,
-    "n_total-serum-thyroxin": 8.4,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 102,
+    "n_total_serum_thyroxin": 8.4,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 0.8,
-    "n_difference-of-TSH": 2.4
+    "n_difference_of_TSH": 2.4
   },
   {
     "class": 1,
-    "n_t3-resin": 115,
-    "n_total-serum-thyroxin": 10.6,
-    "n_total-serum-triiodothyronine": 0.8,
+    "n_t3_resin": 115,
+    "n_total_serum_thyroxin": 10.6,
+    "n_total_serum_triiodothyronine": 0.8,
     "n_TSH": 2.1,
-    "n_difference-of-TSH": 4.6
+    "n_difference_of_TSH": 4.6
   },
   {
     "class": 1,
-    "n_t3-resin": 130,
-    "n_total-serum-thyroxin": 10,
-    "n_total-serum-triiodothyronine": 1.6,
+    "n_t3_resin": 130,
+    "n_total_serum_thyroxin": 10,
+    "n_total_serum_triiodothyronine": 1.6,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": 4.6
+    "n_difference_of_TSH": 4.6
   },
   {
     "class": 1,
-    "n_t3-resin": 101,
-    "n_total-serum-thyroxin": 6.7,
-    "n_total-serum-triiodothyronine": 1.3,
+    "n_t3_resin": 101,
+    "n_total_serum_thyroxin": 6.7,
+    "n_total_serum_triiodothyronine": 1.3,
     "n_TSH": 1,
-    "n_difference-of-TSH": 5.7
+    "n_difference_of_TSH": 5.7
   },
   {
     "class": 1,
-    "n_t3-resin": 110,
-    "n_total-serum-thyroxin": 6.3,
-    "n_total-serum-triiodothyronine": 1,
+    "n_t3_resin": 110,
+    "n_total_serum_thyroxin": 6.3,
+    "n_total_serum_triiodothyronine": 1,
     "n_TSH": 0.8,
-    "n_difference-of-TSH": 1
+    "n_difference_of_TSH": 1
   },
   {
     "class": 1,
-    "n_t3-resin": 103,
-    "n_total-serum-thyroxin": 9.5,
-    "n_total-serum-triiodothyronine": 2.9,
+    "n_t3_resin": 103,
+    "n_total_serum_thyroxin": 9.5,
+    "n_total_serum_triiodothyronine": 2.9,
     "n_TSH": 1.4,
-    "n_difference-of-TSH": -0.1
+    "n_difference_of_TSH": -0.1
   },
   {
     "class": 1,
-    "n_t3-resin": 113,
-    "n_total-serum-thyroxin": 7.8,
-    "n_total-serum-triiodothyronine": 2,
+    "n_t3_resin": 113,
+    "n_total_serum_thyroxin": 7.8,
+    "n_total_serum_triiodothyronine": 2,
     "n_TSH": 1.1,
-    "n_difference-of-TSH": 3
+    "n_difference_of_TSH": 3
   },
   {
     "class": 1,
-    "n_t3-resin": 112,
-    "n_total-serum-thyroxin": 10.6,
-    "n_total-serum-triiodothyronine": 1.6,
+    "n_t3_resin": 112,
+    "n_total_serum_thyroxin": 10.6,
+    "n_total_serum_triiodothyronine": 1.6,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": -0.1
+    "n_difference_of_TSH": -0.1
   },
   {
     "class": 1,
-    "n_t3-resin": 118,
-    "n_total-serum-thyroxin": 6.5,
-    "n_total-serum-triiodothyronine": 1.2,
+    "n_t3_resin": 118,
+    "n_total_serum_thyroxin": 6.5,
+    "n_total_serum_triiodothyronine": 1.2,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": 1.7
+    "n_difference_of_TSH": 1.7
   },
   {
     "class": 1,
-    "n_t3-resin": 109,
-    "n_total-serum-thyroxin": 9.2,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 109,
+    "n_total_serum_thyroxin": 9.2,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 1.1,
-    "n_difference-of-TSH": 4.4
+    "n_difference_of_TSH": 4.4
   },
   {
     "class": 1,
-    "n_t3-resin": 116,
-    "n_total-serum-thyroxin": 7.8,
-    "n_total-serum-triiodothyronine": 1.4,
+    "n_t3_resin": 116,
+    "n_total_serum_thyroxin": 7.8,
+    "n_total_serum_triiodothyronine": 1.4,
     "n_TSH": 1.1,
-    "n_difference-of-TSH": 3.7
+    "n_difference_of_TSH": 3.7
   },
   {
     "class": 1,
-    "n_t3-resin": 127,
-    "n_total-serum-thyroxin": 7.7,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 127,
+    "n_total_serum_thyroxin": 7.7,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 1.9,
-    "n_difference-of-TSH": 6.4
+    "n_difference_of_TSH": 6.4
   },
   {
     "class": 1,
-    "n_t3-resin": 108,
-    "n_total-serum-thyroxin": 6.5,
-    "n_total-serum-triiodothyronine": 1,
+    "n_t3_resin": 108,
+    "n_total_serum_thyroxin": 6.5,
+    "n_total_serum_triiodothyronine": 1,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": 1.5
+    "n_difference_of_TSH": 1.5
   },
   {
     "class": 1,
-    "n_t3-resin": 108,
-    "n_total-serum-thyroxin": 7.1,
-    "n_total-serum-triiodothyronine": 1.3,
+    "n_t3_resin": 108,
+    "n_total_serum_thyroxin": 7.1,
+    "n_total_serum_triiodothyronine": 1.3,
     "n_TSH": 1.6,
-    "n_difference-of-TSH": 2.2
+    "n_difference_of_TSH": 2.2
   },
   {
     "class": 1,
-    "n_t3-resin": 105,
-    "n_total-serum-thyroxin": 5.7,
-    "n_total-serum-triiodothyronine": 1,
+    "n_t3_resin": 105,
+    "n_total_serum_thyroxin": 5.7,
+    "n_total_serum_triiodothyronine": 1,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": 0.9
+    "n_difference_of_TSH": 0.9
   },
   {
     "class": 1,
-    "n_t3-resin": 98,
-    "n_total-serum-thyroxin": 5.7,
-    "n_total-serum-triiodothyronine": 0.4,
+    "n_t3_resin": 98,
+    "n_total_serum_thyroxin": 5.7,
+    "n_total_serum_triiodothyronine": 0.4,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 2.8
+    "n_difference_of_TSH": 2.8
   },
   {
     "class": 1,
-    "n_t3-resin": 112,
-    "n_total-serum-thyroxin": 6.5,
-    "n_total-serum-triiodothyronine": 1.2,
+    "n_t3_resin": 112,
+    "n_total_serum_thyroxin": 6.5,
+    "n_total_serum_triiodothyronine": 1.2,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": 2
+    "n_difference_of_TSH": 2
   },
   {
     "class": 1,
-    "n_t3-resin": 118,
-    "n_total-serum-thyroxin": 12.2,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 118,
+    "n_total_serum_thyroxin": 12.2,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 1,
-    "n_difference-of-TSH": 2.3
+    "n_difference_of_TSH": 2.3
   },
   {
     "class": 1,
-    "n_t3-resin": 94,
-    "n_total-serum-thyroxin": 7.5,
-    "n_total-serum-triiodothyronine": 1.2,
+    "n_t3_resin": 94,
+    "n_total_serum_thyroxin": 7.5,
+    "n_total_serum_triiodothyronine": 1.2,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 4.4
+    "n_difference_of_TSH": 4.4
   },
   {
     "class": 1,
-    "n_t3-resin": 126,
-    "n_total-serum-thyroxin": 10.4,
-    "n_total-serum-triiodothyronine": 1.7,
+    "n_t3_resin": 126,
+    "n_total_serum_thyroxin": 10.4,
+    "n_total_serum_triiodothyronine": 1.7,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": 3.5
+    "n_difference_of_TSH": 3.5
   },
   {
     "class": 1,
-    "n_t3-resin": 114,
-    "n_total-serum-thyroxin": 7.5,
-    "n_total-serum-triiodothyronine": 1.1,
+    "n_t3_resin": 114,
+    "n_total_serum_thyroxin": 7.5,
+    "n_total_serum_triiodothyronine": 1.1,
     "n_TSH": 1.6,
-    "n_difference-of-TSH": 4.4
+    "n_difference_of_TSH": 4.4
   },
   {
     "class": 1,
-    "n_t3-resin": 111,
-    "n_total-serum-thyroxin": 11.9,
-    "n_total-serum-triiodothyronine": 2.3,
+    "n_t3_resin": 111,
+    "n_total_serum_thyroxin": 11.9,
+    "n_total_serum_triiodothyronine": 2.3,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": 3.8
+    "n_difference_of_TSH": 3.8
   },
   {
     "class": 1,
-    "n_t3-resin": 104,
-    "n_total-serum-thyroxin": 6.1,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 104,
+    "n_total_serum_thyroxin": 6.1,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 0.5,
-    "n_difference-of-TSH": 0.8
+    "n_difference_of_TSH": 0.8
   },
   {
     "class": 1,
-    "n_t3-resin": 102,
-    "n_total-serum-thyroxin": 6.6,
-    "n_total-serum-triiodothyronine": 1.2,
+    "n_t3_resin": 102,
+    "n_total_serum_thyroxin": 6.6,
+    "n_total_serum_triiodothyronine": 1.2,
     "n_TSH": 1.4,
-    "n_difference-of-TSH": 1.3
+    "n_difference_of_TSH": 1.3
   },
   {
     "class": 2,
-    "n_t3-resin": 139,
-    "n_total-serum-thyroxin": 16.4,
-    "n_total-serum-triiodothyronine": 3.8,
+    "n_t3_resin": 139,
+    "n_total_serum_thyroxin": 16.4,
+    "n_total_serum_triiodothyronine": 3.8,
     "n_TSH": 1.1,
-    "n_difference-of-TSH": -0.2
+    "n_difference_of_TSH": -0.2
   },
   {
     "class": 2,
-    "n_t3-resin": 111,
-    "n_total-serum-thyroxin": 16,
-    "n_total-serum-triiodothyronine": 2.1,
+    "n_t3_resin": 111,
+    "n_total_serum_thyroxin": 16,
+    "n_total_serum_triiodothyronine": 2.1,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": -0.1
+    "n_difference_of_TSH": -0.1
   },
   {
     "class": 2,
-    "n_t3-resin": 113,
-    "n_total-serum-thyroxin": 17.2,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 113,
+    "n_total_serum_thyroxin": 17.2,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 1,
-    "n_difference-of-TSH": 0
+    "n_difference_of_TSH": 0
   },
   {
     "class": 2,
-    "n_t3-resin": 65,
-    "n_total-serum-thyroxin": 25.3,
-    "n_total-serum-triiodothyronine": 5.8,
+    "n_t3_resin": 65,
+    "n_total_serum_thyroxin": 25.3,
+    "n_total_serum_triiodothyronine": 5.8,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 0.2
+    "n_difference_of_TSH": 0.2
   },
   {
     "class": 2,
-    "n_t3-resin": 88,
-    "n_total-serum-thyroxin": 24.1,
-    "n_total-serum-triiodothyronine": 5.5,
+    "n_t3_resin": 88,
+    "n_total_serum_thyroxin": 24.1,
+    "n_total_serum_triiodothyronine": 5.5,
     "n_TSH": 0.8,
-    "n_difference-of-TSH": 0.1
+    "n_difference_of_TSH": 0.1
   },
   {
     "class": 2,
-    "n_t3-resin": 65,
-    "n_total-serum-thyroxin": 18.2,
-    "n_total-serum-triiodothyronine": 10,
+    "n_t3_resin": 65,
+    "n_total_serum_thyroxin": 18.2,
+    "n_total_serum_triiodothyronine": 10,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 0.1
+    "n_difference_of_TSH": 0.1
   },
   {
     "class": 2,
-    "n_t3-resin": 134,
-    "n_total-serum-thyroxin": 16.4,
-    "n_total-serum-triiodothyronine": 4.8,
+    "n_t3_resin": 134,
+    "n_total_serum_thyroxin": 16.4,
+    "n_total_serum_triiodothyronine": 4.8,
     "n_TSH": 0.6,
-    "n_difference-of-TSH": 0.1
+    "n_difference_of_TSH": 0.1
   },
   {
     "class": 2,
-    "n_t3-resin": 110,
-    "n_total-serum-thyroxin": 20.3,
-    "n_total-serum-triiodothyronine": 3.7,
+    "n_t3_resin": 110,
+    "n_total_serum_thyroxin": 20.3,
+    "n_total_serum_triiodothyronine": 3.7,
     "n_TSH": 0.6,
-    "n_difference-of-TSH": 0.2
+    "n_difference_of_TSH": 0.2
   },
   {
     "class": 2,
-    "n_t3-resin": 67,
-    "n_total-serum-thyroxin": 23.3,
-    "n_total-serum-triiodothyronine": 7.4,
+    "n_t3_resin": 67,
+    "n_total_serum_thyroxin": 23.3,
+    "n_total_serum_triiodothyronine": 7.4,
     "n_TSH": 1.8,
-    "n_difference-of-TSH": -0.6
+    "n_difference_of_TSH": -0.6
   },
   {
     "class": 2,
-    "n_t3-resin": 95,
-    "n_total-serum-thyroxin": 11.1,
-    "n_total-serum-triiodothyronine": 2.7,
+    "n_t3_resin": 95,
+    "n_total_serum_thyroxin": 11.1,
+    "n_total_serum_triiodothyronine": 2.7,
     "n_TSH": 1.6,
-    "n_difference-of-TSH": -0.3
+    "n_difference_of_TSH": -0.3
   },
   {
     "class": 2,
-    "n_t3-resin": 89,
-    "n_total-serum-thyroxin": 14.3,
-    "n_total-serum-triiodothyronine": 4.1,
+    "n_t3_resin": 89,
+    "n_total_serum_thyroxin": 14.3,
+    "n_total_serum_triiodothyronine": 4.1,
     "n_TSH": 0.5,
-    "n_difference-of-TSH": 0.2
+    "n_difference_of_TSH": 0.2
   },
   {
     "class": 2,
-    "n_t3-resin": 89,
-    "n_total-serum-thyroxin": 23.8,
-    "n_total-serum-triiodothyronine": 5.4,
+    "n_t3_resin": 89,
+    "n_total_serum_thyroxin": 23.8,
+    "n_total_serum_triiodothyronine": 5.4,
     "n_TSH": 0.5,
-    "n_difference-of-TSH": 0.1
+    "n_difference_of_TSH": 0.1
   },
   {
     "class": 2,
-    "n_t3-resin": 88,
-    "n_total-serum-thyroxin": 12.9,
-    "n_total-serum-triiodothyronine": 2.7,
+    "n_t3_resin": 88,
+    "n_total_serum_thyroxin": 12.9,
+    "n_total_serum_triiodothyronine": 2.7,
     "n_TSH": 0.1,
-    "n_difference-of-TSH": 0.2
+    "n_difference_of_TSH": 0.2
   },
   {
     "class": 2,
-    "n_t3-resin": 105,
-    "n_total-serum-thyroxin": 17.4,
-    "n_total-serum-triiodothyronine": 1.6,
+    "n_t3_resin": 105,
+    "n_total_serum_thyroxin": 17.4,
+    "n_total_serum_triiodothyronine": 1.6,
     "n_TSH": 0.3,
-    "n_difference-of-TSH": 0.4
+    "n_difference_of_TSH": 0.4
   },
   {
     "class": 2,
-    "n_t3-resin": 89,
-    "n_total-serum-thyroxin": 20.1,
-    "n_total-serum-triiodothyronine": 7.3,
+    "n_t3_resin": 89,
+    "n_total_serum_thyroxin": 20.1,
+    "n_total_serum_triiodothyronine": 7.3,
     "n_TSH": 1.1,
-    "n_difference-of-TSH": -0.2
+    "n_difference_of_TSH": -0.2
   },
   {
     "class": 2,
-    "n_t3-resin": 99,
-    "n_total-serum-thyroxin": 13,
-    "n_total-serum-triiodothyronine": 3.6,
+    "n_t3_resin": 99,
+    "n_total_serum_thyroxin": 13,
+    "n_total_serum_triiodothyronine": 3.6,
     "n_TSH": 0.7,
-    "n_difference-of-TSH": -0.1
+    "n_difference_of_TSH": -0.1
   },
   {
     "class": 2,
-    "n_t3-resin": 80,
-    "n_total-serum-thyroxin": 23,
-    "n_total-serum-triiodothyronine": 10,
+    "n_t3_resin": 80,
+    "n_total_serum_thyroxin": 23,
+    "n_total_serum_triiodothyronine": 10,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": -0.1
+    "n_difference_of_TSH": -0.1
   },
   {
     "class": 2,
-    "n_t3-resin": 89,
-    "n_total-serum-thyroxin": 21.8,
-    "n_total-serum-triiodothyronine": 7.1,
+    "n_t3_resin": 89,
+    "n_total_serum_thyroxin": 21.8,
+    "n_total_serum_triiodothyronine": 7.1,
     "n_TSH": 0.7,
-    "n_difference-of-TSH": -0.1
+    "n_difference_of_TSH": -0.1
   },
   {
     "class": 2,
-    "n_t3-resin": 99,
-    "n_total-serum-thyroxin": 13,
-    "n_total-serum-triiodothyronine": 3.1,
+    "n_t3_resin": 99,
+    "n_total_serum_thyroxin": 13,
+    "n_total_serum_triiodothyronine": 3.1,
     "n_TSH": 0.5,
-    "n_difference-of-TSH": -0.1
+    "n_difference_of_TSH": -0.1
   },
   {
     "class": 2,
-    "n_t3-resin": 68,
-    "n_total-serum-thyroxin": 14.7,
-    "n_total-serum-triiodothyronine": 7.8,
+    "n_t3_resin": 68,
+    "n_total_serum_thyroxin": 14.7,
+    "n_total_serum_triiodothyronine": 7.8,
     "n_TSH": 0.6,
-    "n_difference-of-TSH": -0.2
+    "n_difference_of_TSH": -0.2
   },
   {
     "class": 2,
-    "n_t3-resin": 97,
-    "n_total-serum-thyroxin": 14.2,
-    "n_total-serum-triiodothyronine": 3.6,
+    "n_t3_resin": 97,
+    "n_total_serum_thyroxin": 14.2,
+    "n_total_serum_triiodothyronine": 3.6,
     "n_TSH": 1.5,
-    "n_difference-of-TSH": 0.3
+    "n_difference_of_TSH": 0.3
   },
   {
     "class": 2,
-    "n_t3-resin": 84,
-    "n_total-serum-thyroxin": 21.5,
-    "n_total-serum-triiodothyronine": 2.7,
+    "n_t3_resin": 84,
+    "n_total_serum_thyroxin": 21.5,
+    "n_total_serum_triiodothyronine": 2.7,
     "n_TSH": 1.1,
-    "n_difference-of-TSH": -0.6
+    "n_difference_of_TSH": -0.6
   },
   {
     "class": 2,
-    "n_t3-resin": 84,
-    "n_total-serum-thyroxin": 18.5,
-    "n_total-serum-triiodothyronine": 4.4,
+    "n_t3_resin": 84,
+    "n_total_serum_thyroxin": 18.5,
+    "n_total_serum_triiodothyronine": 4.4,
     "n_TSH": 1.1,
-    "n_difference-of-TSH": -0.3
+    "n_difference_of_TSH": -0.3
   },
   {
     "class": 2,
-    "n_t3-resin": 98,
-    "n_total-serum-thyroxin": 16.7,
-    "n_total-serum-triiodothyronine": 4.3,
+    "n_t3_resin": 98,
+    "n_total_serum_thyroxin": 16.7,
+    "n_total_serum_triiodothyronine": 4.3,
     "n_TSH": 1.7,
-    "n_difference-of-TSH": 0.2
+    "n_difference_of_TSH": 0.2
   },
   {
     "class": 2,
-    "n_t3-resin": 94,
-    "n_total-serum-thyroxin": 20.5,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 94,
+    "n_total_serum_thyroxin": 20.5,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 1.4,
-    "n_difference-of-TSH": -0.5
+    "n_difference_of_TSH": -0.5
   },
   {
     "class": 2,
-    "n_t3-resin": 99,
-    "n_total-serum-thyroxin": 17.5,
-    "n_total-serum-triiodothyronine": 1.9,
+    "n_t3_resin": 99,
+    "n_total_serum_thyroxin": 17.5,
+    "n_total_serum_triiodothyronine": 1.9,
     "n_TSH": 1.4,
-    "n_difference-of-TSH": 0.3
+    "n_difference_of_TSH": 0.3
   },
   {
     "class": 2,
-    "n_t3-resin": 76,
-    "n_total-serum-thyroxin": 25.3,
-    "n_total-serum-triiodothyronine": 4.5,
+    "n_t3_resin": 76,
+    "n_total_serum_thyroxin": 25.3,
+    "n_total_serum_triiodothyronine": 4.5,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": -0.1
+    "n_difference_of_TSH": -0.1
   },
   {
     "class": 2,
-    "n_t3-resin": 110,
-    "n_total-serum-thyroxin": 15.2,
-    "n_total-serum-triiodothyronine": 1.9,
+    "n_t3_resin": 110,
+    "n_total_serum_thyroxin": 15.2,
+    "n_total_serum_triiodothyronine": 1.9,
     "n_TSH": 0.7,
-    "n_difference-of-TSH": -0.2
+    "n_difference_of_TSH": -0.2
   },
   {
     "class": 2,
-    "n_t3-resin": 144,
-    "n_total-serum-thyroxin": 22.3,
-    "n_total-serum-triiodothyronine": 3.3,
+    "n_t3_resin": 144,
+    "n_total_serum_thyroxin": 22.3,
+    "n_total_serum_triiodothyronine": 3.3,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 0.6
+    "n_difference_of_TSH": 0.6
   },
   {
     "class": 2,
-    "n_t3-resin": 105,
-    "n_total-serum-thyroxin": 12,
-    "n_total-serum-triiodothyronine": 3.3,
+    "n_t3_resin": 105,
+    "n_total_serum_thyroxin": 12,
+    "n_total_serum_triiodothyronine": 3.3,
     "n_TSH": 1.1,
-    "n_difference-of-TSH": 0
+    "n_difference_of_TSH": 0
   },
   {
     "class": 2,
-    "n_t3-resin": 88,
-    "n_total-serum-thyroxin": 16.5,
-    "n_total-serum-triiodothyronine": 4.9,
+    "n_t3_resin": 88,
+    "n_total_serum_thyroxin": 16.5,
+    "n_total_serum_triiodothyronine": 4.9,
     "n_TSH": 0.8,
-    "n_difference-of-TSH": 0.1
+    "n_difference_of_TSH": 0.1
   },
   {
     "class": 2,
-    "n_t3-resin": 97,
-    "n_total-serum-thyroxin": 15.1,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 97,
+    "n_total_serum_thyroxin": 15.1,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": -0.2
+    "n_difference_of_TSH": -0.2
   },
   {
     "class": 2,
-    "n_t3-resin": 106,
-    "n_total-serum-thyroxin": 13.4,
-    "n_total-serum-triiodothyronine": 3,
+    "n_t3_resin": 106,
+    "n_total_serum_thyroxin": 13.4,
+    "n_total_serum_triiodothyronine": 3,
     "n_TSH": 1.1,
-    "n_difference-of-TSH": 0
+    "n_difference_of_TSH": 0
   },
   {
     "class": 2,
-    "n_t3-resin": 79,
-    "n_total-serum-thyroxin": 19,
-    "n_total-serum-triiodothyronine": 5.5,
+    "n_t3_resin": 79,
+    "n_total_serum_thyroxin": 19,
+    "n_total_serum_triiodothyronine": 5.5,
     "n_TSH": 0.9,
-    "n_difference-of-TSH": 0.3
+    "n_difference_of_TSH": 0.3
   },
   {
     "class": 2,
-    "n_t3-resin": 92,
-    "n_total-serum-thyroxin": 11.1,
-    "n_total-serum-triiodothyronine": 2,
+    "n_t3_resin": 92,
+    "n_total_serum_thyroxin": 11.1,
+    "n_total_serum_triiodothyronine": 2,
     "n_TSH": 0.7,
-    "n_difference-of-TSH": -0.2
+    "n_difference_of_TSH": -0.2
   },
   {
     "class": 3,
-    "n_t3-resin": 125,
-    "n_total-serum-thyroxin": 2.3,
-    "n_total-serum-triiodothyronine": 0.9,
+    "n_t3_resin": 125,
+    "n_total_serum_thyroxin": 2.3,
+    "n_total_serum_triiodothyronine": 0.9,
     "n_TSH": 16.5,
-    "n_difference-of-TSH": 9.5
+    "n_difference_of_TSH": 9.5
   },
   {
     "class": 3,
-    "n_t3-resin": 120,
-    "n_total-serum-thyroxin": 6.8,
-    "n_total-serum-triiodothyronine": 2.1,
+    "n_t3_resin": 120,
+    "n_total_serum_thyroxin": 6.8,
+    "n_total_serum_triiodothyronine": 2.1,
     "n_TSH": 10.4,
-    "n_difference-of-TSH": 38.6
+    "n_difference_of_TSH": 38.6
   },
   {
     "class": 3,
-    "n_t3-resin": 108,
-    "n_total-serum-thyroxin": 3.5,
-    "n_total-serum-triiodothyronine": 0.6,
+    "n_t3_resin": 108,
+    "n_total_serum_thyroxin": 3.5,
+    "n_total_serum_triiodothyronine": 0.6,
     "n_TSH": 1.7,
-    "n_difference-of-TSH": 1.4
+    "n_difference_of_TSH": 1.4
   },
   {
     "class": 3,
-    "n_t3-resin": 120,
-    "n_total-serum-thyroxin": 3,
-    "n_total-serum-triiodothyronine": 2.5,
+    "n_t3_resin": 120,
+    "n_total_serum_thyroxin": 3,
+    "n_total_serum_triiodothyronine": 2.5,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": 4.5
+    "n_difference_of_TSH": 4.5
   },
   {
     "class": 3,
-    "n_t3-resin": 119,
-    "n_total-serum-thyroxin": 3.8,
-    "n_total-serum-triiodothyronine": 1.1,
+    "n_t3_resin": 119,
+    "n_total_serum_thyroxin": 3.8,
+    "n_total_serum_triiodothyronine": 1.1,
     "n_TSH": 23,
-    "n_difference-of-TSH": 5.7
+    "n_difference_of_TSH": 5.7
   },
   {
     "class": 3,
-    "n_t3-resin": 141,
-    "n_total-serum-thyroxin": 5.6,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 141,
+    "n_total_serum_thyroxin": 5.6,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 9.2,
-    "n_difference-of-TSH": 14.4
+    "n_difference_of_TSH": 14.4
   },
   {
     "class": 3,
-    "n_t3-resin": 129,
-    "n_total-serum-thyroxin": 1.5,
-    "n_total-serum-triiodothyronine": 0.6,
+    "n_t3_resin": 129,
+    "n_total_serum_thyroxin": 1.5,
+    "n_total_serum_triiodothyronine": 0.6,
     "n_TSH": 12.5,
-    "n_difference-of-TSH": 2.9
+    "n_difference_of_TSH": 2.9
   },
   {
     "class": 3,
-    "n_t3-resin": 118,
-    "n_total-serum-thyroxin": 3.6,
-    "n_total-serum-triiodothyronine": 1.5,
+    "n_t3_resin": 118,
+    "n_total_serum_thyroxin": 3.6,
+    "n_total_serum_triiodothyronine": 1.5,
     "n_TSH": 11.6,
-    "n_difference-of-TSH": 48.8
+    "n_difference_of_TSH": 48.8
   },
   {
     "class": 3,
-    "n_t3-resin": 120,
-    "n_total-serum-thyroxin": 1.9,
-    "n_total-serum-triiodothyronine": 0.7,
+    "n_t3_resin": 120,
+    "n_total_serum_thyroxin": 1.9,
+    "n_total_serum_triiodothyronine": 0.7,
     "n_TSH": 18.5,
-    "n_difference-of-TSH": 24
+    "n_difference_of_TSH": 24
   },
   {
     "class": 3,
-    "n_t3-resin": 119,
-    "n_total-serum-thyroxin": 0.8,
-    "n_total-serum-triiodothyronine": 0.7,
+    "n_t3_resin": 119,
+    "n_total_serum_thyroxin": 0.8,
+    "n_total_serum_triiodothyronine": 0.7,
     "n_TSH": 56.4,
-    "n_difference-of-TSH": 21.6
+    "n_difference_of_TSH": 21.6
   },
   {
     "class": 3,
-    "n_t3-resin": 123,
-    "n_total-serum-thyroxin": 5.6,
-    "n_total-serum-triiodothyronine": 1.1,
+    "n_t3_resin": 123,
+    "n_total_serum_thyroxin": 5.6,
+    "n_total_serum_triiodothyronine": 1.1,
     "n_TSH": 13.7,
-    "n_difference-of-TSH": 56.3
+    "n_difference_of_TSH": 56.3
   },
   {
     "class": 3,
-    "n_t3-resin": 115,
-    "n_total-serum-thyroxin": 6.3,
-    "n_total-serum-triiodothyronine": 1.2,
+    "n_t3_resin": 115,
+    "n_total_serum_thyroxin": 6.3,
+    "n_total_serum_triiodothyronine": 1.2,
     "n_TSH": 4.7,
-    "n_difference-of-TSH": 14.4
+    "n_difference_of_TSH": 14.4
   },
   {
     "class": 3,
-    "n_t3-resin": 126,
-    "n_total-serum-thyroxin": 0.5,
-    "n_total-serum-triiodothyronine": 0.2,
+    "n_t3_resin": 126,
+    "n_total_serum_thyroxin": 0.5,
+    "n_total_serum_triiodothyronine": 0.2,
     "n_TSH": 12.2,
-    "n_difference-of-TSH": 8.8
+    "n_difference_of_TSH": 8.8
   },
   {
     "class": 3,
-    "n_t3-resin": 121,
-    "n_total-serum-thyroxin": 4.7,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 121,
+    "n_total_serum_thyroxin": 4.7,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 11.2,
-    "n_difference-of-TSH": 53
+    "n_difference_of_TSH": 53
   },
   {
     "class": 3,
-    "n_t3-resin": 131,
-    "n_total-serum-thyroxin": 2.7,
-    "n_total-serum-triiodothyronine": 0.8,
+    "n_t3_resin": 131,
+    "n_total_serum_thyroxin": 2.7,
+    "n_total_serum_triiodothyronine": 0.8,
     "n_TSH": 9.9,
-    "n_difference-of-TSH": 4.7
+    "n_difference_of_TSH": 4.7
   },
   {
     "class": 3,
-    "n_t3-resin": 134,
-    "n_total-serum-thyroxin": 2,
-    "n_total-serum-triiodothyronine": 0.5,
+    "n_t3_resin": 134,
+    "n_total_serum_thyroxin": 2,
+    "n_total_serum_triiodothyronine": 0.5,
     "n_TSH": 12.2,
-    "n_difference-of-TSH": 2.2
+    "n_difference_of_TSH": 2.2
   },
   {
     "class": 3,
-    "n_t3-resin": 141,
-    "n_total-serum-thyroxin": 2.5,
-    "n_total-serum-triiodothyronine": 1.3,
+    "n_t3_resin": 141,
+    "n_total_serum_thyroxin": 2.5,
+    "n_total_serum_triiodothyronine": 1.3,
     "n_TSH": 8.5,
-    "n_difference-of-TSH": 7.5
+    "n_difference_of_TSH": 7.5
   },
   {
     "class": 3,
-    "n_t3-resin": 113,
-    "n_total-serum-thyroxin": 5.1,
-    "n_total-serum-triiodothyronine": 0.7,
+    "n_t3_resin": 113,
+    "n_total_serum_thyroxin": 5.1,
+    "n_total_serum_triiodothyronine": 0.7,
     "n_TSH": 5.8,
-    "n_difference-of-TSH": 19.6
+    "n_difference_of_TSH": 19.6
   },
   {
     "class": 3,
-    "n_t3-resin": 136,
-    "n_total-serum-thyroxin": 1.4,
-    "n_total-serum-triiodothyronine": 0.3,
+    "n_t3_resin": 136,
+    "n_total_serum_thyroxin": 1.4,
+    "n_total_serum_triiodothyronine": 0.3,
     "n_TSH": 32.6,
-    "n_difference-of-TSH": 8.4
+    "n_difference_of_TSH": 8.4
   },
   {
     "class": 3,
-    "n_t3-resin": 120,
-    "n_total-serum-thyroxin": 3.4,
-    "n_total-serum-triiodothyronine": 1.8,
+    "n_t3_resin": 120,
+    "n_total_serum_thyroxin": 3.4,
+    "n_total_serum_triiodothyronine": 1.8,
     "n_TSH": 7.5,
-    "n_difference-of-TSH": 21.5
+    "n_difference_of_TSH": 21.5
   },
   {
     "class": 3,
-    "n_t3-resin": 125,
-    "n_total-serum-thyroxin": 3.7,
-    "n_total-serum-triiodothyronine": 1.1,
+    "n_t3_resin": 125,
+    "n_total_serum_thyroxin": 3.7,
+    "n_total_serum_triiodothyronine": 1.1,
     "n_TSH": 8.5,
-    "n_difference-of-TSH": 25.9
+    "n_difference_of_TSH": 25.9
   },
   {
     "class": 3,
-    "n_t3-resin": 123,
-    "n_total-serum-thyroxin": 1.9,
-    "n_total-serum-triiodothyronine": 0.3,
+    "n_t3_resin": 123,
+    "n_total_serum_thyroxin": 1.9,
+    "n_total_serum_triiodothyronine": 0.3,
     "n_TSH": 22.8,
-    "n_difference-of-TSH": 22.2
+    "n_difference_of_TSH": 22.2
   },
   {
     "class": 3,
-    "n_t3-resin": 112,
-    "n_total-serum-thyroxin": 2.6,
-    "n_total-serum-triiodothyronine": 0.7,
+    "n_t3_resin": 112,
+    "n_total_serum_thyroxin": 2.6,
+    "n_total_serum_triiodothyronine": 0.7,
     "n_TSH": 41,
-    "n_difference-of-TSH": 19
+    "n_difference_of_TSH": 19
   },
   {
     "class": 3,
-    "n_t3-resin": 134,
-    "n_total-serum-thyroxin": 1.9,
-    "n_total-serum-triiodothyronine": 0.6,
+    "n_t3_resin": 134,
+    "n_total_serum_thyroxin": 1.9,
+    "n_total_serum_triiodothyronine": 0.6,
     "n_TSH": 18.4,
-    "n_difference-of-TSH": 8.2
+    "n_difference_of_TSH": 8.2
   },
   {
     "class": 3,
-    "n_t3-resin": 119,
-    "n_total-serum-thyroxin": 5.1,
-    "n_total-serum-triiodothyronine": 1.1,
+    "n_t3_resin": 119,
+    "n_total_serum_thyroxin": 5.1,
+    "n_total_serum_triiodothyronine": 1.1,
     "n_TSH": 7,
-    "n_difference-of-TSH": 40.8
+    "n_difference_of_TSH": 40.8
   },
   {
     "class": 3,
-    "n_t3-resin": 118,
-    "n_total-serum-thyroxin": 6.5,
-    "n_total-serum-triiodothyronine": 1.3,
+    "n_t3_resin": 118,
+    "n_total_serum_thyroxin": 6.5,
+    "n_total_serum_triiodothyronine": 1.3,
     "n_TSH": 1.7,
-    "n_difference-of-TSH": 11.5
+    "n_difference_of_TSH": 11.5
   },
   {
     "class": 3,
-    "n_t3-resin": 139,
-    "n_total-serum-thyroxin": 4.2,
-    "n_total-serum-triiodothyronine": 0.7,
+    "n_t3_resin": 139,
+    "n_total_serum_thyroxin": 4.2,
+    "n_total_serum_triiodothyronine": 0.7,
     "n_TSH": 4.3,
-    "n_difference-of-TSH": 6.3
+    "n_difference_of_TSH": 6.3
   },
   {
     "class": 3,
-    "n_t3-resin": 103,
-    "n_total-serum-thyroxin": 5.1,
-    "n_total-serum-triiodothyronine": 1.4,
+    "n_t3_resin": 103,
+    "n_total_serum_thyroxin": 5.1,
+    "n_total_serum_triiodothyronine": 1.4,
     "n_TSH": 1.2,
-    "n_difference-of-TSH": 5
+    "n_difference_of_TSH": 5
   },
   {
     "class": 3,
-    "n_t3-resin": 97,
-    "n_total-serum-thyroxin": 4.7,
-    "n_total-serum-triiodothyronine": 1.1,
+    "n_t3_resin": 97,
+    "n_total_serum_thyroxin": 4.7,
+    "n_total_serum_triiodothyronine": 1.1,
     "n_TSH": 2.1,
-    "n_difference-of-TSH": 12.6
+    "n_difference_of_TSH": 12.6
   },
   {
     "class": 3,
-    "n_t3-resin": 102,
-    "n_total-serum-thyroxin": 5.3,
-    "n_total-serum-triiodothyronine": 1.4,
+    "n_t3_resin": 102,
+    "n_total_serum_thyroxin": 5.3,
+    "n_total_serum_triiodothyronine": 1.4,
     "n_TSH": 1.3,
-    "n_difference-of-TSH": 6.7
+    "n_difference_of_TSH": 6.7
   }
 ]
