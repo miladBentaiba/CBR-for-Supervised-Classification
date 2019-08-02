@@ -69,6 +69,12 @@ def insert_cases(_items):
                    .format(SOLUTION, ','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)),
                            ','.join(new_all_features), ','.join(old_all_features)), items)
     S.commit()
+    _c.execute('select * from cases where expert is not "true"')
+    cases = []
+    for row in _c.fetchall():
+        cases.append(dict((_c.description[i][0], value)
+                                       for i, value in enumerate(row)))
+    return cases
 
 
 def upload_data(data_file):
