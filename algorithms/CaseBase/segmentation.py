@@ -360,7 +360,8 @@ def segment_one(obj, iteration_number):
                 insert_into_existing_segment(delegate,
                                              obj, iteration_number)
             except sqlite3.IntegrityError:
-                print('obj already exists in the segment', obj)
+                pass
+                # print('obj already exists in the segment', obj)
             break
     if not inserted_in_level_1:
         create_segment(obj, iteration_number)
