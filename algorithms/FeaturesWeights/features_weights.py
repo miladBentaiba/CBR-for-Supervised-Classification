@@ -25,7 +25,6 @@ def features_weighting(data):
         weight[list(data[0].keys())[_x]] = 0
     # calculate the weights using all possible pairs
     for pair in list(combinations(data, 2)):
-        print(pair)
         comparator = 1 if pair[0][constants.SOLUTION] == pair[1][constants.SOLUTION] else -1
         for i, _x in enumerate(constants.ALL_FEATURES):
             # iterate over features

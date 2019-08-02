@@ -41,7 +41,7 @@ CREATE TABLE cases_in_segment
 CREATE TABLE segment
 (
     _id_segment integer PRIMARY KEY autoincrement not null,
-    severity int NOT NULL check (severity in (0,1)) /* severity of the cases stored in the segment */
+    result_of_treatment int NOT NULL check (result_of_treatment in (0,1)) /* severity of the cases stored in the segment */
 );
 
 Create table rules

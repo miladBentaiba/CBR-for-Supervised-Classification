@@ -41,19 +41,20 @@ def randomness_ratio(obj):
     # _s1 contains all other solutions except the solution of obj
     _s1.remove(obj[SOLUTION])
     _c = S.cursor()
-    # print('select (select sum(frequency) from cases where '
-    #       '{3}=?1 and expert is 1) as s0,'
-    #       '(select sum(frequency) from cases '
-    #       'where ?2 in ({0}) and '
-    #       'expert is 1) as s1, '
-    #       ' (select sum(frequency) from cases '
-    #       '   where ({1}, ?2, '
-    #       'expert) is ({2}, ?1, 1) ) as f0, '
-    #       ' (select sum(frequency) from cases '
-    #       '   where ({1}) is ({2}) '
-    #       '  and ?2 in ({0}) and expert is 1) as f1'
-    #       .format(",".join(map(str, _s1)), ",".join(ALL_FEATURES),
-    #               ",".join(['?'] * len(ALL_FEATURES)), SOLUTION))
+    print('select (select sum(frequency) from cases where '
+          '{3}=?1 and expert is 1) as s0,'
+          '(select sum(frequency) from cases '
+          'where ?2 in ({0}) and '
+          'expert is 1) as s1, '
+          ' (select sum(frequency) from cases '
+          '   where ({1}, ?2, '
+          'expert) is ({2}, ?1, 1) ) as f0, '
+          ' (select sum(frequency) from cases '
+          '   where ({1}) is ({2}) '
+          '  and ?2 in ({0}) and expert is 1) as f1'
+          .format(",".join(map(str, _s1)), ",".join(ALL_FEATURES),
+                  ",".join(['?' + str(x) for x in range(3, 3 + len(ALL_FEATURES))]), SOLUTION),
+          (obj[SOLUTION], str(_s0)) + tuple(obj[x] for x in ALL_FEATURES))
     _c.execute('select (select sum(frequency) from cases where '
                '{3}=?1 and expert is 1) as s0,'
                '(select sum(frequency) from cases '
@@ -66,8 +67,8 @@ def randomness_ratio(obj):
                '   where ({1}) is ({2}) '
                '  and ?2 in ({0}) and expert is 1) as f1'
                .format(",".join(map(str, _s1)), ",".join(ALL_FEATURES),
-                       ",".join(['?'+str(x) for x in range(3, 8)]), SOLUTION),
-               (SOLUTION, str(_s0)) + tuple(obj[x] for x in ALL_FEATURES))
+                       ",".join(['?' + str(x) for x in range(3, 3 + len(ALL_FEATURES))]), SOLUTION),
+               (obj[SOLUTION], str(_s0)) + tuple(obj[x] for x in ALL_FEATURES))
     results = _c.fetchone()
     res = {'s0': 0 if results[0] is None else results[0],
            's1': 0 if results[1] is None else results[1],

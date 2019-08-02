@@ -1,14 +1,1 @@
-Traceback (most recent call last):
-  File "C:/Users/Milad/PycharmProjects/CBR/algorithms/R_S_CB.py", line 12, in <module>
-    for _it in read_json("../datasets/mammographic-masses/rando1.json"):
-  File "C:\Users\Milad\PycharmProjects\CBR\algorithms\I_S_CB.py", line 18, in read_json
-    return json.load(file)
-  File "C:\Users\Milad\AppData\Local\Programs\Python\Python37-32\lib\json\__init__.py", line 296, in load
-    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
-  File "C:\Users\Milad\AppData\Local\Programs\Python\Python37-32\lib\json\__init__.py", line 348, in loads
-    return _default_decoder.decode(s)
-  File "C:\Users\Milad\AppData\Local\Programs\Python\Python37-32\lib\json\decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "C:\Users\Milad\AppData\Local\Programs\Python\Python37-32\lib\json\decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0) 
+
