@@ -1,5 +1,5 @@
 from FeaturesWeights.features_weights import Weighting
-from constantsMammographicMasses import SOLUTION
+from constants import SOLUTION
 from features_weights import order_features
 import init
 

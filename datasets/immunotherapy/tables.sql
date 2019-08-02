@@ -1,12 +1,14 @@
 CREATE TABLE cases
 (
     _id_case integer PRIMARY KEY AUTOINCREMENT,
-    c_bi int check (c_bi in (0,1,2,3,4,5,6)),
+    c_sex int check ( c_sex in (1,2) ),
     n_age int check (n_age <101),
-    c_shape int check(c_shape in (1,2,3,4)),
-    c_margin int check(c_margin in (1,2,3,4,5)),
-    c_density int check (c_density in (1,2,3,4)),
-    severity int check (severity in (0,1)), /* solution part */
+    n_time int,
+    n_number_of_warts int,
+    c_type int check (c_type in (1,2,3)),
+    n_area int ,
+    c_induration_diameter int,
+    result_of_treatment int check (result_of_treatment in (0,1)), /* solution part */
     frequency int DEFAULT 1 NOT NULL, /* number of times the case exists*/
     randomness int DEFAULT null, /* a value used to calculate the stochastic validity */
     significance int DEFAULT null, /* a value used to calculate the stochastic validity */
@@ -15,7 +17,8 @@ CREATE TABLE cases
     randomized boolean not null default false,
     stochasticity int default null,
     segmented boolean not null default false,
-    CONSTRAINT constraint_case UNIQUE (c_bi, n_age, c_shape, c_margin, c_density, severity)
+    CONSTRAINT constraint_case UNIQUE (c_sex, n_age, n_time, n_number_of_warts, c_type, n_area,
+                                      c_induration_diameter, result_of_treatment)
 );
 
 CREATE TABLE weights
@@ -44,41 +47,50 @@ CREATE TABLE segment
 Create table rules
 (
   _id_rule integer primary key autoincrement not null,
-  c_bi int check (c_bi in (0,1,2,3,4,5,6)) default null,
-  n_age int check (n_age <101) default null,
-  c_shape int check(c_shape in (1,2,3,4)) default null,
-  c_margin int check(c_margin in (1,2,3,4,5)) default null,
-  c_density int check (c_density in (1,2,3,4)) default null,
-  severity int check (severity in (0,1)) not null, /* solution */
-  CONSTRAINT constraint_rules_1 UNIQUE (c_bi, n_age, c_shape, c_margin, c_density)
+  c_sex int check ( c_sex in (1,2) ),
+  n_age int check (n_age <101),
+  n_time int,
+  n_number_of_warts int,
+  c_type int check (c_type in (1,2,3)),
+  n_area int ,
+  c_induration_diameter int,
+  result_of_treatment int check (result_of_treatment in (0,1)), /* solution part */
+  CONSTRAINT constraint_rules_1 UNIQUE (c_sex, n_age, n_time, n_number_of_warts, c_type, n_area,
+                                      c_induration_diameter, result_of_treatment)
 );
 
 CREATE TABLE test_cases
 (
     _id_case integer PRIMARY KEY AUTOINCREMENT,
-    c_bi int check (c_bi in (0,1,2,3,4,5,6)),
-    n_age int check (n_age <101),
-    c_shape int check(c_shape in (1,2,3,4)),
-    c_margin int check(c_margin in (1,2,3,4,5)),
-    c_density int check (c_density in (1,2,3,4)),
-    severity int check (severity in (0,1)) /* solution part */
+   c_sex int check ( c_sex in (1,2) ),
+   n_age int check (n_age <101),
+   n_time int,
+   n_number_of_warts int,
+   c_type int check (c_type in (1,2,3)),
+   n_area int ,
+   c_induration_diameter int,
+   result_of_treatment int check (result_of_treatment in (0,1)) /* solution part */
 );
 
 CREATE TABLE new_cases
 (
     _id_case integer PRIMARY KEY AUTOINCREMENT,
-    c_bi int check (c_bi in (0,1,2,3,4,5,6)),
+    c_sex int check ( c_sex in (1,2) ),
     n_age int check (n_age <101),
-    c_shape int check(c_shape in (1,2,3,4)),
-    c_margin int check(c_margin in (1,2,3,4,5)),
-    c_density int check (c_density in (1,2,3,4)),
-    severity int check (severity in (0,1)), /* solution part */
+    n_time int,
+    n_number_of_warts int,
+    c_type int check (c_type in (1,2,3)),
+    n_area int ,
+    c_induration_diameter int,
+    result_of_treatment int check (result_of_treatment in (0,1)), /* solution part */
     frequency int DEFAULT 1 NOT NULL, /* number of times the case exists*/
     randomness int DEFAULT null, /* a value used to calculate the stochastic validity */
     significance int DEFAULT null, /* a value used to calculate the stochastic validity */
     rule boolean DEFAULT null, /* is it valid according to rules? */
     expert boolean DEFAULT null, /* does the expert approved its validity? */
     randomized boolean not null default false,
+    stochasticity int default null,
     segmented boolean not null default false,
-    CONSTRAINT constraint_case UNIQUE (c_bi, n_age, c_shape, c_margin, c_density, severity)
+    CONSTRAINT constraint_case UNIQUE (c_sex, n_age, n_time, n_number_of_warts, c_type, n_area,
+                                      c_induration_diameter, result_of_treatment)
 );

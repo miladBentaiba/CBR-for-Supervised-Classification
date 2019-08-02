@@ -1,6 +1,6 @@
 """ This module compares two cases and returns the similarity between them"""
 
-import constantsMammographicMasses
+import constants
 
 
 def compare_nominative(feature, value1, value2):
@@ -13,7 +13,7 @@ def compare_nominative(feature, value1, value2):
     if value1 == value2:
         sim_value = 1
     elif value1 is None or value2 is None:
-        sim_value = constantsMammographicMasses.PROBABILITY_FEATURES[feature]
+        sim_value = constants.PROBABILITY_FEATURES[feature]
     else:
         sim_value = 0
     return sim_value
@@ -27,10 +27,10 @@ def compare_quantitative(feature, value1, value2):
     :return: similarity between the values
     """
     if value1 is None or value2 is None:
-        sim_value = constantsMammographicMasses.PROBABILITY_FEATURES[feature]
+        sim_value = constants.PROBABILITY_FEATURES[feature]
     else:
         sim_value = 1 - ((abs(value1 - value2)) * 1.0 /
-                         (constantsMammographicMasses.MAX_FEATURE[feature] - constantsMammographicMasses.MIN_FEATURE[feature]))
+                         (constantss.MAX_FEATURE[feature] - constants.MIN_FEATURE[feature]))
     return sim_value
 
 
@@ -45,7 +45,7 @@ def compare_cases(obj1, obj2, weights):
     weights_sum = 0
     # similarity between two nominative features is calculated differently from
     # two quantitative values
-    for _x in constantsMammographicMasses.ALL_FEATURES:
+    for _x in constants.ALL_FEATURES:
         # if _x is nominative
         if _x[0] == 'c':
             similarity += compare_nominative(_x, obj1[_x], obj2[_x]) * weights[_x]
@@ -67,7 +67,7 @@ def compare_cases_initial(obj1, obj2):
     weights_sum = 0
     # similarity between two nominative features is calculated differently from
     # two quantitative values
-    for _x in constantsMammographicMasses.ALL_FEATURES:
+    for _x in constants.ALL_FEATURES:
         # if _x is nominative
         if _x[0] == 'c':
             similarity += compare_nominative(_x, obj1[_x], obj2[_x])

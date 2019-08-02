@@ -74,4 +74,4 @@ POSSIBLE_SOLUTIONS = [0, 1]
 
 TABLES = '../datasets/immunotherapy/tables.sql',
 
-DATA = '../datasets/immunotherapy/immunotheraphy.json'
+DATA = '../datasets/immunotherapy/immunotheray.json'

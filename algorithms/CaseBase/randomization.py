@@ -4,8 +4,8 @@ import json
 
 from features_weights import order_features
 import init
-from constantsMammographicMasses import ALL_FEATURES
-from constantsMammographicMasses import SOLUTION
+from constants import ALL_FEATURES
+from constants import SOLUTION
 
 S = init.Singleton.get_instance()
 

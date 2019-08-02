@@ -1,174 +1,11 @@
 """ This module weights features and select the most appropriate ones. """
 import init
 from itertools import combinations
+import json
 
-import constantsMammographicMasses
+import constants
 
 S = init.Singleton.get_instance()
-DATA = [
-    {
-        "c_bi": 5,
-        "n_age": 67,
-        "c_shape": 3,
-        "c_margin": 5,
-        "c_density": 3,
-        "severity": 1,
-        "frequency": 1
-    },
-    {
-        "c_bi": 4,
-        "n_age": 43,
-        "c_shape": 1,
-        "c_margin": 1,
-        "c_density": None,
-        "severity": 1,
-        "frequency": 1
-    },
-    {
-        "c_bi": 5,
-        "n_age": 58,
-        "c_shape": 4,
-        "c_margin": 5,
-        "c_density": 3,
-        "severity": 1,
-        "frequency": 1
-    },
-    {
-        "c_bi": 4,
-        "n_age": 28,
-        "c_shape": 1,
-        "c_margin": 1,
-        "c_density": 3,
-        "severity": 0,
-        "frequency": 1
-    },
-    {
-        "c_bi": 5,
-        "n_age": 74,
-        "c_shape": 1,
-        "c_margin": 5,
-        "c_density": None,
-        "severity": 1,
-        "frequency": 1
-    },
-    {
-        "c_bi": 4,
-        "n_age": 65,
-        "c_shape": 1,
-        "c_margin": None,
-        "c_density": 3,
-        "severity": 0,
-        "frequency": 1
-    },
-    {
-        "c_bi": 4,
-        "n_age": 70,
-        "c_shape": None,
-        "c_margin": None,
-        "c_density": 3,
-        "severity": 0,
-        "frequency": 1
-    },
-    {
-        "c_bi": 5,
-        "n_age": 42,
-        "c_shape": 1,
-        "c_margin": None,
-        "c_density": 3,
-        "severity": 0,
-        "frequency": 1
-    },
-    {
-        "c_bi": 5,
-        "n_age": 57,
-        "c_shape": 1,
-        "c_margin": 5,
-        "c_density": 3,
-        "severity": 1,
-        "frequency": 1
-    },
-    {
-        "c_bi": 5,
-        "n_age": 60,
-        "c_shape": None,
-        "c_margin": 5,
-        "c_density": 1,
-        "severity": 1,
-        "frequency": 1
-    },
-    {
-        "c_bi": 5,
-        "n_age": 76,
-        "c_shape": 1,
-        "c_margin": 4,
-        "c_density": 3,
-        "severity": 1,
-        "frequency": 1
-    },
-    {
-        "c_bi": 3,
-        "n_age": 42,
-        "c_shape": 2,
-        "c_margin": 1,
-        "c_density": 3,
-        "severity": 1,
-        "frequency": 1
-    },
-    {
-        "c_bi": 4,
-        "n_age": 64,
-        "c_shape": 1,
-        "c_margin": None,
-        "c_density": 3,
-        "severity": 0,
-        "frequency": 1
-    },
-    {
-        "c_bi": 4,
-        "n_age": 36,
-        "c_shape": 3,
-        "c_margin": 1,
-        "c_density": 2,
-        "severity": 0,
-        "frequency": 1
-    },
-    {
-        "c_bi": 4,
-        "n_age": 60,
-        "c_shape": 2,
-        "c_margin": 1,
-        "c_density": 2,
-        "severity": 0,
-        "frequency": 1
-    },
-    {
-        "c_bi": 4,
-        "n_age": 54,
-        "c_shape": 1,
-        "c_margin": 1,
-        "c_density": 3,
-        "severity": 0,
-        "frequency": 1
-    },
-    {
-        "c_bi": 3,
-        "n_age": 52,
-        "c_shape": 3,
-        "c_margin": 4,
-        "c_density": 3,
-        "severity": 0,
-        "frequency": 1
-    },
-    {
-        "c_bi": 4,
-        "n_age": 59,
-        "c_shape": 2,
-        "c_margin": 1,
-        "c_density": 3,
-        "severity": 1,
-        "frequency": 1
-    }
-]
 
 
 def order_features():
@@ -184,12 +21,13 @@ def features_weighting(data):
     """
     weight = {}
     # initiate the weights to 0
-    for _x, f in enumerate(constantsMammographicMasses.ALL_FEATURES):
+    for _x, f in enumerate(constants.ALL_FEATURES):
         weight[list(data[0].keys())[_x]] = 0
     # calculate the weights using all possible pairs
     for pair in list(combinations(data, 2)):
-        comparator = 1 if pair[0][constantsMammographicMasses.SOLUTION] == pair[1][constantsMammographicMasses.SOLUTION] else -1
-        for i, _x in enumerate(constantsMammographicMasses.ALL_FEATURES):
+        print(pair)
+        comparator = 1 if pair[0][constants.SOLUTION] == pair[1][constants.SOLUTION] else -1
+        for i, _x in enumerate(constants.ALL_FEATURES):
             # iterate over features
             # if feature is quantitative (n = numerical)
             if _x[0] == 'n':
@@ -209,7 +47,7 @@ def features_weighting(data):
     min_weight = weight[min(weight, key=weight.get)]
 
     for i, _x in enumerate(data[0]):
-        if i < len(constantsMammographicMasses.ALL_FEATURES):
+        if i < len(constants.ALL_FEATURES):
             weight[_x] = (weight[_x] - min_weight) / (max_weight - min_weight)
 
     _cur = S.cursor()
@@ -227,7 +65,14 @@ class Weighting:
     def get_instance():
         """ Static access method. """
         if Weighting.__instance is None:
-            Weighting(DATA)
+            _cur = S.cursor()
+            _cur.execute('select {0}, {1}, frequency from cases'
+                         .format(','.join(constants.ALL_FEATURES), constants.SOLUTION))
+            cases = []
+            for row in _cur.fetchall():
+                cases.append(dict((_cur.description[i][0], value)
+                                  for i, value in enumerate(row)))
+            Weighting(cases)
         return Weighting.__instance
 
     def __init__(self, data):
@@ -238,11 +83,17 @@ class Weighting:
             _cur.execute('select feature, weight from weights')
             results = _cur.fetchall()
             if not results:
-                Weighting.__instance = features_weighting(data)
+                _cur = S.cursor()
+                _cur.execute('select {0}, {1}, frequency from cases'
+                             .format(','.join(constants.ALL_FEATURES), constants.SOLUTION))
+                cases = []
+                for row in _cur.fetchall():
+                    cases.append(dict((_cur.description[i][0], value)
+                                      for i, value in enumerate(row)))
+                Weighting.__instance = features_weighting(cases)
             else:
                 Weighting.__instance = {}
                 for _x in results:
                     self.__instance[_x[0]] = _x[1]
-
 
 # print(Weighting.get_instance())

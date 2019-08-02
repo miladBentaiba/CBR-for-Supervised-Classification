@@ -1,11 +1,10 @@
 """This module uploads cases from file to the database."""
 
-from constants import SOLUTION, TABLES, DATA
 
 import json
 from sqlite3 import OperationalError
 from random import shuffle
-from constants import ALL_FEATURES, TABLES
+from constants import ALL_FEATURES, TABLES, SOLUTION, DATA
 
 import init
 
