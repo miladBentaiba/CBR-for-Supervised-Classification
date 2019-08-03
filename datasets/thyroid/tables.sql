@@ -1,11 +1,11 @@
 CREATE TABLE cases
 (
     _id_case integer PRIMARY KEY AUTOINCREMENT,
-    n_t3_resin int,
-    n_total_serum_thyroxin int,
-    n_total_serum_triiodothyronine int,
-    n_TSH int,
-    n_difference_of_TSH int,
+    n_t3_resin REAL,
+    n_total_serum_thyroxin REAL,
+    n_total_serum_triiodothyronine REAL,
+    n_TSH REAL,
+    n_difference_of_TSH REAL,
     class int check (class in (1,2,3)), /* solution part */
     frequency int DEFAULT 1 NOT NULL, /* number of times the case exists*/
     randomness int DEFAULT null, /* a value used to calculate the stochastic validity */
@@ -15,7 +15,8 @@ CREATE TABLE cases
     randomized boolean not null default false,
     stochasticity int default null,
     segmented boolean not null default false,
-    CONSTRAINT constraint_case UNIQUE (c_bi, n_age, c_shape, c_margin, c_density, severity)
+    CONSTRAINT constraint_case UNIQUE (n_t3_resin, n_total_serum_thyroxin, n_total_serum_triiodothyronine,
+  n_TSH, n_difference_of_TSH, class)
 );
 
 CREATE TABLE weights
@@ -38,17 +39,17 @@ CREATE TABLE cases_in_segment
 CREATE TABLE segment
 (
     _id_segment integer PRIMARY KEY autoincrement not null,
-    class int NOT NULL check (severity in (1,2,3)) /* severity of the cases stored in the segment */
+    class int NOT NULL check (class in (1,2,3)) /* severity of the cases stored in the segment */
 );
 
 Create table rules
 (
   _id_rule integer primary key autoincrement not null,
-  n_t3_resin int,
-  n_total_serum_thyroxin int,
-  n_total_serum_triiodothyronine int,
-  n_TSH int,
-  n_difference_of_TSH int,
+  n_t3_resin REAL,
+  n_total_serum_thyroxin REAL,
+  n_total_serum_triiodothyronine REAL,
+  n_TSH REAL,
+  n_difference_of_TSH REAL,
   class int check (class in (1,2,3)), /* solution part */
   CONSTRAINT constraint_rules_1 UNIQUE (n_t3_resin, n_total_serum_thyroxin, n_total_serum_triiodothyronine,
      n_TSH, n_difference_of_TSH)
@@ -57,22 +58,22 @@ Create table rules
 CREATE TABLE test_cases
 (
     _id_case integer PRIMARY KEY AUTOINCREMENT,
-    n_t3_resin int,
-  n_total_serum_thyroxin int,
-  n_total_serum_triiodothyronine int,
-  n_TSH int,
-  n_difference_of_TSH int,
-  class int check (class in (1,2,3)), /* solution part */
+    n_t3_resin REAL,
+  n_total_serum_thyroxin REAL,
+  n_total_serum_triiodothyronine REAL,
+  n_TSH REAL,
+  n_difference_of_TSH REAL,
+  class int check (class in (1,2,3)) /* solution part */
 );
 
 CREATE TABLE new_cases
 (
     _id_case integer PRIMARY KEY AUTOINCREMENT,
-    n_t3_resin int,
-    n_total_serum_thyroxin int,
-    n_total_serum_triiodothyronine int,
-    n_TSH int,
-    n_difference_of_TSH int,
+    n_t3_resin REAL,
+    n_total_serum_thyroxin REAL,
+    n_total_serum_triiodothyronine REAL,
+    n_TSH REAL,
+    n_difference_of_TSH REAL,
     class int check (class in (1,2,3)), /* solution part */
     frequency int DEFAULT 1 NOT NULL, /* number of times the case exists*/
     randomness int DEFAULT null, /* a value used to calculate the stochastic validity */

@@ -3,11 +3,11 @@ CREATE TABLE cases
     _id_case integer PRIMARY KEY AUTOINCREMENT,
     c_sex int check ( c_sex in (1,2) ),
     n_age int check (n_age <101),
-    n_time int,
-    n_number_of_warts int,
+    n_time REAL,
+    n_number_of_warts REAL,
     c_type int check (c_type in (1,2,3)),
-    n_area int ,
-    c_induration_diameter int,
+    n_area REAL ,
+    c_induration_diameter REAL,
     result_of_treatment int check (result_of_treatment in (0,1)), /* solution part */
     frequency int DEFAULT 1 NOT NULL, /* number of times the case exists*/
     randomness int DEFAULT null, /* a value used to calculate the stochastic validity */
@@ -49,11 +49,11 @@ Create table rules
   _id_rule integer primary key autoincrement not null,
   c_sex int check ( c_sex in (1,2) ),
   n_age int check (n_age <101),
-  n_time int,
-  n_number_of_warts int,
+  n_time REAL,
+  n_number_of_warts REAL,
   c_type int check (c_type in (1,2,3)),
-  n_area int ,
-  c_induration_diameter int,
+  n_area REAL ,
+  c_induration_diameter REAL,
   result_of_treatment int check (result_of_treatment in (0,1)), /* solution part */
   CONSTRAINT constraint_rules_1 UNIQUE (c_sex, n_age, n_time, n_number_of_warts, c_type, n_area,
                                       c_induration_diameter, result_of_treatment)
@@ -64,11 +64,11 @@ CREATE TABLE test_cases
     _id_case integer PRIMARY KEY AUTOINCREMENT,
    c_sex int check ( c_sex in (1,2) ),
    n_age int check (n_age <101),
-   n_time int,
-   n_number_of_warts int,
+   n_time REAL,
+   n_number_of_warts REAL,
    c_type int check (c_type in (1,2,3)),
-   n_area int ,
-   c_induration_diameter int,
+   n_area REAL ,
+   c_induration_diameter REAL,
    result_of_treatment int check (result_of_treatment in (0,1)) /* solution part */
 );
 
@@ -77,11 +77,11 @@ CREATE TABLE new_cases
     _id_case integer PRIMARY KEY AUTOINCREMENT,
     c_sex int check ( c_sex in (1,2) ),
     n_age int check (n_age <101),
-    n_time int,
-    n_number_of_warts int,
+    n_time REAL,
+    n_number_of_warts REAL,
     c_type int check (c_type in (1,2,3)),
-    n_area int ,
-    c_induration_diameter int,
+    n_area REAL ,
+    c_induration_diameter REAL,
     result_of_treatment int check (result_of_treatment in (0,1)), /* solution part */
     frequency int DEFAULT 1 NOT NULL, /* number of times the case exists*/
     randomness int DEFAULT null, /* a value used to calculate the stochastic validity */

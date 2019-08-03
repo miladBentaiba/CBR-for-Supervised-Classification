@@ -15,5 +15,6 @@
     <file url="file://$PROJECT_DIR$/datasets/mammographic-masses/queries.sql" dialect="SQLite" />
     <file url="file://$PROJECT_DIR$/datasets/mammographic-masses/tables.sql" dialect="SQLite" />
     <file url="file://$PROJECT_DIR$/datasets/thyroid/queries.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/datasets/thyroid/tables.sql" dialect="SQLite" />
   </component>
 </project>
