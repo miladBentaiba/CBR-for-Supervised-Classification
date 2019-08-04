@@ -3,6 +3,7 @@
 
 from constants import PROBABILITY_FEATURES
 from constants import ALL_FEATURES
+from constants import SOLUTION
 
 
 def compare_case_delegate(obj, delegate, _weights):
@@ -17,7 +18,7 @@ def compare_case_delegate(obj, delegate, _weights):
     # for each feature _x
     for _x in obj:
         # if _x is nominative
-        if _x[0] == 'c':
+        if _x[0] == 'c' and _x != SOLUTION:
             # initially, similarity is zero
             sim_x = 0
             # when the value is none, similarity is a probability of
@@ -39,7 +40,7 @@ def compare_case_delegate(obj, delegate, _weights):
             total += sim_x
             weights += _weights[_x]
         # if _x is qualitative
-        elif _x[0] == 'n':
+        elif _x[0] == 'n' and _x != SOLUTION:
             try:
                 # age is a quantitative attribute, and has a different similarity function
                 total += (1 - abs((obj[_x] - delegate[_x][0]['value']) / 100)) * _weights[_x]

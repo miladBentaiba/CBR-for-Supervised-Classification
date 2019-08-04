@@ -53,8 +53,6 @@ def insert_cases(_items):
         s = cas[SOLUTION]
         cas.pop(SOLUTION)
         cas[SOLUTION] = s
-        print(cas)
-        print('tuple', tuple(cas.values()))
         _c = S.cursor()
         new_all_features = ['new.' + x for x in ALL_FEATURES]
         old_all_features = ['old.' + x for x in ALL_FEATURES]
