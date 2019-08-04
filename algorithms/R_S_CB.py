@@ -8,9 +8,9 @@ from I_S_CB import I_S_CB_segment
 #             '../datasets/mammographic-masses/mammographic.json')
 
 randomization()
-all_cases = []
-for _it in read_json("../datasets/mammographic-masses/rando1.json"):
-    all_cases.append(_it)
-all_cases = insert_cases(all_cases)
-I_S_CB_validation(all_cases)
-I_S_CB_segment()
+# all_cases = []
+# for _it in read_json("../datasets/mammographic-masses/rando1.json"):
+#     all_cases.append(_it)
+# all_cases = insert_cases(all_cases)
+# I_S_CB_validation(all_cases)
+# I_S_CB_segment()
