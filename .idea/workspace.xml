@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a194b26d-c31f-40f3-8bd0-1b2b4f83b541" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/CaseBase/segmentation.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/CaseBase/segmentation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/Retrieve/case_segment_similarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/Retrieve/case_segment_similarity.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algorithms/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -317,7 +319,7 @@
       <workItem from="1564152539302" duration="15744000" />
       <workItem from="1564414276593" duration="17341000" />
       <workItem from="1564581795581" duration="44798000" />
-      <workItem from="1565014803396" duration="10798000" />
+      <workItem from="1565014803396" duration="11608000" />
     </task>
     <servers />
   </component>
