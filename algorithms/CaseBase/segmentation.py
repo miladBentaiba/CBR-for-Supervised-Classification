@@ -353,7 +353,7 @@ def segment_one(obj, iteration_number):
     structured_delegates = get_delegates_by_solution(obj[SOLUTION])
     # save the case in only one segment (in its first level)
     for delegate in structured_delegates:
-        similarity = compare_case_delegate(obj, delegate['delegate'], WEIGHTS)
+        similarity = compare_case_delegate(obj, delegate['delegate'])
         if get_level(similarity) == 1:
             inserted_in_level_1 = True
             try:
@@ -390,7 +390,7 @@ def segment_all(obj_array, iteration_number):
                 i = 0
                 # iterate over segments
                 while i < len(new_delegates):
-                    similarity = compare_case_delegate(obj, new_delegates[i]['delegate'], WEIGHTS)
+                    similarity = compare_case_delegate(obj, new_delegates[i]['delegate'])
                     if get_level(similarity) == 1:
                         obj['segmented'] = True
                         new_delegate = insert_into_existing_segment(new_delegates[i],

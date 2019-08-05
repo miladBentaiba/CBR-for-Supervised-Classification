@@ -4,9 +4,12 @@
 from constants import PROBABILITY_FEATURES
 from constants import ALL_FEATURES
 from constants import SOLUTION
+from features_weights import Weighting
+
+WEIGHTS = Weighting.get_instance()
 
 
-def compare_case_delegate(obj, delegate, _weights):
+def compare_case_delegate(obj, delegate):
     """
     :param _weights: features weights
     :param obj: a case
@@ -36,15 +39,15 @@ def compare_case_delegate(obj, delegate, _weights):
                     sim_x = 0
                 else:
                     sim_x = PROBABILITY_FEATURES[_x] if frequencies == 0 else sim_x/frequencies
-            sim_x *= _weights[_x]
+            sim_x *= WEIGHTS[_x]
             total += sim_x
-            weights += _weights[_x]
+            weights += WEIGHTS[_x]
         # if _x is qualitative
         elif _x[0] == 'n' and _x != SOLUTION:
             try:
                 # age is a quantitative attribute, and has a different similarity function
-                total += (1 - abs((obj[_x] - delegate[_x][0]['value']) / 100)) * _weights[_x]
-                weights += _weights[_x]
+                total += (1 - abs((obj[_x] - delegate[_x][0]['value']) / 100)) * WEIGHTS[_x]
+                weights += WEIGHTS[_x]
             except (KeyError, TypeError):
                 pass
     return total / weights

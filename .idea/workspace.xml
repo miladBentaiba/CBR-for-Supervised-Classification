@@ -4,8 +4,6 @@
     <list default="true" id="a194b26d-c31f-40f3-8bd0-1b2b4f83b541" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algorithms/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/mammography.db" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/mammography.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/mammographic-masses/queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/mammographic-masses/queries.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -319,7 +317,7 @@
       <workItem from="1564152539302" duration="15744000" />
       <workItem from="1564414276593" duration="17341000" />
       <workItem from="1564581795581" duration="44798000" />
-      <workItem from="1565014803396" duration="9907000" />
+      <workItem from="1565014803396" duration="10798000" />
     </task>
     <servers />
   </component>
