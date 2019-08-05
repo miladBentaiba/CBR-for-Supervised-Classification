@@ -13,7 +13,8 @@ for x1 in POSSIBLE_SOLUTIONS:
     for x2 in POSSIBLE_SOLUTIONS:
         statistics[str(x1)+str(x2)] = 0
 # --------------------------------------------------------------------------------------------------------
-# I_NS_CB with similarity 0.8
+# I_NS_CB with similarity 0.8, add expert = true
+# R_NS_CB with similarity 0.8
 _c.execute('select * from main.cases where stochasticity >= 0.8')
 cases = []
 for row in _c.fetchall():

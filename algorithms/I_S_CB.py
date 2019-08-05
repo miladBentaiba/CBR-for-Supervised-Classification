@@ -156,7 +156,7 @@ def I_S_CB_validation(dictionaries_cases):
         _e.execute('select frequency from cases where _id_case = ?', (_it['_id_case'],))
         _it['frequency'] = _e.fetchone()[0]
         _it['stochasticity'] = stochastic_validity(_it)
-        _it['rule'] = validation_per_rules(_it)
+        _it['rule'] = validation_per_rules(_it)[0]
     S.commit()
 
     # update the stochastic and absolute validity of the case
