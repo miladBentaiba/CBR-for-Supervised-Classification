@@ -31,9 +31,9 @@ def validation_per_rules(obj):
                    .format(where_clause, null_values, SOLUTION))
         results = _c.fetchall()
         if len(results) == 1 and results[0][0] == obj[SOLUTION]:
-            return True
+            return True, results[0][0]
         elif len(results) == 1 and results[0][0] != obj[SOLUTION]:
-            return False
+            return False, results[0][0]
         else:  # len(results) == 0 or len(results) > 1
             valid = None
-    return valid
+    return valid, obj[SOLUTION]

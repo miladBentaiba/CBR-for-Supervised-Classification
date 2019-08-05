@@ -10,8 +10,8 @@ for row in _c.fetchall():
 
 statistics = {}
 for x1 in POSSIBLE_SOLUTIONS:
-    statistics[str(x1)+str(x1)] = 0
-    statistics[str(x1) + "x"] = 0
+    for x2 in POSSIBLE_SOLUTIONS:
+        statistics[str(x1)+str(x2)] = 0
 # --------------------------------------------------------------------------------------------------------
 # I_NS_CB with similarity 0.8
 _c.execute('select * from main.cases where stochasticity >= 0.8')
@@ -33,26 +33,26 @@ for test_case in test_cases:
                 break
         # verification per rules
         from absolute_validation import validation_per_rules
-        if found == None:
+        if found is None:
             for solution in POSSIBLE_SOLUTIONS:
                 test_case[SOLUTION] = solution
-                if validation_per_rules(test_case):
+                rules = validation_per_rules(test_case)
+                if rules[0]:
                     if solution == original_solution:
                         found = True
+                        statistics[str(original_solution) + str(original_solution)] += 1
                         break
                     else:
                         found = False
+                        statistics[str(original_solution) + str(rules[1])] += 1
                         break
-                elif not validation_per_rules(test_case):
+                elif not rules[0]:
                     if solution == original_solution:
+                        statistics[str(original_solution) + str(rules[1])] += 1
                         found = False
                         break
-    if found == True:
-        statistics[str(original_solution)+str(original_solution)] += 1
-    elif found == False:
-        statistics[str(original_solution)+"x"] += 1
-    else:
-        print("found is none", found == None)
+    if found is None:
+        print("found is none", found is None)
         statistics[str(original_solution) + str(original_solution)] += 1
 
 print(statistics)

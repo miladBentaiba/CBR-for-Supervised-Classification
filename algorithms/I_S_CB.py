@@ -64,13 +64,13 @@ def insert_cases(_items):
         #       "from new left join cases as old on ({3}, new.{0}) is ({4}, old.{0})"
         #       .format(SOLUTION, ','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)),
         #               ','.join(new_all_features), ','.join(old_all_features)), tuple(cas.values()))
-        _c.execute("with new ({1}, {0}, frequency, randomized, rule, expert) as ( values ({2}, ? , 1, 0, 1, 1)) "
-                       "insert or replace into cases (_id_case, {1}, {0}, frequency, randomness, significance, rule, "
-                       "                              expert, randomized) "
-                       "select old._id_case, {3}, new.{0}, old.frequency + 1, old.randomness, old.significance, "
-                       "       old.rule, new.expert, old.randomized "
-                       "from new left join cases as old on ({3}, new.{0}) is ({4}, old.{0})"
-                       .format(SOLUTION, ','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)),
+        _c.execute('with new ({1}, {0}, frequency, randomized, rule, expert) as ( values ({2}, ? , 1, 0, 1, 1)) '
+                   'insert or replace into cases (_id_case, {1}, {0}, frequency, randomness, significance, rule, '
+                   '                              expert, randomized) '
+                   'select old._id_case, {3}, new.{0}, old.frequency + 1, old.randomness, old.significance, '
+                   '       old.rule, new.expert, old.randomized '
+                   'from new left join cases as old on ({3}, new.{0}) is ({4}, old.{0})'
+                   .format(SOLUTION, ','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)),
                                ','.join(new_all_features), ','.join(old_all_features)), tuple(cas.values()))
         S.commit()
     _c.execute('select * from cases where expert is not "true"')
