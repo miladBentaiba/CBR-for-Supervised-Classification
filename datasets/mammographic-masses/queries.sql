@@ -154,3 +154,5 @@ select * from cases where segmented = 1;
 
 insert into test_cases
 select _id_case, c_bi, n_age, c_shape, c_margin, c_density, severity from cases;
+
+select * from main.cases where stochasticity >= 0.8 and expert = 1
