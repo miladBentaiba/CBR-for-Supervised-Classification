@@ -202,4 +202,4 @@ def correction():
     S.commit()
 
 
-# upload_data(DATA)
+upload_data(DATA)

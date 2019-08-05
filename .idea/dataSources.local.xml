@@ -27,6 +27,7 @@
           <node kind="schema" qname="@" />
         </introspection-scope>
       </schema-mapping>
+      <load-sources>user_sources</load-sources>
     </data-source>
     <data-source name="immunotheraphy.db" uuid="bd8830a1-4056-4613-8422-7e7809c48039">
       <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1" exact-driver-version="3.25">
@@ -40,6 +41,7 @@
           <node kind="schema" qname="@" />
         </introspection-scope>
       </schema-mapping>
+      <load-sources>user_sources</load-sources>
     </data-source>
     <data-source name="thyroid.db" uuid="1db755da-be18-41e4-845c-908816efcd5a">
       <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1" exact-driver-version="3.25">
@@ -53,6 +55,7 @@
           <node kind="schema" qname="@" />
         </introspection-scope>
       </schema-mapping>
+      <load-sources>user_sources</load-sources>
     </data-source>
   </component>
 </project>

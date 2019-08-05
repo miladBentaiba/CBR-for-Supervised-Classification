@@ -30,7 +30,7 @@ def compare_quantitative(feature, value1, value2):
         sim_value = constants.PROBABILITY_FEATURES[feature]
     else:
         sim_value = 1 - ((abs(value1 - value2)) * 1.0 /
-                         (constantss.MAX_FEATURE[feature] - constants.MIN_FEATURE[feature]))
+                         (constants.MAX_FEATURE[feature] - constants.MIN_FEATURE[feature]))
     return sim_value
 
 

@@ -150,4 +150,7 @@ update cases set segmented = 0;
 
 select * from cases where segmented is false;
 
-select * from cases where segmented = 1
+select * from cases where segmented = 1;
+
+insert into test_cases
+select _id_case, c_bi, n_age, c_shape, c_margin, c_density, severity from cases;

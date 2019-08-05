@@ -90,7 +90,13 @@
       <DataType>int|0s</DataType>
       <DefaultExpression>null</DefaultExpression>
     </column>
-    <index id="29" parent="6" name="sqlite_autoindex_cases_1">
+    <column id="29" parent="6" name="segmented">
+      <Position>15</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>false</DefaultExpression>
+    </column>
+    <index id="30" parent="6" name="sqlite_autoindex_cases_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>c_bi
 n_age
@@ -101,11 +107,11 @@ severity</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="30" parent="6">
+    <key id="31" parent="6">
       <ColNames>_id_case</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="31" parent="6" name="constraint_case">
+    <key id="32" parent="6" name="constraint_case">
       <ColNames>c_bi
 n_age
 c_shape
@@ -114,137 +120,137 @@ c_density
 severity</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_cases_1</UnderlyingIndexName>
     </key>
-    <check id="32" parent="6">
+    <check id="33" parent="6">
       <Predicate>c_bi in (0,1,2,3,4,5,6)</Predicate>
     </check>
-    <check id="33" parent="6">
+    <check id="34" parent="6">
       <Predicate>c_density in (1,2,3,4)</Predicate>
     </check>
-    <check id="34" parent="6">
+    <check id="35" parent="6">
       <Predicate>c_margin in (1,2,3,4,5)</Predicate>
     </check>
-    <check id="35" parent="6">
+    <check id="36" parent="6">
       <Predicate>c_shape in (1,2,3,4)</Predicate>
     </check>
-    <check id="36" parent="6">
+    <check id="37" parent="6">
       <Predicate>n_age &lt;101</Predicate>
     </check>
-    <check id="37" parent="6">
+    <check id="38" parent="6">
       <Predicate>severity in (0,1)</Predicate>
     </check>
-    <column id="38" parent="7" name="_id">
+    <column id="39" parent="7" name="_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="39" parent="7" name="_id_segment">
+    <column id="40" parent="7" name="_id_segment">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="40" parent="7" name="_id_case">
+    <column id="41" parent="7" name="_id_case">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="41" parent="7" name="randomized">
+    <column id="42" parent="7" name="randomized">
       <Position>4</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>false</DefaultExpression>
     </column>
-    <column id="42" parent="7" name="iteration">
+    <column id="43" parent="7" name="iteration">
       <Position>5</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="43" parent="7" name="level">
+    <column id="44" parent="7" name="level">
       <Position>6</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="44" parent="7">
+    <key id="45" parent="7">
       <ColNames>_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="45" parent="7">
+    <foreign-key id="46" parent="7">
       <ColNames>_id_case</ColNames>
       <RefTableName>cases</RefTableName>
       <RefColNames>_id_case</RefColNames>
     </foreign-key>
-    <check id="46" parent="7">
+    <check id="47" parent="7">
       <Predicate>level in (1,2,3,4,5)</Predicate>
     </check>
-    <column id="47" parent="8" name="_id_case">
+    <column id="48" parent="8" name="_id_case">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="48" parent="8" name="c_bi">
+    <column id="49" parent="8" name="c_bi">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="49" parent="8" name="n_age">
+    <column id="50" parent="8" name="n_age">
       <Position>3</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="50" parent="8" name="c_shape">
+    <column id="51" parent="8" name="c_shape">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="51" parent="8" name="c_margin">
+    <column id="52" parent="8" name="c_margin">
       <Position>5</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="52" parent="8" name="c_density">
+    <column id="53" parent="8" name="c_density">
       <Position>6</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="53" parent="8" name="severity">
+    <column id="54" parent="8" name="severity">
       <Position>7</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="54" parent="8" name="frequency">
+    <column id="55" parent="8" name="frequency">
       <Position>8</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <column id="55" parent="8" name="randomness">
+    <column id="56" parent="8" name="randomness">
       <Position>9</Position>
       <DataType>int|0s</DataType>
       <DefaultExpression>null</DefaultExpression>
     </column>
-    <column id="56" parent="8" name="significance">
+    <column id="57" parent="8" name="significance">
       <Position>10</Position>
       <DataType>int|0s</DataType>
       <DefaultExpression>null</DefaultExpression>
     </column>
-    <column id="57" parent="8" name="rule">
+    <column id="58" parent="8" name="rule">
       <Position>11</Position>
       <DataType>boolean|0s</DataType>
       <DefaultExpression>null</DefaultExpression>
     </column>
-    <column id="58" parent="8" name="expert">
+    <column id="59" parent="8" name="expert">
       <Position>12</Position>
       <DataType>boolean|0s</DataType>
       <DefaultExpression>null</DefaultExpression>
     </column>
-    <column id="59" parent="8" name="randomized">
+    <column id="60" parent="8" name="randomized">
       <Position>13</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>false</DefaultExpression>
     </column>
-    <column id="60" parent="8" name="segmented">
+    <column id="61" parent="8" name="segmented">
       <Position>14</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>false</DefaultExpression>
     </column>
-    <index id="61" parent="8" name="sqlite_autoindex_new_cases_1">
+    <index id="62" parent="8" name="sqlite_autoindex_new_cases_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>c_bi
 n_age
@@ -255,11 +261,11 @@ severity</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="62" parent="8">
+    <key id="63" parent="8">
       <ColNames>_id_case</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="63" parent="8" name="constraint_case">
+    <key id="64" parent="8" name="constraint_case">
       <ColNames>c_bi
 n_age
 c_shape
@@ -268,61 +274,61 @@ c_density
 severity</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_new_cases_1</UnderlyingIndexName>
     </key>
-    <check id="64" parent="8">
+    <check id="65" parent="8">
       <Predicate>c_bi in (0,1,2,3,4,5,6)</Predicate>
     </check>
-    <check id="65" parent="8">
+    <check id="66" parent="8">
       <Predicate>c_density in (1,2,3,4)</Predicate>
     </check>
-    <check id="66" parent="8">
+    <check id="67" parent="8">
       <Predicate>c_margin in (1,2,3,4,5)</Predicate>
     </check>
-    <check id="67" parent="8">
+    <check id="68" parent="8">
       <Predicate>c_shape in (1,2,3,4)</Predicate>
     </check>
-    <check id="68" parent="8">
+    <check id="69" parent="8">
       <Predicate>n_age &lt;101</Predicate>
     </check>
-    <check id="69" parent="8">
+    <check id="70" parent="8">
       <Predicate>severity in (0,1)</Predicate>
     </check>
-    <column id="70" parent="9" name="_id_rule">
+    <column id="71" parent="9" name="_id_rule">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="71" parent="9" name="c_bi">
+    <column id="72" parent="9" name="c_bi">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <DefaultExpression>null</DefaultExpression>
     </column>
-    <column id="72" parent="9" name="n_age">
+    <column id="73" parent="9" name="n_age">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <DefaultExpression>null</DefaultExpression>
     </column>
-    <column id="73" parent="9" name="c_shape">
+    <column id="74" parent="9" name="c_shape">
       <Position>4</Position>
       <DataType>int|0s</DataType>
       <DefaultExpression>null</DefaultExpression>
     </column>
-    <column id="74" parent="9" name="c_margin">
+    <column id="75" parent="9" name="c_margin">
       <Position>5</Position>
       <DataType>int|0s</DataType>
       <DefaultExpression>null</DefaultExpression>
     </column>
-    <column id="75" parent="9" name="c_density">
+    <column id="76" parent="9" name="c_density">
       <Position>6</Position>
       <DataType>int|0s</DataType>
       <DefaultExpression>null</DefaultExpression>
     </column>
-    <column id="76" parent="9" name="severity">
+    <column id="77" parent="9" name="severity">
       <Position>7</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="77" parent="9" name="sqlite_autoindex_rules_1">
+    <index id="78" parent="9" name="sqlite_autoindex_rules_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>c_bi
 n_age
@@ -332,11 +338,11 @@ c_density</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="78" parent="9">
+    <key id="79" parent="9">
       <ColNames>_id_rule</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="79" parent="9" name="constraint_rules_1">
+    <key id="80" parent="9" name="constraint_rules_1">
       <ColNames>c_bi
 n_age
 c_shape
@@ -344,136 +350,136 @@ c_margin
 c_density</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_rules_1</UnderlyingIndexName>
     </key>
-    <check id="80" parent="9">
+    <check id="81" parent="9">
       <Predicate>c_bi in (0,1,2,3,4,5,6)</Predicate>
     </check>
-    <check id="81" parent="9">
+    <check id="82" parent="9">
       <Predicate>c_density in (1,2,3,4)</Predicate>
     </check>
-    <check id="82" parent="9">
+    <check id="83" parent="9">
       <Predicate>c_margin in (1,2,3,4,5)</Predicate>
     </check>
-    <check id="83" parent="9">
+    <check id="84" parent="9">
       <Predicate>c_shape in (1,2,3,4)</Predicate>
     </check>
-    <check id="84" parent="9">
+    <check id="85" parent="9">
       <Predicate>n_age &lt;101</Predicate>
     </check>
-    <check id="85" parent="9">
+    <check id="86" parent="9">
       <Predicate>severity in (0,1)</Predicate>
     </check>
-    <column id="86" parent="10" name="_id_segment">
+    <column id="87" parent="10" name="_id_segment">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="87" parent="10" name="severity">
+    <column id="88" parent="10" name="severity">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="88" parent="10">
+    <key id="89" parent="10">
       <ColNames>_id_segment</ColNames>
       <Primary>1</Primary>
     </key>
-    <check id="89" parent="10">
+    <check id="90" parent="10">
       <Predicate>severity in (0,1)</Predicate>
     </check>
-    <column id="90" parent="11" name="type">
+    <column id="91" parent="11" name="type">
       <Position>1</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="91" parent="11" name="name">
+    <column id="92" parent="11" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="92" parent="11" name="tbl_name">
+    <column id="93" parent="11" name="tbl_name">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="93" parent="11" name="rootpage">
+    <column id="94" parent="11" name="rootpage">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="94" parent="11" name="sql">
+    <column id="95" parent="11" name="sql">
       <Position>5</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="95" parent="12" name="name">
+    <column id="96" parent="12" name="name">
       <Position>1</Position>
     </column>
-    <column id="96" parent="12" name="seq">
+    <column id="97" parent="12" name="seq">
       <Position>2</Position>
     </column>
-    <column id="97" parent="13" name="_id_case">
+    <column id="98" parent="13" name="_id_case">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="98" parent="13" name="c_bi">
+    <column id="99" parent="13" name="c_bi">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="99" parent="13" name="n_age">
+    <column id="100" parent="13" name="n_age">
       <Position>3</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="100" parent="13" name="c_shape">
+    <column id="101" parent="13" name="c_shape">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="101" parent="13" name="c_margin">
+    <column id="102" parent="13" name="c_margin">
       <Position>5</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="102" parent="13" name="c_density">
+    <column id="103" parent="13" name="c_density">
       <Position>6</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="103" parent="13" name="severity">
+    <column id="104" parent="13" name="severity">
       <Position>7</Position>
       <DataType>int|0s</DataType>
     </column>
-    <key id="104" parent="13">
+    <key id="105" parent="13">
       <ColNames>_id_case</ColNames>
       <Primary>1</Primary>
     </key>
-    <check id="105" parent="13">
+    <check id="106" parent="13">
       <Predicate>c_bi in (0,1,2,3,4,5,6)</Predicate>
     </check>
-    <check id="106" parent="13">
+    <check id="107" parent="13">
       <Predicate>c_density in (1,2,3,4)</Predicate>
     </check>
-    <check id="107" parent="13">
+    <check id="108" parent="13">
       <Predicate>c_margin in (1,2,3,4,5)</Predicate>
     </check>
-    <check id="108" parent="13">
+    <check id="109" parent="13">
       <Predicate>c_shape in (1,2,3,4)</Predicate>
     </check>
-    <check id="109" parent="13">
+    <check id="110" parent="13">
       <Predicate>n_age &lt;101</Predicate>
     </check>
-    <check id="110" parent="13">
+    <check id="111" parent="13">
       <Predicate>severity in (0,1)</Predicate>
     </check>
-    <column id="111" parent="14" name="feature">
+    <column id="112" parent="14" name="feature">
       <Position>1</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="112" parent="14" name="weight">
+    <column id="113" parent="14" name="weight">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="113" parent="14" name="sqlite_autoindex_weights_1">
+    <index id="114" parent="14" name="sqlite_autoindex_weights_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>feature</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="114" parent="14">
+    <key id="115" parent="14">
       <ColNames>feature</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_weights_1</UnderlyingIndexName>
