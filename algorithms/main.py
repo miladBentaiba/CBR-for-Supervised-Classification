@@ -115,4 +115,4 @@ def S_CB_Accuracy():
     return statistics
 
 
-S_CB_Accuracy(False)
+S_CB_Accuracy()
