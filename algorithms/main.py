@@ -3,7 +3,7 @@ from constants import SOLUTION, POSSIBLE_SOLUTIONS
 
 S = init.Singleton.get_instance()
 _c = S.cursor()
-_c.execute('select * from main.test_cases')
+_c.execute('select * from main.test_cases limit 4')
 test_cases = []
 for row in _c.fetchall():
     test_cases.append(dict((_c.description[i][0], value) for i, value in enumerate(row)))
