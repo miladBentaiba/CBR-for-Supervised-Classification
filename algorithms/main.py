@@ -3,7 +3,7 @@ from constants import SOLUTION, POSSIBLE_SOLUTIONS
 
 S = init.Singleton.get_instance()
 _c = S.cursor()
-_c.execute('select * from main.test_cases')
+_c.execute('select * from main.test_cases limit 100')
 test_cases = []
 for row in _c.fetchall():
     test_cases.append(dict((_c.description[i][0], value) for i, value in enumerate(row)))
@@ -11,7 +11,7 @@ for row in _c.fetchall():
 statistics = {}
 for x1 in POSSIBLE_SOLUTIONS:
     for x2 in POSSIBLE_SOLUTIONS:
-        statistics[str(x1)+str(x2)] = 0
+        statistics[str(x1) + str(x2)] = 0
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -68,15 +68,11 @@ def NS_CB_Accuracy():
 def S_CB_Accuracy():
     from segmentation import get_delegates_by_solution
     from case_segment_similarity import compare_case_delegate
-    delegates = {}
-    for solution in POSSIBLE_SOLUTIONS:
-        delegates[solution] = get_delegates_by_solution(solution)
     # for each test_case
     for test_case in test_cases:
         found = None
-        sol = test_case[SOLUTION]
-        for i, delegate in enumerate(delegates[sol]):
-            print(i, delegate)
+        delegates = get_delegates_by_solution(test_case[SOLUTION])
+        for delegate in delegates:
             similarity = compare_case_delegate(test_case, delegate['delegate'])
             if similarity > 0.8:
                 found = True
