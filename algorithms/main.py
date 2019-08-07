@@ -68,11 +68,15 @@ def NS_CB_Accuracy():
 def S_CB_Accuracy():
     from segmentation import get_delegates_by_solution
     from case_segment_similarity import compare_case_delegate
+    delegates= {}
+    for solution in POSSIBLE_SOLUTIONS:
+        delegates[solution] = get_delegates_by_solution(solution)
     # for each test_case
     for test_case in test_cases:
         found = None
-        delegates = get_delegates_by_solution(test_case[SOLUTION])
-        for delegate in delegates:
+        # delegates = get_delegates_by_solution(test_case[SOLUTION])
+        for delegate in delegates[test_case[SOLUTION]]:
+            print(delegate)
             similarity = compare_case_delegate(test_case, delegate['delegate'])
             if similarity > 0.8:
                 found = True
@@ -81,8 +85,8 @@ def S_CB_Accuracy():
         if found is None:
             for solution in POSSIBLE_SOLUTIONS:
                 if solution != test_case[SOLUTION]:
-                    delegates = get_delegates_by_solution(test_case[SOLUTION])
-                    for delegate in delegates:
+                    delegatess = get_delegates_by_solution(test_case[SOLUTION])
+                    for delegate in delegatess:
                         similarity = compare_case_delegate(test_case, delegate['delegate'])
                         if similarity > 0.8:
                             found = False
