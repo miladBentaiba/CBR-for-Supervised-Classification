@@ -208,14 +208,10 @@ def insert_test_cases(_items):
         cas.pop(SOLUTION)
         cas[SOLUTION] = s
         _c = S.cursor()
-        try:
-            _c.execute('insert into test_cases ({1}, {0}) values ({2}, ?)'
-                       .format(SOLUTION, ','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)), ),
-                       tuple(cas.values()))
-            S.commit()
-        except:
-            print("pass")
-            pass
+        _c.execute('insert into test_cases ({1}, {0}) values ({2}, ?)'
+                   .format(SOLUTION, ','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)), ),
+                   tuple(cas.values()))
+        S.commit()
 
 
 upload_data(DATA, 0.1)
