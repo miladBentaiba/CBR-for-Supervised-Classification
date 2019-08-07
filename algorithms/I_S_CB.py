@@ -99,10 +99,9 @@ def upload_data(data_file, percentage):
         # 1. insert cases in the cases table
         # print("1. insert cases in the cases table")
         numb = int(len(all_cases) * percentage)
-        print(len(all_cases), numb)
         shuffle(all_cases)
         insert_cases(all_cases[:numb+1])
-        insert_test_cases(all_cases[numb+2:])
+        insert_test_cases(all_cases[numb+1:])
         S.commit()
 
     # get all the inserted cases
