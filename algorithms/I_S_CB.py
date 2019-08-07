@@ -41,12 +41,13 @@ def create_tables():
     return True
 
 
-def insert_cases(_items):
+def insert_cases(_items, expertValid):
     """
     :param _items: a case
     :return: insert the case in the case-base if doesn't exist,
     else increment its frequency
     """
+
     # items = [tuple(cas.values()) for cas in _items]
     for cas in _items:
         s = cas[SOLUTION]
@@ -63,14 +64,15 @@ def insert_cases(_items):
         #       "from new left join cases as old on ({3}, new.{0}) is ({4}, old.{0})"
         #       .format(SOLUTION, ','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)),
         #               ','.join(new_all_features), ','.join(old_all_features)), tuple(cas.values()))
-        _c.execute('with new ({1}, {0}, frequency, randomized, rule, expert) as ( values ({2}, ? , 1, 0, 1, 1)) '
+
+        _c.execute('with new ({1}, {0}, frequency, randomized, rule, expert) as ( values ({2}, ? , 1, 0, 1, {5})) '
                    'insert or replace into cases (_id_case, {1}, {0}, frequency, randomness, significance, rule, '
                    '                              expert, randomized) '
                    'select old._id_case, {3}, new.{0}, old.frequency + 1, old.randomness, old.significance, '
                    '       old.rule, new.expert, old.randomized '
                    'from new left join cases as old on ({3}, new.{0}) is ({4}, old.{0})'
                    .format(SOLUTION, ','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)),
-                           ','.join(new_all_features), ','.join(old_all_features)), tuple(cas.values()))
+                           ','.join(new_all_features), ','.join(old_all_features), expertValid), tuple(cas.values()))
         S.commit()
     _c.execute('select * from cases where expert is not "true"')
     cases = []
@@ -98,9 +100,9 @@ def upload_data(data_file, percentage):
 
         # 1. insert cases in the cases table
         # print("1. insert cases in the cases table")
-        numb = int(len(all_cases) * percentage)
+        numb = int((len(all_cases) * percentage)/100)
         shuffle(all_cases)
-        insert_cases(all_cases[:numb+1])
+        insert_cases(all_cases[:numb+1], 1)
         insert_test_cases(all_cases[numb+1:])
         S.commit()
 
@@ -214,4 +216,4 @@ def insert_test_cases(_items):
         S.commit()
 
 
-upload_data(DATA, 0.1)
+upload_data(DATA, 70)

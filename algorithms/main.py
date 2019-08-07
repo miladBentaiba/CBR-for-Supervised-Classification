@@ -19,7 +19,7 @@ for x1 in POSSIBLE_SOLUTIONS:
 # R_NS_CB with similarity 0.8
 def NS_CB_Accuracy():
     cases = []
-    _c.execute('select * from main.cases where stochasticity >= 0.8')
+    _c.execute('select * from main.cases where stochasticity >= 0.9')
     for row in _c.fetchall():
         cases.append(dict((_c.description[i][0], value) for i, value in enumerate(row)))
 
@@ -29,7 +29,7 @@ def NS_CB_Accuracy():
         original_solution = test_case[SOLUTION]
         for case in cases:
             # verification per similarity
-            if compare_cases_initial(case, test_case) > 0.8:
+            if compare_cases_initial(case, test_case) > 0.9:
                 if case[SOLUTION] == test_case[SOLUTION]:
                     found = True
                     statistics[str(original_solution) + str(original_solution)] += 1
@@ -42,21 +42,16 @@ def NS_CB_Accuracy():
                     test_case[SOLUTION] = solution
                     rules = validation_per_rules(test_case)
                     if rules[0]:
-                        if solution == original_solution:
-                            found = True
-                            statistics[str(original_solution) + str(original_solution)] += 1
-                            break
-                        else:
-                            found = False
-                            statistics[str(original_solution) + str(rules[1])] += 1
-                            break
+                        found = False
+                        statistics[str(original_solution) + str(rules[1])] += 1
                     elif not rules[0]:
                         if solution == original_solution:
                             statistics[str(original_solution) + str(rules[1])] += 1
                             found = False
-                            break
             if found is None:
-                statistics[str(original_solution) + str(original_solution)] += 1
+                for soll in POSSIBLE_SOLUTIONS:
+                    statistics[str(original_solution) + str(soll)] += 1
+
 
     print(statistics)
     return statistics
@@ -77,7 +72,7 @@ def S_CB_Accuracy():
         # delegates = get_delegates_by_solution(test_case[SOLUTION])
         for delegate in delegates[test_case[SOLUTION]]:
             similarity = compare_case_delegate(test_case, delegate['delegate'])
-            if similarity > 0.8:
+            if similarity > 0.9:
                 found = True
                 statistics[str(test_case[SOLUTION]) + str(test_case[SOLUTION])] += 1
                 break
@@ -87,10 +82,9 @@ def S_CB_Accuracy():
                     delegatess = get_delegates_by_solution(test_case[SOLUTION])
                     for delegate in delegatess:
                         similarity = compare_case_delegate(test_case, delegate['delegate'])
-                        if similarity > 0.8:
+                        if similarity > 0.9:
                             found = False
                             statistics[str(test_case[SOLUTION]) + str(solution)] += 1
-                            break
         if found is None:
             # verification per rules
             from absolute_validation import validation_per_rules
@@ -99,21 +93,16 @@ def S_CB_Accuracy():
                     test_case[SOLUTION] = solution
                     rules = validation_per_rules(test_case)
                     if rules[0]:
-                        if solution == test_case[SOLUTION]:
-                            found = True
-                            statistics[str(test_case[SOLUTION]) + str(test_case[SOLUTION])] += 1
-                            break
-                        else:
-                            found = False
-                            statistics[str(test_case[SOLUTION]) + str(rules[1])] += 1
-                            break
+                        found = False
+                        statistics[str(test_case[SOLUTION]) + str(rules[1])] += 1
                     elif not rules[0]:
                         if solution == test_case[SOLUTION]:
                             statistics[str(test_case[SOLUTION]) + str(rules[1])] += 1
                             found = False
                             break
             if found is None:
-                statistics[str(test_case[SOLUTION]) + str(test_case[SOLUTION])] += 1
+                for soll in POSSIBLE_SOLUTIONS:
+                    statistics[str(test_case[SOLUTION]) + str(soll)] += 1
     print(statistics)
     return statistics
 
