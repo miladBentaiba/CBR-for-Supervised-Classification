@@ -3,7 +3,7 @@ from constants import SOLUTION, POSSIBLE_SOLUTIONS
 
 S = init.Singleton.get_instance()
 _c = S.cursor()
-_c.execute('select * from main.test_cases limit 100')
+_c.execute('select * from main.test_cases')
 test_cases = []
 for row in _c.fetchall():
     test_cases.append(dict((_c.description[i][0], value) for i, value in enumerate(row)))
@@ -76,7 +76,6 @@ def S_CB_Accuracy():
         found = None
         # delegates = get_delegates_by_solution(test_case[SOLUTION])
         for delegate in delegates[test_case[SOLUTION]]:
-            print(delegate)
             similarity = compare_case_delegate(test_case, delegate['delegate'])
             if similarity > 0.8:
                 found = True
