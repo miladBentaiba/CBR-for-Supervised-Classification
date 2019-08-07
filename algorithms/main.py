@@ -118,4 +118,7 @@ def S_CB_Accuracy():
     return statistics
 
 
+print("I_NS_CB 10%")
+NS_CB_Accuracy()
+print("I_S_CB 10%")
 S_CB_Accuracy()

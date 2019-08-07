@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a194b26d-c31f-40f3-8bd0-1b2b4f83b541" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/I_S_CB.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/I_S_CB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/mammography.db" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/mammography.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/mammography.db-journal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +117,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.I_S_CB">
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="I_S_CB" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CBR-for-Classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -264,9 +262,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.I_S_CB" />
         <item itemvalue="Python.R_S_CB" />
-        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.R_CB" />
         <item itemvalue="Python.randomization" />
       </list>
@@ -280,12 +278,22 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@631b66" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@788e00da" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@631b66" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@b6c40c0" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@788e00da" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@2c0b4043" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@788e00da" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@461358ee" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@788e00da" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@5e13412d" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -322,7 +330,7 @@
       <workItem from="1565014803396" duration="12175000" />
       <workItem from="1565044887409" duration="853000" />
       <workItem from="1565128206884" duration="4467000" />
-      <workItem from="1565138610104" duration="5108000" />
+      <workItem from="1565138610104" duration="6244000" />
     </task>
     <servers />
   </component>
@@ -380,7 +388,7 @@
     <SUITE FILE_PATH="coverage/CBR_for_Classification$features_weights.coverage" NAME="features_weights Coverage Results" MODIFIED="1560693043726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/FeaturesWeights" />
     <SUITE FILE_PATH="coverage/CBR_for_Classification$stochastic_validation.coverage" NAME="stochastic_validation Coverage Results" MODIFIED="1560099860740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/Revise" />
     <SUITE FILE_PATH="coverage/CBR_for_Classification$R_S_CB.coverage" NAME="R_S_CB Coverage Results" MODIFIED="1565142646238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms" />
-    <SUITE FILE_PATH="coverage/CBR_for_Classification$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1565140353278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms" />
     <SUITE FILE_PATH="coverage/CBR_for_Classification$I_S_CB.coverage" NAME="I_S_CB Coverage Results" MODIFIED="1565149000023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms" />
+    <SUITE FILE_PATH="coverage/CBR_for_Classification$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1565185567502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms" />
   </component>
 </project>
