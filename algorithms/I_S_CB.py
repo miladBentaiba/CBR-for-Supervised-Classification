@@ -98,7 +98,8 @@ def upload_data(data_file, percentage):
 
         # 1. insert cases in the cases table
         # print("1. insert cases in the cases table")
-        numb = round(len(all_cases) * percentage, 0)
+        numb = int(len(all_cases) * percentage)
+        print(len(all_cases), numb)
         shuffle(all_cases)
         insert_cases(all_cases[:numb+1])
         insert_test_cases(all_cases[numb+2:])
@@ -207,15 +208,15 @@ def insert_test_cases(_items):
         s = cas[SOLUTION]
         cas.pop(SOLUTION)
         cas[SOLUTION] = s
-    _c = S.cursor()
-    try:
-        _c.execute('insert into test_cases ({1}, {0}) values ({2}, ?)'
-                   .format(SOLUTION, ','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)), ),
-                   tuple(cas.values()))
-        S.commit()
-    except:
-        print("pass")
-        pass
+        _c = S.cursor()
+        try:
+            _c.execute('insert into test_cases ({1}, {0}) values ({2}, ?)'
+                       .format(SOLUTION, ','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)), ),
+                       tuple(cas.values()))
+            S.commit()
+        except:
+            print("pass")
+            pass
 
 
-upload_data(DATA, 10)
+upload_data(DATA, 0.1)
