@@ -72,7 +72,7 @@ DATA = '../datasets/mammographic-masses/mammographic.json'
 #
 # POSSIBLE_SOLUTIONS = [0, 1]
 #
-# TABLES = '../datasets/immunotherapy/tables.sql',
+# TABLES = '../datasets/immunotherapy/tables.sql'
 #
 # DATA = '../datasets/immunotherapy/immunotheray.json'
 
@@ -113,6 +113,6 @@ DATA = '../datasets/mammographic-masses/mammographic.json'
 #
 # POSSIBLE_SOLUTIONS = [1, 2, 3]
 #
-# TABLES = '../datasets/thyroid/tables.sql',
+# TABLES = '../datasets/thyroid/tables.sql'
 #
 # DATA = '../datasets/thyroid/thyroid.json'

@@ -1,6 +1,5 @@
 """This module uploads cases from file to the database."""
 
-
 import json
 from sqlite3 import OperationalError
 from random import shuffle
@@ -22,7 +21,7 @@ def create_tables():
     :return: tables will be created in the database
     """
     # Open and read the file as a single buffer
-    _fd = open(TABLES[0], 'r')
+    _fd = open(TABLES, 'r')
     sql_file = _fd.read()
     _fd.close()
     _c = S.cursor()
@@ -48,7 +47,7 @@ def insert_cases(_items):
     :return: insert the case in the case-base if doesn't exist,
     else increment its frequency
     """
-    items = [tuple(cas.values()) for cas in _items]
+    # items = [tuple(cas.values()) for cas in _items]
     for cas in _items:
         s = cas[SOLUTION]
         cas.pop(SOLUTION)
@@ -71,17 +70,17 @@ def insert_cases(_items):
                    '       old.rule, new.expert, old.randomized '
                    'from new left join cases as old on ({3}, new.{0}) is ({4}, old.{0})'
                    .format(SOLUTION, ','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)),
-                               ','.join(new_all_features), ','.join(old_all_features)), tuple(cas.values()))
+                           ','.join(new_all_features), ','.join(old_all_features)), tuple(cas.values()))
         S.commit()
     _c.execute('select * from cases where expert is not "true"')
     cases = []
     for row in _c.fetchall():
         cases.append(dict((_c.description[i][0], value)
-                                       for i, value in enumerate(row)))
+                          for i, value in enumerate(row)))
     return cases
 
 
-def upload_data(data_file):
+def upload_data(data_file, percentage):
     """
     :return: upload data to cases table
     """
@@ -99,9 +98,10 @@ def upload_data(data_file):
 
         # 1. insert cases in the cases table
         # print("1. insert cases in the cases table")
-        # shuffle(all_cases)
-        part_cases = all_cases  # [:50]
-        insert_cases(part_cases)
+        numb = round(len(all_cases) * percentage, 0)
+        shuffle(all_cases)
+        insert_cases(all_cases[:numb+1])
+        insert_test_cases(all_cases[numb+2:])
         S.commit()
 
     # get all the inserted cases
@@ -202,4 +202,20 @@ def correction():
     S.commit()
 
 
-upload_data(DATA)
+def insert_test_cases(_items):
+    for cas in _items:
+        s = cas[SOLUTION]
+        cas.pop(SOLUTION)
+        cas[SOLUTION] = s
+    _c = S.cursor()
+    try:
+        _c.execute('insert into test_cases ({1}, {0}) values ({2}, ?)'
+                   .format(SOLUTION, ','.join(ALL_FEATURES), ','.join(['?'] * len(ALL_FEATURES)), ),
+                   tuple(cas.values()))
+        S.commit()
+    except:
+        print("pass")
+        pass
+
+
+upload_data(DATA, 10)
