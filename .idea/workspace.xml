@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a194b26d-c31f-40f3-8bd0-1b2b4f83b541" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/CaseBase/segmentation.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/CaseBase/segmentation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -318,6 +321,7 @@
       <workItem from="1564581795581" duration="44798000" />
       <workItem from="1565014803396" duration="12175000" />
       <workItem from="1565044887409" duration="853000" />
+      <workItem from="1565128206884" duration="2655000" />
     </task>
     <servers />
   </component>
@@ -376,6 +380,6 @@
     <SUITE FILE_PATH="coverage/CBR_for_Classification$stochastic_validation.coverage" NAME="stochastic_validation Coverage Results" MODIFIED="1560099860740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/Revise" />
     <SUITE FILE_PATH="coverage/CBR_for_Classification$R_S_CB.coverage" NAME="R_S_CB Coverage Results" MODIFIED="1565010063764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms" />
     <SUITE FILE_PATH="coverage/CBR_for_Classification$I_S_CB.coverage" NAME="I_S_CB Coverage Results" MODIFIED="1565039235281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms" />
-    <SUITE FILE_PATH="coverage/CBR_for_Classification$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1565128356406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms" />
+    <SUITE FILE_PATH="coverage/CBR_for_Classification$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1565135962581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms" />
   </component>
 </project>

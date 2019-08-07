@@ -89,7 +89,7 @@ def get_delegates_by_solution(solution):
     """
     _d = S.cursor()
     # print('select _id_segment from segment where ? = ?')
-    _d.execute('select _id_segment from segment where ? = ?', (SOLUTION, solution))
+    _d.execute('select _id_segment from segment where {0} = ?'.format(SOLUTION), (solution,))
     all_id_segments = _d.fetchall()
     structured_delegates = []
     for _id_segment in all_id_segments:
@@ -154,11 +154,11 @@ def get_delegates_by_solution(solution):
                            '  inner join segment '
                            '  on (cases_in_segment._id_segment = segment._id_segment) '
                            'where cases_in_segment.level = 1 '
-                           '  and segment.?3 = ?1 '
+                           '  and segment.{1} = ?1 '
                            '  and segment._id_segment = ?2 '
                            '  and {0} is not null '
                            'group by segment._id_segment '
-                           .format(_x), (solution, _id_segment[0], SOLUTION))
+                           .format(_x, SOLUTION), (solution, _id_segment[0]))
         for row in _d.fetchall():
             _r2.append(dict((_d.description[i][0], value) for i, value in enumerate(row)))
         for row in _r2:
