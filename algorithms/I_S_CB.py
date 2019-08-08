@@ -13,7 +13,8 @@ S = init.Singleton.get_instance()
 def read_json(url):
     """parse json file into data"""
     with open(url) as file:
-        return json.load(file)
+        data = json.load(file)
+    return data
 
 
 def create_tables():
@@ -216,4 +217,4 @@ def insert_test_cases(_items):
         S.commit()
 
 
-upload_data(DATA, 70)
+# upload_data(DATA, 0.15)

@@ -98,18 +98,19 @@ def significance(obj):
         signif = 0
     else:
         # print('select {0}, ? from cases where expert is 1'.format(','.join(ALL_FEATURES)))
-        _c.execute('select {0}, ? from cases where expert is 1'
-                   .format(','.join(ALL_FEATURES)), (SOLUTION,))
+        _c.execute('select {0}, {1} from cases where expert is 1'
+                   .format(','.join(ALL_FEATURES), SOLUTION))
         results = _c.fetchall()
         max_similarity = 0
         similar_case = {}
-        for _case in results:
-            _rs = json.dumps({ALL_FEATURES[x]: _case[x] for x in range(len(ALL_FEATURES))}
-                             .update({SOLUTION: _case[len(ALL_FEATURES)]}), allow_nan=True)
-            sim = compare_cases(obj, json.loads(_rs), _weights)
+        _cases = []
+        for row in results:
+            _case = dict((_c.description[i][0], value) for i, value in enumerate(row))
+            _cases.append(_case)
+            sim = compare_cases(obj, _case, _weights)
             if sim > max_similarity:
                 max_similarity = sim
-                similar_case = json.loads(_rs)
+                similar_case = _case
         if similar_case[SOLUTION] == obj[SOLUTION]:
             signif = max_similarity
         elif similar_case[SOLUTION] != obj[SOLUTION] and max_similarity < 0.5:
