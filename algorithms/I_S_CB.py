@@ -101,10 +101,9 @@ def upload_data(data_file, percentage):
 
         # 1. insert cases in the cases table
         # print("1. insert cases in the cases table")
-        numb = int((len(all_cases) * percentage)/100)
         shuffle(all_cases)
-        insert_cases(all_cases[:numb+1], 1)
-        insert_test_cases(all_cases[numb+1:])
+        insert_cases(all_cases[:percentage], 1)
+        insert_test_cases(all_cases[percentage:])
         S.commit()
 
     # get all the inserted cases
@@ -130,14 +129,13 @@ def I_S_CB_segment():
     _c = S.cursor()
     from segmentation import segment_all
     _c.execute('select _id_case, {1}, {0}, randomness, significance, frequency,'
-               ' stochasticity, rule from cases where segmented = "false"'
+               ' stochasticity, rule from cases where segmented = "false" and stochasticity >= 0.9 '
                .format(SOLUTION, ','.join(ALL_FEATURES)), ())
     dictionaries_cases = []
     for row in _c.fetchall():
         dictionaries_cases.append(dict((_c.description[i][0], value)
                                        for i, value in enumerate(row)))
     segment_all(dictionaries_cases, 0)
-    _c.execute('update cases set segmented = "true"')
     S.commit()
 
 
@@ -217,4 +215,4 @@ def insert_test_cases(_items):
         S.commit()
 
 
-# upload_data(DATA, 0.15)
+upload_data(DATA, 100)

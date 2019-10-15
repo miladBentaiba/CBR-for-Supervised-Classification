@@ -15,7 +15,7 @@
       </schema-mapping>
       <load-sources>user_sources</load-sources>
     </data-source>
-    <data-source name="mammography-r-all.db" uuid="d12ebe19-07cf-4db5-af4c-f44aee0faba9">
+    <data-source name="immunotheraphy.db" uuid="22381e0f-0225-4521-818a-97c5df40e7d9">
       <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1" exact-driver-version="3.25">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
@@ -29,7 +29,7 @@
       </schema-mapping>
       <load-sources>user_sources</load-sources>
     </data-source>
-    <data-source name="immunotheraphy.db" uuid="bd8830a1-4056-4613-8422-7e7809c48039">
+    <data-source name="thyroid.db" uuid="a46374ea-b7b3-4d3f-99e7-52f10c35354a">
       <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1" exact-driver-version="3.25">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
@@ -41,21 +41,6 @@
           <node kind="schema" qname="@" />
         </introspection-scope>
       </schema-mapping>
-      <load-sources>user_sources</load-sources>
-    </data-source>
-    <data-source name="thyroid.db" uuid="1db755da-be18-41e4-845c-908816efcd5a">
-      <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1" exact-driver-version="3.25">
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <secret-storage>master_key</secret-storage>
-      <auth-required>false</auth-required>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="schema" qname="@" />
-        </introspection-scope>
-      </schema-mapping>
-      <load-sources>user_sources</load-sources>
     </data-source>
   </component>
 </project>

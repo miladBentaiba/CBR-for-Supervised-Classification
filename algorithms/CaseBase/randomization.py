@@ -93,7 +93,6 @@ def randomization():
         for row in _c.fetchall():
             cases.append(dict((_c.description[i][0], value) for i, value in enumerate(row)))
 
-
         # do the attributes interchanging
         for i, cs1 in enumerate(cases):
             for j, cs2 in enumerate(cases):
@@ -108,5 +107,5 @@ def randomization():
                     # new_cases = new_cases + added
 
     print(']')
-    # _d.execute('update cases set randomized = 1')
-    # S.commit()
+    _d.execute('update cases set randomized = 1')
+    S.commit()

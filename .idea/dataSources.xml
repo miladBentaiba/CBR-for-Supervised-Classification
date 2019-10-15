@@ -10,29 +10,20 @@
         <property name="enable_load_extension" value="true" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="mammography-r-all.db" uuid="d12ebe19-07cf-4db5-af4c-f44aee0faba9">
+    <data-source source="LOCAL" name="immunotheraphy.db" uuid="22381e0f-0225-4521-818a-97c5df40e7d9">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/algorithms/mammography-r-all.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\Milad\PycharmProjects\CBR\algorithms\immunotheraphy.db</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="immunotheraphy.db" uuid="bd8830a1-4056-4613-8422-7e7809c48039">
+    <data-source source="LOCAL" name="thyroid.db" uuid="a46374ea-b7b3-4d3f-99e7-52f10c35354a">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/algorithms/immunotheraphy.db</jdbc-url>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="thyroid.db" uuid="1db755da-be18-41e4-845c-908816efcd5a">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/algorithms/thyroid.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/algorithms/machine learning/thyroid.db</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>
